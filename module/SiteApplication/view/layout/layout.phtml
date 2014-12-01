@@ -1,0 +1,534 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle($this->translate('Futura União - Consultoria de Seguros'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ; ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicosadn.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/app.css') ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->appendFile($this->basePath() . '/js/plugins/blockui-master/jquery.blockUI.js')
+            ->appendFile($this->basePath() . '/bower_components/angular/angular.js')
+            ->appendFile($this->basePath() . '/bower_components/angular-route/angular-route.js')
+            ->appendFile($this->basePath() . '/bower_components/angular-resource/angular-resource.js')
+            ->appendFile($this->basePath() . '/js/app/CmsApp.js')
+            ->appendFile($this->basePath() . '/js/app/Services.js')
+            ->appendFile($this->basePath() . '/js/app/Directives.js')
+            ->appendFile($this->basePath() . '/js/app/Controllers.js')
+            ->appendFile($this->basePath() . '/js/html5.image.preview.min.js')
+            ->prependFile($this->basePath() . '/bower_components/foundation/js/foundation.js')
+            ->prependFile($this->basePath() . '/js/jquery.min.js')
+            ->prependFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',))
+            
+        ; ?>
+    </head>
+    <body ng-app='CmsApp'>
+      <div ng-controller="RouteCtrl">
+        
+        
+
+        <header id="navbar-menu-principal" class="fixed">
+            <nav class="top-bar" data-topbar role="navigation">
+              <!-- Title -->
+              <ul class="title-area">
+                <li class="name"><h1><a href="/" target="_self"><span class="half-left-title">FUTURA</span> <span class="half-right-title">UNIÃO</span></a></h1></li>
+
+                <!-- Mobile Menu Toggle -->
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+              </ul>
+
+              <!-- Top Bar Section -->
+              <section class="top-bar-section">
+
+                <!-- Top Bar Left Nav Elements -->
+                <ul class="left">
+
+                  <!-- Button -->
+                  <li class="has-form show-for-large-up">
+                    <?php 
+
+                    if ($this->UserIdentity('CmsUser')):
+                      $hour =  date('H');
+                      $comprimento = 'Bom dia, ';
+
+                      if ($hour > 11) {
+                        $comprimento = 'Boa tarde, ';
+                      } elseif ($hour > 17) {
+                        $comprimento = 'Boa noite, ';
+                      }
+                      $nome = $this->UserIdentity("CmsUser")->getNome();
+                      $etc = "";
+
+                      if (strlen($nome) > 20) {
+                        $etc = "...";
+                      }
+
+                      echo '<a href="/admin" class="button default-btn-cms btn-cms"  target="_self"><span class="icon-unlocked"></span> ', $comprimento, substr($nome, 0, 20), $etc,'</a>';
+                    else:
+                      echo '<a href="/admin" class="button default-btn-cms  btn-cms"  target="_self"><span class="icon-lock2"></span> Acesso Restrito</a>';
+                    endif;
+                    ?>
+                    
+                  </li>
+                  <?php if ($this->UserIdentity('CmsUser')): ?>
+                  <li class="has-form show-for-large-up">
+                    <a href="/auth/logout" class="button quit-btn-cms btn-cms" target="_self"><span class="icon-exit"></span>&nbsp;Sair</a>
+                  </li>
+                  <?php endif; ?>
+                  
+                </ul> 
+
+                <!-- Top Bar Right Nav Elements -->
+                <ul class="right menu-links">
+
+                  <li><a href="#" data-reveal-id="modal-quem-somos">Quem Somos</a></li>
+
+                  <!-- Divider -->
+                  <li class="divider"></li>
+
+                  <li class="has-dropdown"><a href="#">Serviços</a>
+                    <ul class="dropdown">
+                      <li><a href="#" data-reveal-id="modal-servicos-apoio-tecn">Apoio Técnico</a></li>
+                      <li><a href="#" data-reveal-id="modal-servicos-apoio-com">Apoio Comercial</a></li>
+                      <li><a href="#" data-reveal-id="modal-servicos-apoio-jur">Apoio Jurídico</a></li>
+                      <li><a href="#" data-reveal-id="modal-servicos-apoio-sin">Apoio Sinistros</a></li>
+                      <li><a href="#" data-reveal-id="modal-servicos-apoio-resseg">Apoio Resseguros</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="divider"></li>
+
+                  <li class="has-dropdown"><a href="#">Produtos</a>
+                    <ul class="dropdown">
+
+                      <li class="has-dropdown"><a href="#"  data-reveal-id="modal-produtos-riscos-financeiros">Riscos Financeiros</a>
+
+                        <!-- Nested Dropdown -->
+                        <ul class="dropdown">
+                          <li><label>Riscos Financeiros</label></li>
+                          <li><a href="#">Seguro Garantia</a></li>
+                          <li><a href="#">Fiança Fiscal</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="has-dropdown"><a href="#" data-reveal-id="modal-produtos-riscos-patrimoniais-resp">Riscos Patrimoniais & Responsabilidades</a>
+
+                        <!-- Nested Dropdown -->
+                        <ul class="dropdown">
+                          <li><label>Riscos Patrimoniais & Responsabilidades</label></li>
+                          <li><a href="#">Responsabilidade de engenharia</a></li>
+
+                          <li class="has-dropdown"><a href="#">Responsabilidade Civil</a>
+                            <ul class="dropdown">
+                                <li><label>Responsabilidade Civil</label></li>
+                                <li><a href="#">Responsabilidade Civil Geral</a></li>
+                                <li><a href="#">Responsabilidade Civil Eventos</a></li>
+                                <li><a href="#">RS Profissional</a></li>
+                                <li><a href="#">D & O</a></li>
+                                <li><a href="#">E & O</a></li>
+                            </ul>
+                          </li>
+
+                          <li class="has-dropdown"><a href="#">Riscos Diversos</a>
+                            <ul class="dropdown">
+                                <li><label>Riscos Diversos</label></li>
+                                <li><a href="#">Equipamentos</a></li>
+                                <li><a href="#">Benfeitorias</a></li>
+                            </ul>
+                          </li>
+
+                          
+
+                        </ul>
+                      </li>
+
+                      <li class="has-dropdown"><a href="#" data-reveal-id="modal-produtos-transportes">Transportes</a>
+                        <ul class="dropdown">
+                            <li><label>Transportes</label></li>
+                            <li><a href="#">Transporte Nacional</a></li>
+                            <li><a href="#">Transporte Internacional</a></li>
+                            <li><a href="#">Responsabilidade Civil do Transportador Rodoviário de Carga</a></li>
+                            <li><a href="#">Responsabilidade Civil por Dervio de carga</a></li>
+                            <li><a href="#">Responsabilidade Civil do Transportador Aéreo de Carga</a></li>
+                            <li><a href="#">Responsabilidade Civil do Transportador de Viagem Internacional</a></li>
+                        </ul>
+                      </li>
+
+                    </ul>
+                  </li>
+
+                  <li class="divider"></li>
+
+                  <li class="has-dropdown"><a href="#">Para Corretores</a>
+                    <ul class="dropdown">
+                      <li><a href="/formularios" target="_self">Formulários</a></li>
+                      <li><a href="/notificacoes" target="_self">Notificações</a></li>
+                      <li><a href="/circulares" target="_self">Circuláres</a></li>
+                    </ul>
+                  </li>
+                  <li class="divider"></li>
+
+
+                  <li class="has-dropdown"><a href="#">Ajuda</a>
+                    <ul class="dropdown">
+                      <li><a href="#" target="_self">FAQ/Glossário</a></li>
+                      <li><a href="#" target="_self">Informativos</a></li>
+                      <li><a href="#" target="_self">Ind. Económicos</a></li>
+                      <li><a href="#" target="_self">Últ. Notícias</a></li>
+                    </ul>
+                  </li>
+                  <li class="divider"></li>
+
+                  <li class="has-dropdown"><a href="#">Atendimento</a>
+                    <ul class="dropdown">
+                      <li><a href="#">Fale Conosco</a></li>
+                      <li><a href="#">Chat On-Line</a></li>
+                      <li><a href="#">Telefones</a></li>
+                    </ul>
+                  </li>
+                  
+                </ul>
+              </section>
+            </nav>
+        </header>
+        <div id="linha_header_top" class="linha_split_decor fixed"></div>
+        <div id="linha_header_bottom" class="linha_split_decor fixed"></div>
+        
+        <?php
+        $route = $this->getHelperPluginManager()->getServiceLocator()->get('request')->getUri()->getPath(); 
+        $isAdmin = false;
+
+        if (strpos($route, 'admin') !== false) {
+            $isAdmin = true;
+        }
+        ?>
+
+        <?php if ($isAdmin and $this->UserIdentity('CmsUser')): ?>
+
+        <aside id="admin-menu" class="fixed">
+
+          <nav class="menu-accordion">
+            <ul>
+              <li style="display: none">
+                <h3><span class="icon-dashboard"></span>ACL - Permissões</h3>
+                <ul>
+                  <li><a href="/admin/access/roles">Roles</a></li>
+                  <li><a href="/admin/access/resources">Resources</a></li>
+                  <li><a href="/admin/access/privileges">Privileges</a></li>
+                </ul>
+              </li>
+
+              <li ng-class="{'active': isContent}">
+                <h3>&nbsp;&nbsp;<span class="icon-drawer"></span>&nbsp;&nbsp;Conteudo</h3>
+                <ul>
+                  <li><a href="/admin/content/posts" target="_self"><span class="icon-compose"></span>&nbsp;&nbsp;Posts</a></li>
+                  <li><a href="/admin/content/arquivostexto" target="_self"><span class="icon-note"></span>&nbsp;&nbsp;Arquivo</a></li>
+                  <li><a href="/admin/content/links" target="_self"><span class="icon-link"></span>&nbsp;&nbsp;Links</a></li>
+                  <li><a href="/admin/content/corretores" target="_self"><span class="icon-vcard"></span>&nbsp;&nbsp;Corretor</a></li>
+                </ul>
+              </li>
+
+              <li ng-class="{'active': isUser}">
+                <h3>&nbsp;&nbsp;<span class="icon-users2"></span>&nbsp;&nbsp;Usuários</h3>
+                <ul>
+                  <li><a href="/admin/access/users/index" target="_self"><span class="icon-users3"></span>&nbsp;&nbsp;Listar</a></li>
+                  <li><a href="/admin/access/users/new" target="_self"><span class="icon-user-add"></span>&nbsp;&nbsp;Novo</a></li>
+                </ul>
+              </li>
+
+              <li style="display: none">
+                <h3><span class="/admin/access/users"></span>Newsletter</h3>
+                <ul>
+                  <li><a href="/admin/access/users/index" target="_self">Cadastrados</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </nav>
+        </aside>
+      
+        <?php endif; ?>
+
+        <div id="main-content" ng-class="{'admin-content': isAdmin}" data-ng-cloak>
+
+          <?php echo $this->content; ?>
+
+        </div>
+
+        <footer id="rodapte-principal">
+          
+        </footer>
+
+        <!-- Janelas Modais INÍCIO -->
+        
+        <!-- Janela Modal Quem Somos -->
+        <div id="modal-quem-somos" class="reveal-modal" data-reveal>
+          <h2>Quem Somos</h2>
+          <p>Sobre a Futura União...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in debitis maiores ad, corrupti facere est doloribus inventore odit quasi, nihil atque beatae veniam velit sit ratione dignissimos! Aliquam quisquam deserunt voluptatibus eum, praesentium commodi debitis doloribus dolores vero esse voluptates molestias. Corporis adipisci voluptatum nam, suscipit ab molestiae aperiam harum, incidunt odio doloribus, aut? Non deleniti qui et aspernatur corrupti nesciunt, quisquam sunt, distinctio pariatur, at tempore quo. Illum culpa ut facilis eos impedit, quibusdam, enim officiis repellendus placeat reprehenderit ab. Veritatis, dolore, nihil. At aliquid, neque sequi iusto, eligendi quisquam maxime, provident rem facilis eos illo est repellat.</p>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+        <!-- Janelas Modais de Serviços -->
+        <div id="modal-servicos-apoio-tecn" class="reveal-modal" data-reveal>
+          <h2>Apoio Técnico</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in debitis maiores ad, corrupti facere est doloribus inventore odit quasi, nihil atque beatae veniam velit sit ratione dignissimos! Aliquam quisquam deserunt voluptatibus eum, praesentium commodi debitis doloribus dolores vero esse voluptates molestias. Corporis adipisci voluptatum nam, suscipit ab molestiae aperiam harum, incidunt odio doloribus, aut? Non deleniti qui et aspernatur corrupti nesciunt, quisquam sunt, distinctio pariatur, at tempore quo. Illum culpa ut facilis eos impedit, quibusdam, enim officiis repellendus placeat reprehenderit ab. Veritatis, dolore, nihil. At aliquid, neque sequi iusto, eligendi quisquam maxime, provident rem facilis eos illo est repellat.</p>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+        <div id="modal-servicos-apoio-com" class="reveal-modal" data-reveal>
+          <h2>Apoio Comercial</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in debitis maiores ad, corrupti facere est doloribus inventore odit quasi, nihil atque beatae veniam velit sit ratione dignissimos! Aliquam quisquam deserunt voluptatibus eum, praesentium commodi debitis doloribus dolores vero esse voluptates molestias. Corporis adipisci voluptatum nam, suscipit ab molestiae aperiam harum, incidunt odio doloribus, aut? Non deleniti qui et aspernatur corrupti nesciunt, quisquam sunt, distinctio pariatur, at tempore quo. Illum culpa ut facilis eos impedit, quibusdam, enim officiis repellendus placeat reprehenderit ab. Veritatis, dolore, nihil. At aliquid, neque sequi iusto, eligendi quisquam maxime, provident rem facilis eos illo est repellat.</p>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+        <div id="modal-servicos-apoio-jur" class="reveal-modal" data-reveal>
+          <h2>Apoio Jurídico</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in debitis maiores ad, corrupti facere est doloribus inventore odit quasi, nihil atque beatae veniam velit sit ratione dignissimos! Aliquam quisquam deserunt voluptatibus eum, praesentium commodi debitis doloribus dolores vero esse voluptates molestias. Corporis adipisci voluptatum nam, suscipit ab molestiae aperiam harum, incidunt odio doloribus, aut? Non deleniti qui et aspernatur corrupti nesciunt, quisquam sunt, distinctio pariatur, at tempore quo. Illum culpa ut facilis eos impedit, quibusdam, enim officiis repellendus placeat reprehenderit ab. Veritatis, dolore, nihil. At aliquid, neque sequi iusto, eligendi quisquam maxime, provident rem facilis eos illo est repellat.</p>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+        <div id="modal-servicos-apoio-sin" class="reveal-modal" data-reveal>
+          <h2>Apoio Sinistros</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in debitis maiores ad, corrupti facere est doloribus inventore odit quasi, nihil atque beatae veniam velit sit ratione dignissimos! Aliquam quisquam deserunt voluptatibus eum, praesentium commodi debitis doloribus dolores vero esse voluptates molestias. Corporis adipisci voluptatum nam, suscipit ab molestiae aperiam harum, incidunt odio doloribus, aut? Non deleniti qui et aspernatur corrupti nesciunt, quisquam sunt, distinctio pariatur, at tempore quo. Illum culpa ut facilis eos impedit, quibusdam, enim officiis repellendus placeat reprehenderit ab. Veritatis, dolore, nihil. At aliquid, neque sequi iusto, eligendi quisquam maxime, provident rem facilis eos illo est repellat.</p>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+        <div id="modal-servicos-apoio-resseg" class="reveal-modal" data-reveal>
+          <h2>Apoio Resseguros</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in debitis maiores ad, corrupti facere est doloribus inventore odit quasi, nihil atque beatae veniam velit sit ratione dignissimos! Aliquam quisquam deserunt voluptatibus eum, praesentium commodi debitis doloribus dolores vero esse voluptates molestias. Corporis adipisci voluptatum nam, suscipit ab molestiae aperiam harum, incidunt odio doloribus, aut? Non deleniti qui et aspernatur corrupti nesciunt, quisquam sunt, distinctio pariatur, at tempore quo. Illum culpa ut facilis eos impedit, quibusdam, enim officiis repellendus placeat reprehenderit ab. Veritatis, dolore, nihil. At aliquid, neque sequi iusto, eligendi quisquam maxime, provident rem facilis eos illo est repellat.</p>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+
+        <!-- Janelas Modais de Produtos  -->
+        <div id="modal-produtos-riscos-financeiros" class="reveal-modal" data-reveal>
+          <h2>Riscos Financeiros</h2>
+
+          <div>
+            <dl class="accordion" data-accordion="riscosFinGropo">
+              <dd class="accordion-navigation">
+
+                <a href="#riscosfin-seguro-garantia">Seguro Garantia</a>
+                <div id="riscosfin-seguro-garantia" class="content">
+                  <p>Sobre seguro garantira... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+              </dd>
+
+              <dd class="accordion-navigation">
+                <a href="#riscosfin-fianca-locataria">Fiança Locatícia</a>
+                <div id="riscosfin-fianca-locataria" class="content">
+                  <p>Sobre fiança locatícia... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+              </dd>
+
+            </dl>
+          </div>
+          
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+        <div id="modal-produtos-riscos-patrimoniais-resp" class="reveal-modal" data-reveal>
+          <h2>Riscos Patrimoniais & Responsabilidades</h2>
+          <div>
+            <dl class="accordion" data-accordion="riscosPRGrupo">
+              <dd class="accordion-navigation">
+
+                <a href="#riscospr-responsabilidade-de-engenharia">Responsabilidade de Engenharia</a>
+                <div id="riscospr-responsabilidade-de-engenharia" class="content">
+                  <p>Sobre Responsabilidade de Engenharia ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde, delectus architecto optio animi dolores debitis tempora vero laboriosam, maiores aspernatur recusandae sequi in quae nesciunt iste esse ratione necessitatibus nulla sapiente hic. Sed nam perferendis voluptates maxime repudiandae molestiae sequi ipsam assumenda pariatur esse, non, nesciunt iste enim, quasi.</p>
+                </div>
+              </dd>
+
+              <dd class="accordion-navigation">
+                <a href="#riscospr-responsabilidade-civil">Responsabilidade Civil</a>
+
+                <div id="riscospr-responsabilidade-civil" class="content">
+                  <dl class="tabs" data-tab>
+                    <dd><a href="#respcivil-geral">Responsabilidade Civil Geral</a></dd>
+                    <dd><a href="#respcivil-eventos">Responsabilidade Civil Eventos</a></dd>
+                    <dd><a href="#respcivil-profissional">RC Profissional</a></dd>
+                    <dd><a href="#respcivil-do">D & O</a></dd>
+                    <dd><a href="#respcivil-eo">E & O</a></dd>
+                  </dl>
+                  <div class="tabs-content">
+                    <div class="content active" id="respcivil-geral">
+                      <p>Sobre Responsabilidade Civil Geral... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                    </div>
+                    <div class="content" id="respcivil-eventos">
+                      <p>Sobre Responsabilidade Civil Eventos... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                    </div>
+                    <div class="content" id="respcivil-profissional">
+                      <p>Sobre RS Profissional... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                    </div>
+                    <div class="content" id="respcivil-do">
+                      <p>Sobre D & O... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                    </div>
+                    <div class="content" id="respcivil-eo">
+                      <p>Sobre E & O... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                    </div>
+                  </div>
+                </div>
+              </dd>
+
+              <dd class="accordion-navigation">
+                <a href="#riscospr-riscos-diversos">Riscos Diversos</a>
+                <div id="riscospr-riscos-diversos" class="content">
+                  <dl class="tabs" data-tab>
+                    <dd><a href="#riscdiver-equipamentos">Equipamentos</a></dd>
+                    <dd><a href="#riscdiver-benfeitorias">Benfeitorias</a></dd>
+                  </dl>
+                  <div class="tabs-content">
+
+                    <div class="content active" id="riscdiver-equipamentos">
+                      <p>Sobre Equipamentos... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                    </div>
+
+                    <div class="content" id="riscdiver-benfeitorias">
+                      <p>Sobre Benfeitorias... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                    </div>
+
+                  </div>
+                </div>
+              </dd>
+
+            </dl>
+
+          </div>
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+
+        <div id="modal-produtos-transportes" class="reveal-modal" data-reveal>
+          <h2>Transportes</h2>
+          
+          <div>
+            
+            <dl class="accordion" data-accordion="transpGrupo">
+
+              <dd class="accordion-navigation">
+                <a href="#transp-transporte-nacional">Transporte Nacional</a>
+                <div id="transp-transporte-nacional" class="content">
+                  <p>Sobre Transporte Nacional... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+              </dd>
+
+              <dd class="accordion-navigation">
+                <a href="#transp-transporte-internacional">Transporte Internacional</a>
+                <div id="transp-transporte-internacional" class="content">
+                  <p>Sobre Transporte Internacional... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+              </dd>
+
+              <dd class="accordion-navigation">
+                <a href="#transp-tranportador-rodoviario">Responsabilidade Civil do Transportador Rodoviário de Carga</a>
+                <div id="transp-tranportador-rodoviario" class="content">
+                  <p>Sobre Responsabilidade Civil do Transportador Rodoviário de Carga... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+              </dd>
+
+              <dd class="accordion-navigation">
+                <a href="#transp-desvio-de-carga">Responsabilidade Civil por Desvio de Carga</a>
+                <div id="transp-desvio-de-carga" class="content">
+                  <p>Sobre Responsabilidade Civil por Desvio de Carga... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+              </dd>
+
+              <dd class="accordion-navigation">
+                <a href="#transp-transportador-aereo">Responsabilidade Civil do Transportador Aéreo Carga</a>
+                <div id="transp-transportador-aereo" class="content">
+                  <p>Sobre Responsabilidade Civil do Transportador Aéreo Carga... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+              </dd>
+
+              <dd class="accordion-navigation">
+                <a href="#transp-viagem-internacional">Responsabilidade Civil do Transportador de Viagem Internacional</a>
+                <div id="transp-viagem-internacional" class="content">
+                  <p>Sobre Responsabilidade Civil do Transportador de Viagem Internacional... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+              </dd>
+
+            </dl>
+
+          </div>
+
+          <a class="close-reveal-modal">&#215;</a>
+
+        </div>
+
+
+      </div>
+        <?php echo $this->inlineScript() ?>
+      
+      <script> 
+        window.onload = function() {
+            // Listen to the double click event.
+            if ( window.addEventListener )
+                document.body.addEventListener( 'dblclick', onDoubleClick, false );
+            else if ( window.attachEvent )
+                document.body.attachEvent( 'ondblclick', onDoubleClick );
+
+        };
+
+        function onDoubleClick( ev ) {
+            // Get the element which fired the event. This is not necessarily the
+            // element to which the event has been attached.
+            var element = ev.target || ev.srcElement;
+
+            // Find out the div that holds this element.
+            var name;
+
+            do {
+                element = element.parentNode;
+            }
+            while ( element && ( name = element.nodeName.toLowerCase() ) &&
+                ( name != 'div' || element.className.indexOf( 'editable' ) == -1 ) && name != 'body' );
+
+            if ( name == 'div' && element.className.indexOf( 'editable' ) != -1 )
+                replaceDiv( element );
+        }
+
+        var editor;
+
+        function replaceDiv( div ) {
+            if ( editor )
+                editor.destroy();
+
+            editor = CKEDITOR.replace( div );
+        }
+
+
+        $(document).ready(function () {
+          $(document).foundation();
+
+          $(".menu-accordion h3").click(function(){
+          
+            $(".menu-accordion ul ul").slideUp();
+            
+            if(!$(this).next().is(":visible")) {
+              $(this).next().slideDown();
+            
+            }
+          })
+
+          $(".menu-accordion ul ul li").click(function(){
+            $(".active").removeClass("active").addClass("inactive");
+            $(this).removeClass("inactive").addClass("active");
+          });
+
+        });
+
+      </script>
+
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<form action="&#x2F;admin&#x2F;content&#x2F;arquivostexto&#x2F;new" method="post" name="post" enctype="multipart&#x2F;form-data" id="post"><fieldset ><input type="hidden" name="id" value=""><label><span>Descrição: </span><input type="text" name="descricao" placeholder="Entre&#x20;com&#x20;a&#x20;descri&#xE7;&#xE3;o&#x20;do&#x20;arquivo" class="form-input" value=""></label><label><span>Não Expirar Arquivo: </span><input type="hidden" name="expirar" value="sim"><input type="checkbox" name="expirar" value="nao"></label><label><span>Expira Em:</span><input type="date" name="expiresAt" min="2014-11-19" max="2015-11-18" step="1" value=""></label><label><span>Categoria: </span><select name="categoria"><option value="3">Formulários</option>
+<option value="4">Circulares</option>
+<option value="5">Notificações</option></select></label><label><span>Escolha o Arquivo: </span><input type="file" name="arquivo"></label><input type="hidden" name="security" value="71b7c2ea28999b6640745e4f337e650d-4d3a32a0a7f1ef2e1fb1a4969a7e6892"><input type="submit" name="submit" class="btn-success" value="Publicar"></fieldset></form>
+
+
+	<?php
+		
+	$form = $this->form;
+	$form->setAttribute('action',$this->url('cms-admin-content/default',array('controller'=>'arquivostexto','action'=>'new')));
+	$form->prepare();
+
+	echo $this->form()->openTag($form);
+	echo $this->formCollection($form);
+	echo $this->form()->closeTag();
+	?>
+
+		<form action="/admin/content/arquivostexto/new" method="post" name="post" enctype=
+	  "multipart/form-data" id="post" novalidate>
+	    <fieldset>
+	      <input type="hidden" name="id" value="" />
+	      	<label><span>Descri&ccedil;&atilde;o:</span> 
+	      	<input type="text" name=
+	      "descricao" placeholder="Entre com a descri&ccedil;&atilde;o do arquivo" class=
+	      "form-input" value="" required  ng-model="arquivo.descricao" /></label>
+
+	      <div class="error" 
+			    ng-show="post.descricao.$dirty && post.descricao.$invalid">
+			<small class="error" 
+			ng-show="post.descricao.$error.required">
+				A descricao é obrigatoria
+			</small>
+		</div>
+
+	      <label><span>N&atilde;o Expirar Arquivo:</span>
+	      <input type="hidden" name="expirar" value="sim" /><input type="checkbox" ng-model="checked_expirar" name=
+	      "expirar"/></label>
+
+	      <label><span>Expira Em:</span><input ng-disabled="checked_expirar" type="date"
+	      name="expiresAt" min="2014-11-18" ng-model="expiresAt" max="2015-11-17" step="1" value=
+	      "" /></label>
+		
+			<small class="error" ng-show="post.expiresAt.$error.required">
+				Você precisa escolher a data de expiração ou marcar a caixa de opção acima para não expire.
+			</small>
+
+	      <label><span>Categoria:</span> <select name="categoria">
+	        <option value="3">
+	          Formul&aacute;rios
+	        </option>
+
+	        <option value="4">
+	          Circulares
+	        </option>
+
+	        <option value="5">
+	          Notifica&ccedil;&otilde;es
+	        </option>
+	      </select></label>
+			
+			<small class="error" 
+							ng-show="post.email.$error.required">
+				Você precisa escolher a data de expiração ou marcar a caixa de opção acima para não expire.
+			</small>
+
+	      <label><span>Escolha o Arquivo:</span> <input ng-model="upload" data-valid-file type="file" name=
+	      "arquivo" required/></label>
+
+	      <input type="hidden" name="security" value=
+	      "625f072e0187d9fb849c47a893ad9863-4c3fc20dedfa5d3d8a57c8094c053e26"  />
+
+	      	<small class="error" 
+							ng-show="post.arquivo.$error.required">
+				Você precisa escolher um arquivo para fazer o upload.
+			</small>
+
+	      <button ng-hide="corretor.id" class="btn-enviar-form button expand" ng-disabled="post.$invalid">Publicar</button>
+	    </fieldset>
+  	</form>
