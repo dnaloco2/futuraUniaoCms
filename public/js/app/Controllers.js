@@ -184,8 +184,6 @@ CmsApp.controller('CorretoresCtrl', ['$scope', 'Corretor', '$location', function
 				// 200
 				function () {
 
-					console.log(data);
-
 					if (data.data.success) {
 
 						$scope.cadastronovo = data.data.corretor;
@@ -421,21 +419,260 @@ CmsApp.controller('ArquivosCtrl', ['$scope',  function ( $scope ) {
 
 }]);
 
-CmsApp.controller('FormulariosCtrl', ['$scope', 'Formulario', '$location', function ($scope, Formulario, $location) {
-	$scope.teste = "tesgte";
+CmsApp.controller('LinksCtrl', ['$scope', 'ngTableParams', 'Link', function($scope, ngTableParams, Link) {
+	$scope.links = [];
 
+	var loadLinks = ( function() {
+
+		$scope.loadingLinks = true;
+		var links = Link.query( function () {
+			
+
+			var data = $.map(links.data, function(el) { return el; });
+
+			$scope.tableParams = new ngTableParams({
+		        page: 1,            // show first page
+		        count: 5         	// count per page
+		    }, {
+		        total: data.length, // length of data
+		        getData: function($defer, params) {
+		            $defer.resolve(data.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+		        }
+		    });
+
+		    $scope.loadingLinks = false;
+			
+		});
+		
+	})();
+}]);
+
+CmsApp.controller('FaqCtrl', ['$scope', 'Faq', '$sce', function($scope, Faq, $sce) {
+	$scope.currentPage = 1;
+  	$scope.pageSize = 10;
+	$scope.faqs = [];
+
+	$scope.renderHtml = function(html_code) {
+	    return $sce.trustAsHtml(html_code);
+	};
+
+	var loadFaqs = ( function() {
+
+		$scope.loadingFaqs = true;
+		var faqs = Faq.query( function () {
+			
+
+			var data = $.map(faqs.data, function(el) { return el; });
+
+			$scope.faqs = data;
+
+			$scope.loadingFaqs = false;
+
+		});
+		
+	})();
+
+}]);
+
+CmsApp.controller('CorretoresCtrl', ['$scope', 'Corretor', function($scope, Corretor) {
+	$scope.currentPage = 1;
+  	$scope.pageSize = 5;
+	$scope.corretores = [];
+
+	var loadCorretores = ( function() {
+
+		$scope.loadingCorretores = true;
+
+		var corretores = Corretor.query( function () {
+		
+			var data = $.map(corretores.data, function(el) { return el; });
+
+			$scope.corretores = data;
+
+			$scope.loadingCorretores = false;
+
+		});
+		
+	})();
+}]);
+
+CmsApp.controller('FormulariosCtrl', ['$scope', 'Formulario', function ($scope, Formulario) {
+	$scope.currentPage = 1;
+  	$scope.pageSize = 10;
 	$scope.formularios = [];
 
 	var loadFormularios = ( function() {
+
 		$scope.loadingFormularios = true;
-/*		var formularios = Corretor.query( function () {
+
+		var formularios = Formulario.query( function () {
+
+			var data = $.map(formularios.data, function(el) { return el; });
+
+			$scope.formularios = data;
+
 			$scope.loadingFormularios = false;
 
-			console.log(formularios);
-
-			for ( key in formularios.data ) {
-				$scope.formularios.push( formularios.data[key] );
-			}
-		});*/
+		});
+		
 	})();
+}]);	
+
+CmsApp.controller('NotificacoesCtrl', ['$scope', 'Notificacao', 'NotificacaoArquivo', function ($scope, Notificacao, NotificacaoArquivo) {
+	$scope.currentPage = 1;
+  	$scope.pageSize = 10;
+	$scope.notificacoes = [];
+
+	$scope.currentPage = 1;
+  	$scope.pageSize = 10;
+	$scope.notificacoesArquivos = [];
+
+	var loadNotificacoes = ( function() {
+
+		$scope.loadingNotificacoes = true;
+		
+		var notificacoes = Notificacao.query( function () {
+			
+
+			var data = $.map(notificacoes.data, function(el) { return el; });
+
+			$scope.notificacoes = data;
+
+			console.log(data);
+
+			$scope.loadingNotificacoes = false;
+
+		});
+		
+	})();
+
+	$scope.currentPageArquivos = 1;
+  	$scope.pageSizeArquivos = 10;
+	$scope.notificacoesArquivos = [];
+
+	var loadNotificacoesArquivos = ( function () {
+		$scope.loadingNotificacoesArquivos = true;
+
+		var notificacoesArquivos = NotificacaoArquivo.query( function () {
+			
+
+			var data = $.map(notificacoesArquivos.data, function(el) { return el; });
+
+			$scope.notificacoesArquivos = data;
+
+			$scope.loadingNotificacoesArquivos = false;
+
+		});
+
+	})();
+}]);
+
+CmsApp.controller('CircularesCtrl', ['$scope', 'Circular', 'CircularArquivo', function ($scope, Circular, CircularArquivo) {
+	$scope.currentPage = 1;
+  	$scope.pageSize = 10;
+	$scope.circulares = [];
+
+	var loadCirculares = ( function() {
+
+		$scope.loadingCirculares = true;
+		
+		var circulares = Circular.query( function () {
+			
+			var data = $.map(circulares.data, function(el) { return el; });
+
+			$scope.circulares = data;
+
+			$scope.loadingCirculares = false;
+
+		});
+		
+	})();
+
+	$scope.currentPageArquivos = 1;
+  	$scope.pageSizeArquivos = 10;
+	$scope.circularesArquivos = [];
+
+	var loadCircularesArquivos = ( function () {
+		$scope.loadingCircularesArquivos = true;
+
+		var circularesArquivos = CircularArquivo.query( function () {
+			
+
+			var data = $.map(circularesArquivos.data, function(el) { return el; });
+
+			$scope.circularesArquivos = data;
+
+			$scope.loadingCircularesArquivos = false;
+
+		});
+
+	})();
+}]);
+
+
+
+CmsApp.controller('GlossarioCtrl', ['$scope', 'Glossario', '$sce', function($scope, Glossario, $sce) {
+	$scope.currentPage = 1;
+  	$scope.pageSize = 10;
+	$scope.glossario = [];
+
+	$scope.renderHtml = function(html_code) {
+	    return $sce.trustAsHtml(html_code);
+	};
+
+	var loadGlossario = ( function() {
+
+		$scope.loadinGlossario = true;
+		
+		var glossario = Glossario.query( function () {
+
+			var data = $.map(glossario.data, function(el) { return el; });
+
+			$scope.glossario = data;
+
+			$scope.loadinGlossario = false;
+
+		});
+		
+	})();
+}]);
+
+CmsApp.controller('FormContatoCtrl', ['$scope', '$http', function($scope, $http) {
+	$scope.result = 'hidden'
+    $scope.resultMessage;
+    $scope.formData; //formData is an object holding the name, email, subject, and message
+    $scope.submitButtonDisabled = false;
+    $scope.submitted = false; //used so that form errors are shown only after the form has been submitted
+    $scope.submit = function(contactform) {
+        $scope.submitted = true;
+        $scope.submitButtonDisabled = true;
+        if (contactform.$valid) {
+
+            $http({
+                method  : 'POST',
+                url     : '/api/formcontato',
+                data    : $.param($scope.formData),  //param method from jQuery
+                headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  //set the headers so angular passing info as form data (not request payload)
+            }).success(function(data){
+
+                if (data.success) { //success comes from the return json object
+
+                    $scope.submitButtonDisabled = true;
+                    $scope.resultMessage = data.message;
+                    $scope.result='bg-success';
+                } else {
+
+                    $scope.submitButtonDisabled = false;
+                    $scope.resultMessage = data.message;
+                    $scope.result='bg-danger';
+                }
+            }).error(function(data) {
+            	console.log('ERROR',data);
+            });
+
+            $scope.submitButtonDisabled = false;
+            $scope.resultMessage = 'Failed <img src="http://www.chaosm.net/blog/wp-includes/images/smilies/icon_sad.gif" alt=":(" class="wp-smiley">  Please fill out all the fields.';
+            $scope.result='bg-danger';
+        }
+    }
 }]);

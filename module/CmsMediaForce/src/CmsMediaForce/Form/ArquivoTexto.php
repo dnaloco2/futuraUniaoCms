@@ -18,9 +18,9 @@ class ArquivoTexto  extends Form
         $id = new \Zend\Form\Element\Hidden('id');
         $this->add($id);
         
-        $nome = new \Zend\Form\Element\Text("descricao");
-        $nome->setLabel("Descrição: ")
-                ->setAttribute('placeholder','Entre com a descrição do arquivo')
+        $nome = new \Zend\Form\Element\Text("titulo");
+        $nome->setLabel("Título: ")
+                ->setAttribute('placeholder','Entre com o título do arquivo')
                 ->setAttribute('class', 'form-input')
                 ->setAttribute('data-ng-model', 'arquivo.descricao')
                 ->setRequired(true);

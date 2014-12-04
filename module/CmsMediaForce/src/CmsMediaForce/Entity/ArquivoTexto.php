@@ -105,7 +105,7 @@ class ArquivoTexto
      *
      * @return self
      */
-    protected function setTitulo($titulo)
+    public function setTitulo($titulo)
     {
         $this->titulo = $titulo;
 

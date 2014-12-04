@@ -63,6 +63,6 @@ class AuthController extends AbstractActionController
         $auth->setStorage(new SessionStorage("CmsUser"));
         $auth->clearIdentity();
         
-        return $this->redirect()->toRoute('cms-auth');
+        return $this->redirect()->toRoute('home');
     }
 }

@@ -53,12 +53,12 @@ class Post
 
         return array(
             'id' => $this->id,
-            'categoria' => $dadosCad['categoria'],
+            'categoria' => (string) $dadosCad['categoria'],
             'conteudo' => $this->conteudo,
             'titulo' => $this->titulo,
             'criado_em' => $dadosCad['created_at'],
             'atualizado_em' => $dadosCad['updated_at'],
-            'criado_por' => $dadosCad['criado_por'],
+            'criado_por' => (string) $dadosCad['criado_por'],
             'expirar' => $dadosCad['is_expired'],
             'expiresAt' => $dadosCad['expira_em'],
         );

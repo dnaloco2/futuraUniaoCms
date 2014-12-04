@@ -20,6 +20,8 @@
             ->appendFile($this->basePath() . '/bower_components/angular/angular.js')
             ->appendFile($this->basePath() . '/bower_components/angular-route/angular-route.js')
             ->appendFile($this->basePath() . '/bower_components/angular-resource/angular-resource.js')
+            ->appendFile($this->basePath() . '/js/plugins/ng-table.js')
+            ->appendFile($this->basePath() . '/js/app/dirPagination.js')
             ->appendFile($this->basePath() . '/js/app/CmsApp.js')
             ->appendFile($this->basePath() . '/js/app/Services.js')
             ->appendFile($this->basePath() . '/js/app/Directives.js')
@@ -111,57 +113,16 @@
                   <li class="has-dropdown"><a href="#">Produtos</a>
                     <ul class="dropdown">
 
-                      <li class="has-dropdown"><a href="#"  data-reveal-id="modal-produtos-riscos-financeiros">Riscos Financeiros</a>
-
-                        <!-- Nested Dropdown -->
-                        <ul class="dropdown">
-                          <li><label>Riscos Financeiros</label></li>
-                          <li><a href="#">Seguro Garantia</a></li>
-                          <li><a href="#">Fiança Fiscal</a></li>
-                        </ul>
+                      <li><a href="#"  data-reveal-id="modal-produtos-riscos-financeiros">Riscos Financeiros</a>
                       </li>
 
-                      <li class="has-dropdown"><a href="#" data-reveal-id="modal-produtos-riscos-patrimoniais-resp">Riscos Patrimoniais & Responsabilidades</a>
-
-                        <!-- Nested Dropdown -->
-                        <ul class="dropdown">
-                          <li><label>Riscos Patrimoniais & Responsabilidades</label></li>
-                          <li><a href="#">Responsabilidade de engenharia</a></li>
-
-                          <li class="has-dropdown"><a href="#">Responsabilidade Civil</a>
-                            <ul class="dropdown">
-                                <li><label>Responsabilidade Civil</label></li>
-                                <li><a href="#">Responsabilidade Civil Geral</a></li>
-                                <li><a href="#">Responsabilidade Civil Eventos</a></li>
-                                <li><a href="#">RS Profissional</a></li>
-                                <li><a href="#">D & O</a></li>
-                                <li><a href="#">E & O</a></li>
-                            </ul>
-                          </li>
-
-                          <li class="has-dropdown"><a href="#">Riscos Diversos</a>
-                            <ul class="dropdown">
-                                <li><label>Riscos Diversos</label></li>
-                                <li><a href="#">Equipamentos</a></li>
-                                <li><a href="#">Benfeitorias</a></li>
-                            </ul>
-                          </li>
-
-                          
-
-                        </ul>
+                      <li><a href="#" data-reveal-id="modal-produtos-riscos-patrimoniais-resp">Riscos Patrimoniais & Responsabilidades</a>
+                      </li>
+                      
+                      <li><a href="#" data-reveal-id="modal-produtos-riscos-diversos">Riscos Diversos</a>
                       </li>
 
-                      <li class="has-dropdown"><a href="#" data-reveal-id="modal-produtos-transportes">Transportes</a>
-                        <ul class="dropdown">
-                            <li><label>Transportes</label></li>
-                            <li><a href="#">Transporte Nacional</a></li>
-                            <li><a href="#">Transporte Internacional</a></li>
-                            <li><a href="#">Responsabilidade Civil do Transportador Rodoviário de Carga</a></li>
-                            <li><a href="#">Responsabilidade Civil por Dervio de carga</a></li>
-                            <li><a href="#">Responsabilidade Civil do Transportador Aéreo de Carga</a></li>
-                            <li><a href="#">Responsabilidade Civil do Transportador de Viagem Internacional</a></li>
-                        </ul>
+                      <li><a href="#" data-reveal-id="modal-produtos-transportes">Transportes</a>
                       </li>
 
                     </ul>
@@ -171,9 +132,9 @@
 
                   <li class="has-dropdown"><a href="#">Para Corretores</a>
                     <ul class="dropdown">
-                      <li><a href="/formularios" target="_self">Formulários</a></li>
-                      <li><a href="/notificacoes" target="_self">Notificações</a></li>
-                      <li><a href="/circulares" target="_self">Circuláres</a></li>
+                      <li><a href="#" data-reveal-id="formulariosModal">Formulários</a></li>
+                      <li><a href="#" data-reveal-id="notificacoesModal">Notificações</a></li>
+                      <li><a href="#" data-reveal-id="circularesModal">Circuláres</a></li>
                     </ul>
                   </li>
                   <li class="divider"></li>
@@ -181,19 +142,19 @@
 
                   <li class="has-dropdown"><a href="#">Ajuda</a>
                     <ul class="dropdown">
-                      <li><a href="#" target="_self">FAQ/Glossário</a></li>
-                      <li><a href="#" target="_self">Informativos</a></li>
-                      <li><a href="#" target="_self">Ind. Económicos</a></li>
-                      <li><a href="#" target="_self">Últ. Notícias</a></li>
+                      <li><a href="#" data-reveal-id="faqModal">FAQ</a></li>
+                      <li><a href="#" data-reveal-id="glossarioModal">Glossário</a></li>
+                      <li><a href="#" data-reveal-id="linksModal">Links Úteis</a></li>
+                      <li><a href="#" data-reveal-id="indicadoresModal">Ind. Econômicos</a></li>
                     </ul>
                   </li>
                   <li class="divider"></li>
 
                   <li class="has-dropdown"><a href="#">Atendimento</a>
                     <ul class="dropdown">
-                      <li><a href="#">Fale Conosco</a></li>
+                      <li><a href="#" data-reveal-id="formulariosModal">Fale Conosco</a></li>
                       <li><a href="#">Chat On-Line</a></li>
-                      <li><a href="#">Telefones</a></li>
+                      <li><a href="#" data-reveal-id="nossoCorretores">Telefones</a></li>
                     </ul>
                   </li>
                   
@@ -201,8 +162,8 @@
               </section>
             </nav>
         </header>
-        <div id="linha_header_top" class="linha_split_decor fixed"></div>
-        <div id="linha_header_bottom" class="linha_split_decor fixed"></div>
+        <!-- <div id="linha_header_top" class="linha_split_decor fixed"></div>
+        <div id="linha_header_bottom" class="linha_split_decor fixed"></div> -->
         
         <?php
         $route = $this->getHelperPluginManager()->getServiceLocator()->get('request')->getUri()->getPath(); 
@@ -266,10 +227,15 @@
         </div>
 
         <footer id="rodapte-principal">
-          
+          FOOTER
+          - Últ. Notícias
+          - Clima Tempo
+          - Site Map
+          - Contatos
+          - 
         </footer>
 
-        <!-- Janelas Modais INÍCIO -->
+      <!-- Janelas Modais INÍCIO -->
         
         <!-- Janela Modal Quem Somos -->
         <div id="modal-quem-somos" class="reveal-modal" data-reveal>
@@ -308,9 +274,11 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in debitis maiores ad, corrupti facere est doloribus inventore odit quasi, nihil atque beatae veniam velit sit ratione dignissimos! Aliquam quisquam deserunt voluptatibus eum, praesentium commodi debitis doloribus dolores vero esse voluptates molestias. Corporis adipisci voluptatum nam, suscipit ab molestiae aperiam harum, incidunt odio doloribus, aut? Non deleniti qui et aspernatur corrupti nesciunt, quisquam sunt, distinctio pariatur, at tempore quo. Illum culpa ut facilis eos impedit, quibusdam, enim officiis repellendus placeat reprehenderit ab. Veritatis, dolore, nihil. At aliquid, neque sequi iusto, eligendi quisquam maxime, provident rem facilis eos illo est repellat.</p>
           <a class="close-reveal-modal">&#215;</a>
         </div>
+        <!-- fim Janelas Modais de Serviços -->
 
 
         <!-- Janelas Modais de Produtos  -->
+
         <div id="modal-produtos-riscos-financeiros" class="reveal-modal" data-reveal>
           <h2>Riscos Financeiros</h2>
 
@@ -335,7 +303,7 @@
           </div>
           
           <a class="close-reveal-modal">&#215;</a>
-        </div>
+        </div> <!-- fim modal-produtos-riscos-financeiros  -->
 
         <div id="modal-produtos-riscos-patrimoniais-resp" class="reveal-modal" data-reveal>
           <h2>Riscos Patrimoniais & Responsabilidades</h2>
@@ -350,7 +318,47 @@
               </dd>
 
               <dd class="accordion-navigation">
-                <a href="#riscospr-responsabilidade-civil">Responsabilidade Civil</a>
+
+                <a href="#riscospr-responsabilidade-geral">Responsabilidade de Engenharia</a>
+                <div id="riscospr-responsabilidade-geral" class="content">
+                  <p>Sobre Responsabilidade Civil Geral... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+              </dd>
+
+              <dd class="accordion-navigation">
+
+                <a href="#riscospr-responsabilidade-eventos">Responsabilidade de Engenharia</a>
+                <div id="riscospr-responsabilidade-eventos" class="content">
+                  <p>Sobre Responsabilidade Civil Eventos... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+              </dd>
+
+              <dd class="accordion-navigation">
+
+                <a href="#riscospr-profissional">Responsabilidade de Engenharia</a>
+                <div id="riscospr-profissional" class="content">
+                  <p>Sobre RS Profissional... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+              </dd>
+
+              <dd class="accordion-navigation">
+
+                <a href="#riscospr-do">Responsabilidade de Engenharia</a>
+                <div id="riscospr-do" class="content">
+                  <p>Sobre D & O... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+              </dd>
+
+              <dd class="accordion-navigation">
+
+                <a href="#riscospr-responsabilidade-de-engenharia">Responsabilidade de Engenharia</a>
+                <div id="riscospr-responsabilidade-de-engenharia" class="content">
+                  <p>Sobre Responsabilidade de Engenharia ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde, delectus architecto optio animi dolores debitis tempora vero laboriosam, maiores aspernatur recusandae sequi in quae nesciunt iste esse ratione necessitatibus nulla sapiente hic. Sed nam perferendis voluptates maxime repudiandae molestiae sequi ipsam assumenda pariatur esse, non, nesciunt iste enim, quasi.</p>
+                </div>
+              </dd>
+
+              <dd class="accordion-navigation">
+                <a href="#riscospr-responsabilidade-civil-geral">Responsabilidade Civil </a>
 
                 <div id="riscospr-responsabilidade-civil" class="content">
                   <dl class="tabs" data-tab>
@@ -406,8 +414,41 @@
           </div>
 
           <a class="close-reveal-modal">&#215;</a>
-        </div>
+        </div> <!-- fim modal-produtos-riscos-patrimoniais-resp  -->
 
+        <div id="modal-produtos-riscos-diversos" class="reveal-modal" data-reveal>
+          <h2>Riscos Financeiros</h2>
+
+          <div>
+
+            <dl class="accordion" data-accordion="riscosDiver">
+
+              <dd class="accordion-navigation">
+
+                <a href="/#prod-pn-riscd-equip">Equipamentos</a>
+
+                <div id="prod-pn-riscd-equip" class="content">
+                  <p>Sobre equipamentos... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+
+              </dd>
+
+              <dd class="accordion-navigation">
+
+                <a href="/#prod-pn-riscd-ben">Benfeitorias</a>
+
+                <div id="prod-pn-riscd-ben" class="content">
+                  <p>Sobre benfeitorias... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius reprehenderit at enim eum quibusdam blanditiis asperiores ipsum corporis iusto modi, sapiente voluptatem consectetur soluta nemo perspiciatis consequatur ullam hic nulla natus culpa, impedit. Nam voluptates cumque quasi deleniti recusandae. Perspiciatis saepe error, voluptatum libero quas. Quibusdam saepe velit cupiditate.</p>
+                </div>
+
+              </dd>
+
+            </dl>
+
+          </div>
+          
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal-produtos-riscos-financeiros  -->
 
         <div id="modal-produtos-transportes" class="reveal-modal" data-reveal>
           <h2>Transportes</h2>
@@ -464,7 +505,403 @@
 
           <a class="close-reveal-modal">&#215;</a>
 
-        </div>
+        </div> <!-- fim modal-produtos-transportes  -->
+
+        <div ng-controller="FormulariosCtrl" id="formulariosModal" class="reveal-modal" data-reveal>
+
+          <div class="row margem_bottom_10 padding_left_10" >
+            <h1 class="titulo-modal titulo-parte-home-light-green ">Formulários</h1>
+            <hr class="my_fancy_hr hr_gradiente_light_grey">
+          </div>
+
+          <div ng-show="loadingFormularios" class="carregando_informacao texto_centralizado">
+            <img src="/img/carregando.gif" alt="">
+          </div>
+          <div ng-hide="loadingFormularios">
+            <strong>
+              <ng-pluralize count="formularios.length"
+                                 when="{'0': 'Sem Formulários Cadastrados!',
+                                 'one': '1 Formulário:',
+                                   'other': '{} Formulários:'}">
+              </ng-pluralize>
+            </strong>
+          </div>
+
+          <ul class="ng-cloak">
+            
+            <li dir-paginate="formulario in formularios | filter:q | itemsPerPage: pageSize: 'forms'" current-page="currentPage" pagination-id="forms">
+              {{ formulario.titulo }} | <a href="/{{ formulario.endereco }}" target="_self" download>download</a>
+            </li>
+
+          </ul>
+
+          <dir-pagination-controls pagination-id="forms" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/templates/dirPagination.tpl.html" class="ng-cloak"></dir-pagination-controls>
+              
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal formularios -->
+
+        <div ng-controller="NotificacoesCtrl" id="notificacoesModal" class="reveal-modal" data-reveal>
+
+          <div class="row margem_bottom_10 padding_left_10" >
+            <h1 class="titulo-modal titulo-parte-home-light-green ">Notificações</h1>
+            <hr class="my_fancy_hr hr_gradiente_light_grey">
+          </div>
+
+          <dl class="tabs" data-tab>
+            <dd class="active"><a href="/#panel_paginas_notificacoes">Paginas</a></dd>
+            <dd><a href="/#panel_arquivos_notificacoes">Arquivos</a></dd>
+          </dl>
+
+          
+
+          <div class="tabs-content">
+            <div class="content active" id="panel_paginas_notificacoes">
+              <div ng-show="loadingNotificacoes" class="carregando_informacao texto_centralizado">
+              <img src="/img/carregando.gif" alt="">
+            </div>
+            <div ng-hide="loadingNotificacoes">
+              <strong>
+                <ng-pluralize count="notificacoes.length"
+                           when="{'0': 'Sem Notificações Cadastradas!',
+                           'one': '1 Notificação:',
+                             'other': '{} Notificações:' }">
+                </ng-pluralize>
+              </strong>
+            </div>
+              <ul class="ng-cloak">
+                
+              <li dir-paginate="notificacao in notificacoes | filter:q | itemsPerPage: pageSize: 'notis'" current-page="currentPage" pagination-id="notis">
+                <a href="/conteudo/notificações/{{ notificacao.id }}" target="_self">
+                  {{ notificacao.titulo }}
+                </a>
+                &nbsp;|&nbsp;
+                Em {{ notificacao.criado_em.date }} 
+                &nbsp;Por Nome do Criador
+
+              </li>
+
+            </ul>
+
+            <dir-pagination-controls pagination-id="notis" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/templates/dirPagination.tpl.html" class="ng-cloak"></dir-pagination-controls>
+            </div>
+
+            <div class="content" id="panel_arquivos_notificacoes">
+              <div ng-show="loadingNotificacoesArquivos" class="carregando_informacao texto_centralizado">
+              <img src="/img/carregando.gif" alt="">
+            </div>
+            <div ng-hide="loadingNotificacoesArquivos">
+              <strong>
+                <ng-pluralize count="notificacoesArquivos.length"
+                           when="{'0': 'Sem Arquivos de Notificação Cadastradas!',
+                           'one': '1 Arquivo de Notificação:',
+                             'other': '{} Arquivos de Notificações:'}">
+                </ng-pluralize>
+              </strong>
+            </div>
+              <ul class="ng-cloak">
+                
+              <li dir-paginate="notificacaoArquivo in notificacoesArquivos | filter:w | itemsPerPage: pageSizeArquivos: 'notisarquis'" current-page="currentPageArquivos"  pagination-id="notisarquis">
+                {{ notificacaoArquivo.titulo }} | <a href="/{{ notificacaoArquivo.endereco }}" target="_self" download>download</a>
+
+              </li>
+
+            </ul>
+
+            <dir-pagination-controls pagination-id="notisarquis" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/templates/dirPagination.tpl.html" class="ng-cloak"></dir-pagination-controls>
+            </div>
+          </div>
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal notificacoes -->
+
+        <div ng-controller="CircularesCtrl" id="circularesModal" class="reveal-modal" data-reveal>
+
+          <div class="row margem_bottom_10 padding_left_10" >
+            <h1 class="titulo-modal titulo-parte-home-light-green ">Circulares</h1>
+            <hr class="my_fancy_hr hr_gradiente_light_grey">
+          </div>
+
+            <dl class="tabs" data-tab>
+            <dd class="active"><a href="/#panel_paginas_circulares">Paginas</a></dd>
+            <dd><a href="/#panel_arquivos_circulares">Arquivos</a></dd>
+          </dl>
+
+          <div class="tabs-content">
+            <div class="content active" id="panel_paginas_circulares">
+              <div ng-show="loadingCirculares" class="carregando_informacao texto_centralizado">
+              <img src="/img/carregando.gif" alt="">
+            </div>
+            <div ng-hide="loadingCirculares">
+              <strong>
+                <ng-pluralize count="circulares.length"
+                           when="{'0': 'Sem Circulares Cadastradas!',
+                           'one': '1 Circular:',
+                             'other': '{} Circulares:'}">
+                </ng-pluralize>
+              </strong>
+            </div>
+              <ul class="ng-cloak">
+              <li dir-paginate="circular in circulares | filter:q | itemsPerPage: pageSize: 'circus'" current-page="currentPage"  pagination-id="circus">
+                <a href="/conteudo/circulares/{{ circular.id }}" target="_self">
+                  {{ circular.titulo }}
+                </a>
+                &nbsp;|&nbsp;
+                Em {{ circular.criado_em.date }}  
+                &nbsp;Por Nome do Criador
+
+              </li>
+
+            </ul>
+
+            <dir-pagination-controls pagination-id="circus" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/templates/dirPagination.tpl.html" class="ng-cloak"></dir-pagination-controls>
+            </div>
+
+            <div class="content" id="panel_arquivos_circulares">
+              <div ng-show="loadingCircularesArquivos" class="carregando_informacao texto_centralizado">
+              <img src="/img/carregando.gif" alt="">
+            </div>
+            <div ng-hide="loadingCircularesArquivos">
+              <strong>
+                <ng-pluralize count="circularesArquivos.length"
+                           when="{'0': 'Sem Arquivos de Circular Cadastradas!',
+                           'one': '1 Arquivo de Circular:',
+                             'other': '{} Arquivos de Circulares:'}">
+              </ng-pluralize>
+              </strong>
+            </div>
+              <ul class="ng-cloak">
+              <li dir-paginate="circularArquivo in circularesArquivos | filter:q | itemsPerPage: pageSizeArquivos: 'circusarquis'" current-page="currentPageArquivos" pagination-id="circusarquis">
+                <a href="" target="_self">
+                  {{ circularArquivo.titulo }}
+                </a>
+                &nbsp;|&nbsp;
+                Em {{ circularArquivo.criado_em.date }} 
+                &nbsp;Por Nome do Criador
+
+              </li>
+
+            </ul>
+
+            <dir-pagination-controls pagination-id="circusarquis" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/templates/dirPagination.tpl.html" class="ng-cloak"></dir-pagination-controls>
+            </div>
+          </div>
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal notificacoes -->
+
+        <div id="faqModal" ng-controller="FaqCtrl" class="reveal-modal" data-reveal>
+
+          <div class="row margem_bottom_10 padding_left_10" >
+            <h1 class="titulo-modal titulo-parte-home-light-green ">FAQ - {{ currentPage }}</h1>
+            <hr class="my_fancy_hr hr_gradiente_light_grey">
+          </div>
+
+          <div class="row">
+
+            <div class="large-3 small-12 columns">
+              <label for="right-label" class="right inline"><strong>Procurar Pergunta: </strong></label>
+            </div>
+
+            <div class="large-9 small-12 columns">
+              <input ng-model="q" id="search" class="form-control expand" placeholder="Escreva a pergunta">
+            </div>
+
+          </div>
+
+              <div ng-show="loadingFaqs" class="carregando_informacao texto_centralizado">
+                <img src="/img/carregando.gif" alt="">
+              </div>
+                    
+                    <dl id="faq-accordion" class="accordion" data-accordion="myAccordionGroup">
+                  <dd class="accordion-navigation" dir-paginate="faq in faqs | filter:q | itemsPerPage: pageSize: 'faq'" current-page="currentPage" pagination-id="faq">
+                    <a href="/#faq-{{ faq.id }}">{{faq.titulo}}</a>
+                    <div id="faq-{{ faq.id }}" class="content">
+                      <p ng-bind-html="renderHtml(faq.conteudo)"></p>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dir-pagination-controls pagination-id="faq" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/templates/dirPagination.tpl.html"></dir-pagination-controls>
+
+
+              
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal faq -->
+
+        <div ng-controller="GlossarioCtrl" id="glossarioModal" class="reveal-modal" data-reveal>
+
+          <div class="row margem_bottom_10 padding_left_10" >
+            <h1 class="titulo-modal titulo-parte-home-light-green ">Glossário</h1>
+            <hr class="my_fancy_hr hr_gradiente_light_grey">
+          </div>
+
+          <div class="row">
+
+            <div class="large-3 small-12 columns">
+              <label for="right-label" class="right inline"><strong>Procurar Termo: </strong></label>
+            </div>
+
+            <div class="large-9 small-12 columns">
+              <input ng-model="q" id="search" class="form-control expand" placeholder="Escreva o termo">
+            </div>
+
+          </div>
+
+          <div ng-show="loadinGlossario" class="carregando_informacao texto_centralizado">
+            <img src="/img/carregando.gif" alt="">
+          </div>
+
+          <ul class="ng-cloak">
+            <li dir-paginate="termo in glossario | filter:q | itemsPerPage: pageSize: 'gloss'" current-page="currentPage" pagination-id="gloss">
+              
+              <strong>{{ termo.titulo }}</strong>: <span ng-bind-html="renderHtml(termo.conteudo)"></span>
+
+            </li>
+
+          </ul>
+
+          <dir-pagination-controls pagination-id="gloss" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/templates/dirPagination.tpl.html" class="ng-cloak"></dir-pagination-controls>
+
+          <a class="close-reveal-modal ">&#215;</a>
+        </div> <!-- fim modal glossario -->
+
+        <div ng-controller="LinksCtrl" id="linksModal" class="reveal-modal tiny" data-reveal>
+
+          Teste <br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum doloremque impedit laudantium magnam eos quae ipsum, rem, voluptatum saepe laboriosam ipsam nobis architecto debitis, vel aut provident tenetur perferendis, aliquid commodi magni sequi hic quia nemo! Nam odio fugiat, similique eum saepe. Laboriosam officiis delectus reiciendis, est tenetur voluptates ducimus! Ducimus enim dolor, eos id porro, amet culpa alias sunt reprehenderit necessitatibus deserunt eum. Sunt quia accusamus facilis quo, cum maiores nam illum sit quisquam, tempora fugit? Quod voluptate debitis voluptatum illo. Est, rerum sequi. Corporis atque incidunt placeat aliquam error veniam quis, minus voluptatem, qui, a pariatur voluptatibus, ut.
+
+          <a class="close-reveal-modal ">&#215;</a>
+        </div> <!-- fim modal glossario -->
+
+        <div id="indicadoresModal" class="reveal-modal small" data-reveal>
+
+          Teste <br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum doloremque impedit laudantium magnam eos quae ipsum, rem, voluptatum saepe laboriosam ipsam nobis architecto debitis, vel aut provident tenetur perferendis, aliquid commodi magni sequi hic quia nemo! Nam odio fugiat, similique eum saepe. Laboriosam officiis delectus reiciendis, est tenetur voluptates ducimus! Ducimus enim dolor, eos id porro, amet culpa alias sunt reprehenderit necessitatibus deserunt eum. Sunt quia accusamus facilis quo, cum maiores nam illum sit quisquam, tempora fugit? Quod voluptate debitis voluptatum illo. Est, rerum sequi. Corporis atque incidunt placeat aliquam error veniam quis, minus voluptatem, qui, a pariatur voluptatibus, ut.
+
+          <a class="close-reveal-modal ">&#215;</a>
+        </div> <!-- fim modal glossario -->
+
+        <div ng id="nossoCorretores" class="reveal-modal" data-reveal ng-controller="CorretoresCtrl">
+
+          <div class="row margem_bottom_10 padding_left_10" >
+            <h1 class="titulo-modal titulo-parte-home-light-green ">Nossos Colaboradores {{ currentPage }}</h1>
+            <p class="light_gray_f subtitulo">Entre em contato com um de nossos colaboradores:</p>
+          </div>
+
+          <div ng-show="loadingCorretores" class="carregando_informacao texto_centralizado">
+            <img src="/img/carregando.gif" alt="">
+          </div>
+
+          <div class="ng-cloak" pagination-id="colabor" dir-paginate="corretor in corretores | filter:q | itemsPerPage: pageSize: 'colabor'" current-page="currentPage">
+
+            <div class="row">
+              <div class="large-3 small-12 columns">
+                <span ng-show="corretor.foto.length">
+                  {{ corretor.foto }}
+                </span>
+                <span ng-hide="corretor.foto.length">
+                  <img src="/img/corretores/sem-foto.png" alt="Sem Foto Corretor">
+                </span>
+              </div>
+              <div class="large-8 large-offset-1 small-12 columns">
+                <table style="width: 100%">
+                  <tbody>
+                    <tr>
+                      <td><strong>Nome:</strong></td>
+                      <td><span>{{ corretor.nome }}</span><br></td>
+                    </tr>
+
+                    <span ng-show="corretor.area.length > 0">
+                      <tr>
+                        <td><strong>Area:</strong></td>
+                        <td><span>{{ corretor.area }}</span></td>
+                      </tr>
+                    </span>
+                    
+                    <span ng-show="corretor.cargo.length > 0">
+                      <tr>
+                        <td><strong>Cargo:</strong></td>
+                        <td><span>{{ corretor.cargo }}</span></td>
+                      </tr>
+                    </span>
+                    
+                    <span ng-show="corretor.filial.length > 0">
+                      <tr>
+                        <td><strong>Filial:</strong></td>
+                        <td><span>{{ corretor.filial }}</span></td>
+                      </tr>
+                    </span>
+
+                    <tr>
+                      <td><strong>E-mail:</strong></td>
+                      <td><span>{{ corretor.email }}</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <strong>
+                          <ng-pluralize count="corretor.telefones.length"
+                                           when="{'0': 'Sem telefone!',
+                                               'one': '1 Telefone:',
+                                               'other': '{} Telefones:'}">
+                          </ng-pluralize>
+                        </strong>
+                      </td>
+                      <td>
+                        <span ng-repeat="telefone in corretor.telefones">
+                          
+                          <div ng-if="telefone.tipo=='celular'"><span class="icon-mobile">{{ telefone.num }}</span></div>
+                          <div ng-if="telefone.tipo=='telefone'"><span class="icon-phone">{{ telefone.num }}</span></div>
+                          <div ng-if="telefone.tipo=='fax'"><span class="icon-uniE603">{{ telefone.num }}</span></div>
+                          
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <dir-pagination-controls pagination-id="colabor" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/templates/dirPagination.tpl.html" class="ng-cloak"></dir-pagination-controls>
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal nossoCorretores -->
+
+        <div ng-controller="FormulariosCtrl" id="formulariosModal" class="reveal-modal" data-reveal>
+
+          <div class="row margem_bottom_10 padding_left_10" >
+            <h1 class="titulo-modal titulo-parte-home-light-green ">Formulários</h1>
+            <hr class="my_fancy_hr hr_gradiente_light_grey">
+          </div>
+
+          <div ng-show="loadingFormularios" class="carregando_informacao texto_centralizado">
+            <img src="/img/carregando.gif" alt="">
+          </div>
+          <div ng-hide="loadingFormularios">
+            <strong>
+              <ng-pluralize count="formularios.length"
+                                 when="{'0': 'Sem Formulários Cadastrados!',
+                                 'one': '1 Formulário:',
+                                   'other': '{} Formulários:'}">
+              </ng-pluralize>
+            </strong>
+          </div>
+
+          <ul class="ng-cloak">
+            
+            <li dir-paginate="formulario in formularios | filter:q | itemsPerPage: pageSize: 'forms'" current-page="currentPage" pagination-id="forms">
+              {{ formulario.titulo }} | <a href="/{{ formulario.endereco }}" target="_self" download>download</a>
+            </li>
+
+          </ul>
+
+          <dir-pagination-controls pagination-id="forms" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/templates/dirPagination.tpl.html" class="ng-cloak"></dir-pagination-controls>
+              
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal formularios -->
+
+        <!-- fim das janelas modais  -->
 
 
       </div>

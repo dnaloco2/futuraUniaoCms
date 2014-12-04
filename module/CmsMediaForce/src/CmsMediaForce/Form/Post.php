@@ -61,7 +61,7 @@ class Post  extends Form
             'type'=>'Zend\Form\Element\Submit',
             'attributes' => array(
                 'value'=>'Publicar',
-                'class' => 'btn-success'
+                'class' => 'btn-success right'
             )
         ));
                 
