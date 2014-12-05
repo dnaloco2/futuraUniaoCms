@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow|Istok+Web|Arimo|Oswald|Signika|Sintony|Roboto+Condensed|Roboto);
+@import url(http://fonts.googleapis.com/css?family=Muli);
 @import url(http://thecodeplayer.com/uploads/fonts/fontawesome/css/font-awesome.min.css);
 @font-face {
   font-family: 'icomoon';
@@ -19925,7 +19926,7 @@ meta.foundation-mq-topbar {
 /* line 114, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .contain-to-grid {
   width: 100%;
-  background: #EEEDFA;
+  background: white;
 }
 /* line 118, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .contain-to-grid .top-bar {
@@ -19965,7 +19966,7 @@ meta.foundation-mq-topbar {
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: #EEEDFA;
+  background: white;
   margin-bottom: 0;
 }
 /* line 157, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -20082,7 +20083,7 @@ meta.foundation-mq-topbar {
 }
 /* line 265, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .title-area {
-  background: #EEEDFA;
+  background: white;
 }
 /* line 268, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .toggle-topbar a {
@@ -20112,7 +20113,7 @@ meta.foundation-mq-topbar {
 /* line 297, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section .divider,
 .top-bar-section [role="separator"] {
-  border-top: solid 1px #4035bf;
+  border-top: solid 1px gray;
   clear: both;
   height: 1px;
   width: 100%;
@@ -20406,7 +20407,7 @@ meta.foundation-mq-topbar {
 @media only screen and (min-width: 40.063em) {
   /* line 448, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar {
-    background: #EEEDFA;
+    background: white;
     overflow: visible;
   }
   /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -20440,7 +20441,7 @@ meta.foundation-mq-topbar {
   }
   /* line 466, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar.expanded {
-    background: #EEEDFA;
+    background: white;
   }
 
   /* line 469, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -20479,7 +20480,7 @@ meta.foundation-mq-topbar {
   .top-bar-section li:not(.has-form) a:not(.button) {
     padding: 0 15px;
     line-height: 45px;
-    background: #EEEDFA;
+    background: white;
   }
   /* line 505, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section li:not(.has-form) a:not(.button):hover {
@@ -20596,14 +20597,14 @@ meta.foundation-mq-topbar {
   .top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
     border-bottom: none;
     border-top: none;
-    border-right: solid 1px #f0effb;
+    border-right: solid 1px white;
     clear: none;
     height: 45px;
     width: 0;
   }
   /* line 627, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-form {
-    background: #EEEDFA;
+    background: white;
     padding: 0 15px;
     height: 45px;
   }
@@ -23753,17 +23754,112 @@ INDICE
 
 /********************* 3 - Estrutura ******************************/
 /* line 116, ../scss/app.scss */
+footer#rodape {
+  color: #C4C4C4;
+  background-color: #F1F1F1;
+  width: 100% !important;
+  border-top: 3px solid #C4C4C4;
+  margin-top: 20px;
+  padding-top: 15px;
+  /* vertical padding instead of vertical margin (ie8) */
+  /*  
+    Add styles for all links in the 'accordion':
+  .accordion a {...}
+  */
+}
+/* line 125, ../scss/app.scss */
+footer#rodape .logos_empresas img {
+  width: 80%;
+}
+/* line 129, ../scss/app.scss */
+footer#rodape .barra_copyright {
+  background: #323d38;
+  padding: 10px !important;
+}
+/* line 133, ../scss/app.scss */
+footer#rodape h3 {
+  font-size: 1.2em;
+  color: #C4C4C4;
+}
+/* line 137, ../scss/app.scss */
+footer#rodape a {
+  color: #C4C4C4;
+}
+/* line 141, ../scss/app.scss */
+footer#rodape .accordion_list {
+  margin: 0;
+}
+/* line 143, ../scss/app.scss */
+footer#rodape .accordion_list li {
+  list-style-type: none;
+}
+/* line 145, ../scss/app.scss */
+footer#rodape .accordion_list li.last-child {
+  margin-left: 19px;
+  list-style-type: disc;
+}
+/* line 148, ../scss/app.scss */
+footer#rodape .accordion_list .outer {
+  border: 1px solid #dadada;
+  border-width: 0 1px 1px;
+  background: #fff;
+}
+/* line 150, ../scss/app.scss */
+footer#rodape .accordion_list .inner {
+  margin-bottom: 0;
+  padding: .5em 20px 1em;
+  position: relative;
+  overflow: hidden;
+}
+/* line 152, ../scss/app.scss */
+footer#rodape .accordion_list .inner .inner {
+  padding-bottom: 0;
+}
+/* line 154, ../scss/app.scss */
+footer#rodape .accordion_list .h {
+  padding-top: .3em;
+}
+/* line 156, ../scss/app.scss */
+footer#rodape .accordion_list p {
+  margin: .5em 1px 1em;
+}
+/* line 163, ../scss/app.scss */
+footer#rodape a.trigger {
+  display: block;
+  padding-left: 20px;
+  background-image: url(/img/mais.png);
+  background-repeat: no-repeat;
+  background-position: 1px 50%;
+}
+/* line 165, ../scss/app.scss */
+footer#rodape a.trigger.open {
+  background-image: url(/img/menos.png);
+}
+/* line 167, ../scss/app.scss */
+footer#rodape .last-child a.trigger {
+  padding-left: 1px;
+  background-image: none;
+  font-weight: normal;
+}
+/* line 171, ../scss/app.scss */
+footer#rodape a.active {
+  font-weight: 700;
+  color: #f72;
+  text-decoration: none;
+}
+
+/* line 176, ../scss/app.scss */
 .admin-content {
   margin-left: 220px;
 }
 
-/* line 120, ../scss/app.scss */
+/* line 180, ../scss/app.scss */
 .content-admin {
   padding: 15px 30px;
   margin-left: 220px;
 }
 
-/* line 125, ../scss/app.scss */
+/* line 185, ../scss/app.scss */
 div.editable {
   border: solid 2px transparent;
   padding-left: 15px;
@@ -23771,17 +23867,17 @@ div.editable {
   border-color: #C4C4C4;
   min-height: 50px;
 }
-/* line 134, ../scss/app.scss */
+/* line 194, ../scss/app.scss */
 div.editable::hover {
   border-color: black;
 }
 
-/* line 140, ../scss/app.scss */
+/* line 200, ../scss/app.scss */
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
 
-/* line 144, ../scss/app.scss */
+/* line 204, ../scss/app.scss */
 #fotoCorretor {
   margin: auto;
   max-width: 200px;
@@ -23790,100 +23886,107 @@ div.editable::hover {
   box-shadow: -2px 2px 3px #43453A;
 }
 
-/* line 153, ../scss/app.scss */
+/* line 213, ../scss/app.scss */
 #tabela-corretores tbody {
   overflow-y: auto;
   overflow-x: scroll;
 }
 
-/* line 159, ../scss/app.scss */
+/* line 219, ../scss/app.scss */
 .linha_split_decor {
   clear: both;
   width: 100%;
   height: 3px;
 }
 
-/* line 166, ../scss/app.scss */
+/* line 226, ../scss/app.scss */
 #linha_header_top {
   background-color: #282165;
   top: 0;
 }
 
-/* line 171, ../scss/app.scss */
+/* line 231, ../scss/app.scss */
 #linha_header_bottom {
   background-color: #00A556;
   top: 45px;
 }
 
 /********************* 4 - Rodap├® *********************************/
-/* line 177, ../scss/app.scss */
+/* line 237, ../scss/app.scss */
 footer#rodape-principal {
   background: #0A0079;
   height: 200px;
 }
 
 /********************* 5 - Estilo de T├¡tulos *********************/
-/* line 184, ../scss/app.scss */
+/* line 244, ../scss/app.scss */
 .half-left-title {
   color: #00A556;
 }
 
-/* line 188, ../scss/app.scss */
+/* line 248, ../scss/app.scss */
 .half-right-title {
   color: #282165;
 }
 
 /********************* 6 - Estilo de Texto ************************/
-/* line 194, ../scss/app.scss */
+/* line 254, ../scss/app.scss */
 .tipo-telefone {
   float: left;
   margin-left: 5px;
 }
 
 /********************* 7 - Bot├Áes *********************************/
-/* line 201, ../scss/app.scss */
+/* line 261, ../scss/app.scss */
 .default-btn-cms {
   -moz-border-radius: 5px / 5px;
   -webkit-border-radius: 5px 5px;
   border-radius: 5px / 5px;
   background-color: #282165 !important;
 }
-/* line 207, ../scss/app.scss */
+/* line 267, ../scss/app.scss */
 .default-btn-cms:hover {
   background-color: #3c3197 !important;
 }
 
-/* line 212, ../scss/app.scss */
+/* line 272, ../scss/app.scss */
 .btn-cms {
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
-/* line 216, ../scss/app.scss */
+/* line 276, ../scss/app.scss */
 .quit-btn-cms {
   -moz-border-radius: 5px / 5px;
   -webkit-border-radius: 5px 5px;
   border-radius: 5px / 5px;
   background-color: #970004 !important;
 }
-/* line 222, ../scss/app.scss */
+/* line 282, ../scss/app.scss */
 .quit-btn-cms:hover {
   background-color: #ca0005 !important;
 }
 
 /********************* 8 - Navega├º├úo ******************************/
-/* line 228, ../scss/app.scss */
+/* line 289, ../scss/app.scss */
+#navbar-menu-principal {
+  border-top: 3px solid #282165;
+  border-bottom: 3px solid #00A556;
+  box-shadow: 0px 1px 5px #232323;
+}
+
+/* line 295, ../scss/app.scss */
 #admin-menu {
   width: 220px;
   margin-top: 47px;
   background: #282165;
   height: 100vh;
 }
-/* line 235, ../scss/app.scss */
+/* line 302, ../scss/app.scss */
 #admin-menu ul {
   margin: 0;
   padding: 0;
 }
-/* line 239, ../scss/app.scss */
+/* line 306, ../scss/app.scss */
 #admin-menu ul li {
   background-color: #00A556;
   -moz-transition-property: all;
@@ -23895,11 +23998,11 @@ footer#rodape-principal {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 245, ../scss/app.scss */
+/* line 312, ../scss/app.scss */
 #admin-menu ul li:hover {
   background-color: #00ce6b;
 }
-/* line 249, ../scss/app.scss */
+/* line 316, ../scss/app.scss */
 #admin-menu ul li li {
   padding-left: 20%;
   -moz-transition-property: all;
@@ -23911,11 +24014,11 @@ footer#rodape-principal {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 255, ../scss/app.scss */
+/* line 322, ../scss/app.scss */
 #admin-menu ul li li:hover {
   border-left: 5px solid #3f349f;
 }
-/* line 262, ../scss/app.scss */
+/* line 329, ../scss/app.scss */
 #admin-menu h3 {
   font-size: 1.4em;
   color: white;
@@ -23926,39 +24029,132 @@ footer#rodape-principal {
   background-image: -webkit-linear-gradient(#282165, #372e8b);
   background-image: linear-gradient(#282165, #372e8b);
 }
-/* line 268, ../scss/app.scss */
+/* line 335, ../scss/app.scss */
 #admin-menu a {
   color: white;
 }
 
-/* line 276, ../scss/app.scss */
+/* line 343, ../scss/app.scss */
 .menu-accordion ul {
   list-style-type: none;
 }
-/* line 279, ../scss/app.scss */
+/* line 346, ../scss/app.scss */
 .menu-accordion ul h3 {
   cursor: pointer;
   margin: 0 !important;
   padding: 5px !important;
 }
-/* line 285, ../scss/app.scss */
+/* line 352, ../scss/app.scss */
 .menu-accordion ul ul {
   display: none;
 }
-/* line 288, ../scss/app.scss */
+/* line 355, ../scss/app.scss */
 .menu-accordion ul ul li a {
   display: block;
 }
-/* line 294, ../scss/app.scss */
+/* line 361, ../scss/app.scss */
 .menu-accordion ul li.active ul {
   display: block;
 }
 
-/* line 303, ../scss/app.scss */
+/* line 370, ../scss/app.scss */
 .menu-links li a {
   font-weight: bold !important;
 }
 
 /********************* 9 - Formul├írios ****************************/
 /********************* 10 - Extras/Miscel├óneas ********************/
+/* line 379, ../scss/app.scss */
+.texto_centralizado {
+  text-align: center !important;
+}
+
+/* line 383, ../scss/app.scss */
+.light_right_border {
+  border-right: 1px solid #D6D7D0 !important;
+}
+
 /********************* 11 - Media Queries  ************************/
+/********************* 12 - P├ígina Index   ************************/
+/* line 394, ../scss/app.scss */
+#home_index * {
+  font-family: 'Muli', sans-serif !important;
+}
+/* line 398, ../scss/app.scss */
+#home_index #fundo_banner_home {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M1ZTZkNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y2ZmJmOSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c5e6d7), color-stop(100%, #f6fbf9));
+  background-image: -moz-linear-gradient(#c5e6d7, #f6fbf9);
+  background-image: -webkit-linear-gradient(#c5e6d7, #f6fbf9);
+  background-image: linear-gradient(#c5e6d7, #f6fbf9);
+  height: 100%;
+  width: 100%;
+}
+/* line 405, ../scss/app.scss */
+#home_index #banner_futura_uniao {
+  margin: auto;
+}
+/* line 409, ../scss/app.scss */
+#home_index #chamada_sulamerica {
+  border-top: 2px solid #C4C6BB;
+  border-bottom: 1px solid #C4C6BB;
+  min-height: 100px;
+  height: 100%;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkZmRmZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fdfdfd), color-stop(100%, #f5f5f5));
+  background-image: -moz-linear-gradient(#fdfdfd, #f5f5f5);
+  background-image: -webkit-linear-gradient(#fdfdfd, #f5f5f5);
+  background-image: linear-gradient(#fdfdfd, #f5f5f5);
+  display: block;
+  overflow: auto;
+}
+/* line 418, ../scss/app.scss */
+#home_index #chamada_sulamerica #texto_sulamerica {
+  line-height: 160%;
+  margin-top: 20px !important;
+  font-size: 1.3em;
+  color: #999999;
+  padding-left: 15%;
+}
+/* line 426, ../scss/app.scss */
+#home_index #chamada_sulamerica #logo_sulamerica {
+  width: 58%;
+  padding: 10px;
+}
+/* line 434, ../scss/app.scss */
+#home_index #futurauniao_features h1 {
+  font-size: 36px;
+  color: #97a69f;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+/* line 441, ../scss/app.scss */
+#home_index #futurauniao_features h2 {
+  font-size: 26px;
+  font-weight: normal !important;
+  color: #999999;
+}
+/* line 447, ../scss/app.scss */
+#home_index #futurauniao_features img {
+  width: 30%;
+}
+/* line 451, ../scss/app.scss */
+#home_index #futurauniao_features p {
+  width: 60%;
+  margin: auto;
+  height: 130px;
+  color: #828282;
+}
+/* line 458, ../scss/app.scss */
+#home_index #futurauniao_features .campo_img {
+  height: 140px;
+}
+/* line 462, ../scss/app.scss */
+#home_index #futurauniao_features button {
+  border-radius: 5px;
+  padding: 10px 30px;
+  background: #cfeade;
+  color: #7f8e87;
+}

@@ -32,7 +32,7 @@ $body-font-family: 'Arimo', sans-serif;
 
 // Top Bar
 $topbar-title-weight: bold;
-$color_top_01: #EEEDFA;
+$color_top_01: white;
 $fcolor_top_01: #262C35;
 
 $topbar-bg-color: $color_top_01;
@@ -113,6 +113,66 @@ INDICE
 }
 
 /********************* 3 - Estrutura ******************************/
+footer#rodape {
+	color: #C4C4C4;
+	background-color: #F1F1F1;
+	width: 100% !important;
+
+	border-top: 3px solid #C4C4C4;
+	margin-top: 20px;
+	padding-top: 15px;
+
+	.logos_empresas img {
+		width: 80%;
+	}
+
+	.barra_copyright {
+		background: #323d38;
+		padding: 10px !important;
+	}
+	h3 {
+		font-size: 1.2em;
+   		color: #C4C4C4;
+	}
+	a {
+		color: #C4C4C4;
+	}
+
+	.accordion_list {margin:0}
+
+	.accordion_list li {list-style-type:none}
+
+	.accordion_list li.last-child {margin-left:19px; list-style-type:disc}
+
+
+	.accordion_list .outer {border:1px solid #dadada; border-width:0 1px 1px; background: #fff}
+
+	.accordion_list .inner {margin-bottom:0; padding:.5em 20px 1em; position:relative; overflow:hidden}
+
+	.accordion_list .inner .inner {padding-bottom:0}
+
+	.accordion_list .h {padding-top:.3em} /* vertical padding instead of vertical margin (ie8) */
+
+	.accordion_list p {margin:.5em 1px 1em}
+
+	/*  
+	  Add styles for all links in the 'accordion':
+	.accordion a {...}
+	*/    
+
+	a.trigger {display:block; padding-left:20px; background-image: url(/img/mais.png); background-repeat: no-repeat; background-position: 1px 50%}
+
+	a.trigger.open {background-image: url(/img/menos.png)}
+
+	.last-child a.trigger{padding-left:1px; background-image:none; font-weight:normal}
+
+
+
+	a.active{font-weight:700; color:#f72; text-decoration:none}
+
+}
+
+
 .admin-content {
 	margin-left: 220px;
 }
@@ -210,7 +270,7 @@ footer#rodape-principal {
 }
 
 .btn-cms {
-	margin-top: 3px;
+	margin-top: 2px;
 }
 
 .quit-btn-cms {
@@ -225,6 +285,13 @@ footer#rodape-principal {
 }
 
 /********************* 8 - Navegação ******************************/
+
+#navbar-menu-principal {
+	border-top: 3px solid #282165;
+	border-bottom: 3px solid #00A556;
+	box-shadow: 0px 1px 5px #232323;
+}
+
 #admin-menu {
 	width: 220px;
 	margin-top: 47px;
@@ -309,5 +376,95 @@ footer#rodape-principal {
 /********************* 9 - Formulários ****************************/
 
 /********************* 10 - Extras/Miscelâneas ********************/
+.texto_centralizado {
+text-align: center !important;
+}
+
+.light_right_border {
+	border-right: 1px solid #D6D7D0 !important; 
+}
+
 
 /********************* 11 - Media Queries  ************************/
+
+/********************* 12 - Página Index   ************************/
+
+#home_index {
+	
+	* {
+		font-family: 'Muli', sans-serif !important;
+	}
+
+	#fundo_banner_home {
+	    @include background-image(linear-gradient(#c5e6d7, #f6fbf9));
+	    height: 100%;
+
+		width: 100%;
+	}
+
+	#banner_futura_uniao {
+		margin: auto;
+	}
+
+	#chamada_sulamerica {
+		border-top: 2px solid #C4C6BB;
+  		border-bottom: 1px solid #C4C6BB;
+		min-height: 100px;
+		height: 100%;
+		@include background-image(linear-gradient(#FDFDFD, #F5F5F5));
+		display: block;
+		overflow:auto;
+
+		#texto_sulamerica {
+			line-height: 160%;
+			margin-top: 20px !important;
+			font-size: 1.3em;
+			color: #999999;
+			padding-left: 15%;
+		}
+
+		#logo_sulamerica {
+			width: 58%;
+			padding: 10px;
+		}
+	}
+
+	#futurauniao_features {
+
+		h1 {
+			font-size: 36px;
+			color: #97a69f;
+			margin-bottom: 30px;
+			margin-top: 20px
+		}
+
+		h2 {
+			font-size: 26px;
+			font-weight: normal !important;
+			color: #999999;
+		}
+
+		img {
+			width: 30%;
+		}
+
+		p {
+			width: 60%;
+			margin: auto;
+			height: 130px;
+			color: #828282;
+		}
+
+		.campo_img {
+			height: 140px;
+		}
+
+		button{
+			border-radius: 5px;
+			padding: 10px 30px;
+			background: #cfeade;
+			color: #7f8e87;
+		}
+
+	}
+}

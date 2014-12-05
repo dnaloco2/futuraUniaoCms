@@ -1,5 +1,29 @@
 <?php echo $this->doctype(); ?>
 
+<?php
+$route = $this->getHelperPluginManager()->getServiceLocator()->get('request')->getUri()->getPath(); 
+$isAdmin = false;
+
+$isConteudo = false;
+
+if (strpos($route, 'admin') !== false) {
+    $isAdmin = true;
+}
+
+if (strpos($route, 'conteudo') !== false) {
+    $isConteudo = true;
+}
+
+?>
+
+<?php
+    header('Access-Control-Allow-Origin: *');
+    header("Access-Control-Allow-Credentials: true");
+    header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+    header('Access-Control-Max-Age: 1000');
+    header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Disposition, Content-Description');
+?>
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -17,6 +41,7 @@
         <!-- Scripts -->
         <?php echo $this->headScript()
             ->appendFile($this->basePath() . '/js/plugins/blockui-master/jquery.blockUI.js')
+            ->appendFile($this->basePath() . '/js/plugins/jquery.nestedAccordion.js')
             ->appendFile($this->basePath() . '/bower_components/angular/angular.js')
             ->appendFile($this->basePath() . '/bower_components/angular-route/angular-route.js')
             ->appendFile($this->basePath() . '/bower_components/angular-resource/angular-resource.js')
@@ -43,7 +68,7 @@
             <nav class="top-bar" data-topbar role="navigation">
               <!-- Title -->
               <ul class="title-area">
-                <li class="name"><h1><a href="/" target="_self"><span class="half-left-title">FUTURA</span> <span class="half-right-title">UNIÃO</span></a></h1></li>
+                <li class="name"><h1><a href="/" target="_self"><img src="/img/titulo_menu.jpg" alt="Titulo Menu"></a></h1></li>
 
                 <!-- Mobile Menu Toggle -->
                 <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -140,12 +165,13 @@
                   <li class="divider"></li>
 
 
-                  <li class="has-dropdown"><a href="#">Ajuda</a>
+                  <li class="has-dropdown"><a>Ajuda</a>
                     <ul class="dropdown">
                       <li><a href="#" data-reveal-id="faqModal">FAQ</a></li>
                       <li><a href="#" data-reveal-id="glossarioModal">Glossário</a></li>
                       <li><a href="#" data-reveal-id="linksModal">Links Úteis</a></li>
                       <li><a href="#" data-reveal-id="indicadoresModal">Ind. Econômicos</a></li>
+                      <li><a href="#" data-reveal-id="previsaoModal">Previsão do Tempo</a></li>
                     </ul>
                   </li>
                   <li class="divider"></li>
@@ -164,15 +190,6 @@
         </header>
         <!-- <div id="linha_header_top" class="linha_split_decor fixed"></div>
         <div id="linha_header_bottom" class="linha_split_decor fixed"></div> -->
-        
-        <?php
-        $route = $this->getHelperPluginManager()->getServiceLocator()->get('request')->getUri()->getPath(); 
-        $isAdmin = false;
-
-        if (strpos($route, 'admin') !== false) {
-            $isAdmin = true;
-        }
-        ?>
 
         <?php if ($isAdmin and $this->UserIdentity('CmsUser')): ?>
 
@@ -225,15 +242,7 @@
           <?php echo $this->content; ?>
 
         </div>
-
-        <footer id="rodapte-principal">
-          FOOTER
-          - Últ. Notícias
-          - Clima Tempo
-          - Site Map
-          - Contatos
-          - 
-        </footer>
+        
 
       <!-- Janelas Modais INÍCIO -->
         
@@ -773,10 +782,38 @@
           <a class="close-reveal-modal ">&#215;</a>
         </div> <!-- fim modal glossario -->
 
-        <div id="indicadoresModal" class="reveal-modal small" data-reveal>
+        <div id="indicadoresModal" class="reveal-modal" data-reveal>
 
-          Teste <br>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum doloremque impedit laudantium magnam eos quae ipsum, rem, voluptatum saepe laboriosam ipsam nobis architecto debitis, vel aut provident tenetur perferendis, aliquid commodi magni sequi hic quia nemo! Nam odio fugiat, similique eum saepe. Laboriosam officiis delectus reiciendis, est tenetur voluptates ducimus! Ducimus enim dolor, eos id porro, amet culpa alias sunt reprehenderit necessitatibus deserunt eum. Sunt quia accusamus facilis quo, cum maiores nam illum sit quisquam, tempora fugit? Quod voluptate debitis voluptatum illo. Est, rerum sequi. Corporis atque incidunt placeat aliquam error veniam quis, minus voluptatem, qui, a pariatur voluptatibus, ut.
+          <dl class="tabs vertical" data-tab>
+            <dd class="active"><a href="#indicadoresInflacao">Indicadores de inflação</a></dd>
+            <dd><a href="#indicadoresDiversos">Indicadores Diversos</a></dd>
+            <dd><a href="#dolarAtual">Dólar (Cotação Atual)</a></dd>
+            <dd><a href="#dolarUltimos">Dólar (Fechamento dos últimos Dias)</a></dd>
+            <dd><a href="#euroUltimos">Euro (Fechamento dos últimos Dias)</a></dd>
+            <dd><a href="#conversorMoedas">Conversor de moedas)</a></dd>
+          </dl>
+          <div class="tabs-content">
+            <div class="content active" id="indicadoresInflacao">
+  
+              <script type="text/javascript" src="http://www.debit.com.br/resumogratuito.php?info=inflacao"></script>
+            </div>
+            <div class="content" id="indicadoresDiversos">
+              <script type="text/javascript" src="http://www.debit.com.br/resumogratuito.php?info=diversos"></script>
+            </div>
+            <div class="content" id="dolarAtual">
+              <a href="http://www.debit.com.br" target="_blank" alt="Correção monetária e cálculos trabalhistas"><img src="http://www.debit.com.br/indicadores.php" title="Correção monetária e cálculos trabalhistas"></a>
+            </div>
+            <div class="content" id="dolarUltimos">
+              <script type="text/javascript" src="http://www.debit.com.br/resumogratuito.php?info=dolar"></script>
+            </div>
+            <div class="content" id="euroUltimos">
+              <script type="text/javascript" src="http://www.debit.com.br/resumogratuito.php?info=euro"></script>
+            </div>
+            <div class="content" id="conversorMoedas">
+              <div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana; float: left;"><iframe style="border:1px solid #C0C0C0; width:180px; height:300px;"  scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="http://pt.loobiz.com/BRL-vs-USD.htm"><a href="http://pt.loobiz.com/BRL-vs-USD.htm">BRL USD</a><div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana;"></iframe><br/><a href="http://pt.loobiz.com/moeda-conversor/">Conversor de Moedas</a><br/><a href="http://pt.loobiz.com/moeda-conversor/real+us-dolar">BRL / USD</a></div>
+              <div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana; float: left;"><iframe style="border:1px solid #C0C0C0; width:180px; height:300px;"  scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="http://pt.loobiz.com/BRL-vs-EUR.htm"><a href="http://pt.loobiz.com/BRL-vs-EUR.htm">BRL EUR</a><div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana;"></iframe><br/><a href="http://pt.loobiz.com/moeda-conversor/">Conversor de Moedas</a><br/><a href="http://pt.loobiz.com/moeda-conversor/real+euro">BRL / EUR</a></div>
+            </div>
+          </div>         
 
           <a class="close-reveal-modal ">&#215;</a>
         </div> <!-- fim modal glossario -->
@@ -901,11 +938,134 @@
           <a class="close-reveal-modal">&#215;</a>
         </div> <!-- fim modal formularios -->
 
+        <div id="previsaoModal" class="reveal-modal tiny" data-reveal>
+          <h3>Previsão do Tempo</h3>
+
+          <a href="http://www.accuweather.com/pt/br/sao-paulo/45881/weather-forecast/45881" class="aw-widget-legal">
+<!--
+By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.
+-->
+</a><div id="awcc1417788345787" class="aw-widget-current"  data-locationkey="" data-unit="c" data-language="pt" data-useip="true" data-uid="awcc1417788345787"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal formularios -->
+
+
         <!-- fim das janelas modais  -->
 
-
+        
       </div>
         <?php echo $this->inlineScript() ?>
+
+        <?php if (!$isAdmin && !$isConteudo): ?>
+
+         <footer  id="rodape" ng-class="{'admin-content': isAdmin}" class="ng-cloak">
+          
+
+          <div class="row">
+          <div class="margem_top_10"></div>
+
+            <div class="large-3 columns">
+              <h3 class="titulo_footer">Mapa do Site</h3>
+              <hr class="my_fancy_hr hr_gradiente_white">
+              <div class="margem_top_10"></div>
+              <ul id="sitemap" class="accordion">
+                <li>
+                  <a href="">Home</a>
+                </li>
+                <li>
+                  <a href=""><img src="/img/mais.png" alt="">Quem Somos</a>
+                </li>
+                <li>
+                  <a href=""><img src="/img/mais.png" alt="">Serviçoes</a>
+                </li>
+                <li>
+                  <a href=""><img src="/img/mais.png" alt="">Produtos</a>
+                </li>
+                <li>
+                  <a href=""><img src="/img/mais.png" alt="">Ajuda</a>
+                
+                </li>
+                <li>
+                  <a href=""><img src="/img/mais.png" alt="">Para Corretores</a>
+                  
+                </li>
+                <li>
+                  <a href="">Redes Sociais</a>
+                  
+                </li>
+                <li>
+                  <a href=""><img src="/img/mais.png" alt="">Atendimento</a>
+                  
+                </li>
+                <li>
+                  <a href="">Portal do Corretor</a>
+                </li>
+                
+              </ul>
+            </div>
+
+
+            <div class="large-4 columns logos_empresas">
+              <h3 class="titulo_footer">Sobre Nós</h3>
+              <hr class="my_fancy_hr hr_gradiente_white">
+              <div class="row">
+                <div class="margem_top_10"></div>              
+                <div class="large-12 columns"><img src="/img/logo-futura-rodape.png" alt="Logo da Futura União"></div>
+                <div class="large-12 columns margem_top_10"></div>
+                <div class="large-12 columns"><img src="/img/sulamerica-rodape.png" alt="Logo da SulAmerica"></div>
+              </div>
+              <!-- <p class="fonte_rodape">
+                <span class="right">Rua Sete de Abril, 342 - SL 105 - República</span>
+                <span class="right">São Paulo - SP - CEP 01044-000</span>
+              </p> -->
+
+            </div>
+
+            <div class="large-5 columns">
+              <h3 class="titulo_footer">Contatos</h3>
+              <hr class="my_fancy_hr hr_gradiente_white">
+              <br>
+              <div class="font_rodape">
+                <p>
+                  <strong>Fones: </strong>(11) 3214-4608 / 3214-4580 <br>
+                  <strong>E-mail: </strong>atendimento@casesassessoria.com.br
+                </p>
+              </div>
+
+              <br>
+
+              <h3 class="titulo_footer">Redes Sociais</h3>
+              <hr class="my_fancy_hr hr_gradiente_white">
+              <div class="margin_10"></div>
+              <div class="row">
+
+                  <div class="small-12 columns">
+                    <div class="btn_social_footer left">
+                      <a href="" class="twitter_icon"><span class="icon-twitter2"></span></a>
+                    </div>
+
+                    <div class="btn_social_footer left">
+                      <a href="" class="facebook_icon"><span class="icon-facebook2"></span></a>
+                    </div>
+                    
+                  </div>
+
+                </div>
+            
+            </div>
+
+          </div>
+
+          <div class="barra_copyright texto_centralizado">
+  
+            Visite-nos: Rua Sete de Abril, 342 -SL 105 - República - São Paulo - SP - Cep: 01044-000 <br>
+            Desenvolvido por <a href="" rel="no-follow">Media Force - Agência Digital</a>
+
+          </div>
+
+
+        </footer>  <!-- fim rodape  -->
+        <?php endif; ?>
       
       <script> 
         window.onload = function() {
@@ -962,6 +1122,8 @@
             $(".active").removeClass("active").addClass("inactive");
             $(this).removeClass("inactive").addClass("active");
           });
+
+          $("#sitemap").accordion();
 
         });
 
