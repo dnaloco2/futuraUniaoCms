@@ -113,64 +113,7 @@ INDICE
 }
 
 /********************* 3 - Estrutura ******************************/
-footer#rodape {
-	color: #C4C4C4;
-	background-color: #F1F1F1;
-	width: 100% !important;
 
-	border-top: 3px solid #C4C4C4;
-	margin-top: 20px;
-	padding-top: 15px;
-
-	.logos_empresas img {
-		width: 80%;
-	}
-
-	.barra_copyright {
-		background: #323d38;
-		padding: 10px !important;
-	}
-	h3 {
-		font-size: 1.2em;
-   		color: #C4C4C4;
-	}
-	a {
-		color: #C4C4C4;
-	}
-
-	.accordion_list {margin:0}
-
-	.accordion_list li {list-style-type:none}
-
-	.accordion_list li.last-child {margin-left:19px; list-style-type:disc}
-
-
-	.accordion_list .outer {border:1px solid #dadada; border-width:0 1px 1px; background: #fff}
-
-	.accordion_list .inner {margin-bottom:0; padding:.5em 20px 1em; position:relative; overflow:hidden}
-
-	.accordion_list .inner .inner {padding-bottom:0}
-
-	.accordion_list .h {padding-top:.3em} /* vertical padding instead of vertical margin (ie8) */
-
-	.accordion_list p {margin:.5em 1px 1em}
-
-	/*  
-	  Add styles for all links in the 'accordion':
-	.accordion a {...}
-	*/    
-
-	a.trigger {display:block; padding-left:20px; background-image: url(/img/mais.png); background-repeat: no-repeat; background-position: 1px 50%}
-
-	a.trigger.open {background-image: url(/img/menos.png)}
-
-	.last-child a.trigger{padding-left:1px; background-image:none; font-weight:normal}
-
-
-
-	a.active{font-weight:700; color:#f72; text-decoration:none}
-
-}
 
 
 .admin-content {
@@ -234,9 +177,101 @@ div.editable {
 }
 
 /********************* 4 - Rodapé *********************************/
-footer#rodape-principal {
-	background: #0A0079; 
-	height: 200px;
+
+$cor_fonte_footer: #999999;
+
+footer#rodape #sitemap li a.trigger {
+	padding-left: 25px !important;
+}
+
+footer#rodape #sitemap li ul {
+	padding-left: 15px !important;
+}
+
+.btn_social_footer {
+	padding: 15px;
+
+
+  	a {
+  		font-size: 2em !important;
+  		color: $cor_fonte_footer !important;
+		transition: color 0.5s;
+
+		&:hover {
+			color: #5B5849 !important;
+		}
+  	}
+	
+}
+
+footer#rodape {
+	color: $cor_fonte_footer;
+	background-color: #f1f1f1;
+	width: 100% !important;
+
+	border-top: 3px solid #999999;
+	margin-top: 20px;
+	padding-top: 15px;
+
+	#sitemap, #sitemap * {
+		list-style-type: none !important;
+		margin: 0 !important;
+		padding: 0 !important;
+
+	}
+
+	.logos_empresas img {
+		width: 100%;
+		background-position: center center;
+
+	}
+
+	.barra_copyright {
+		background: #999999;
+		color: white !important;
+		padding: 10px !important;
+	}
+
+	h3 {
+		font-size: 1.2em;
+   		color: $cor_fonte_footer;
+	}
+	a {
+		color: $cor_fonte_footer;
+	}
+
+	.accordion_list {margin:0}
+
+	.accordion_list li {list-style-type:none}
+
+	.accordion_list li.last-child {margin-left:19px; list-style-type:disc}
+
+
+	.accordion_list .outer {border:1px solid #dadada; border-width:0 1px 1px; background: #fff}
+
+	.accordion_list .inner {margin-bottom:0; padding:.5em 20px 1em; position:relative; overflow:hidden}
+
+	.accordion_list .inner .inner {padding-bottom:0}
+
+	.accordion_list .h {padding-top:.3em} /* vertical padding instead of vertical margin (ie8) */
+
+	.accordion_list p {margin:.5em 1px 1em}
+
+	/*  
+	  Add styles for all links in the 'accordion':
+	.accordion a {...}
+	*/    
+
+	a.trigger {display:block; padding-left:20px; background-image: url(/img/mais.jpg); background-repeat: no-repeat; background-position: 1px 50%}
+
+	a.trigger.open {background-image: url(/img/menos.jpg)}
+
+	.last-child a.trigger{padding-left:1px; background-image:none; font-weight:normal}
+
+
+
+	a.active{font-weight:700; color:#f72; text-decoration:none}
+
 }
 
 /********************* 5 - Estilo de Títulos *********************/
@@ -290,14 +325,26 @@ footer#rodape-principal {
 	border-top: 3px solid #282165;
 	border-bottom: 3px solid #00A556;
 	box-shadow: 0px 1px 5px #232323;
+	background: white;
+
+	a {
+		font-size: 0.9em;
+		transition: all 0.3s;
+	}
 }
 
 #admin-menu {
 	width: 220px;
-	margin-top: 47px;
+	margin-top: 51px;
 	background: $main-color;
+	border-right: 3px solid $cor_verde;
 
 	height:100vh;
+
+	#menu_title {
+		background: #282165 !important;
+		
+	}
 
 	ul{
 		margin: 0;
@@ -320,7 +367,7 @@ footer#rodape-principal {
   				@include transition-duration(0.3s);
 
 				&:hover {
-					border-left: 5px solid adjust-lightness($main-color, +15);
+					border-left: 5px solid adjust-lightness(#1A1540, +15);
 				}
 			}
 		}
@@ -329,7 +376,11 @@ footer#rodape-principal {
 	h3 {
 		font-size: 1.4em;
 		color: white;
-		@include background-image(linear-gradient( $main-color, adjust-lightness($main-color, +10)));
+		background: #1A1540;
+
+		&:hover {
+			background-color: adjust-lightness(#1A1540, +10);
+		}
 	}
 	
 	a {
@@ -376,12 +427,177 @@ footer#rodape-principal {
 /********************* 9 - Formulários ****************************/
 
 /********************* 10 - Extras/Miscelâneas ********************/
-.texto_centralizado {
-text-align: center !important;
+#logo_index_admin {
+ 	width: 84%;
+}
+
+#index_admin {
+	@include background-image(radial-gradient(45px 45px, #FFFFFF 60px, #EFEFEF 200px));
+	height: 100vh;
 }
 
 .light_right_border {
 	border-right: 1px solid #D6D7D0 !important; 
+}
+
+.height_vh {
+	height: 100vh !important;
+}
+
+.font_12 {
+	font-size: 12px !important;
+
+}
+
+.font_10 {
+	font-size: 10px !important;
+
+}
+
+.light_gray_f {
+	color: #B6B8AB;
+}
+
+.green_f {
+	color: #2F7938 !important;
+}
+
+hr.my_fancy_hr {
+	border: 0; 
+    height: 2px;
+    padding: 0 !important;
+    margin: 0 !important;
+    padding: 0;
+	
+}
+
+hr.hr_gradiente_dark_blue {
+	@include background-image(linear-gradient(to right, rgba(#385559, 1) , rgba(white, 0)));
+}
+
+hr.hr_gradiente_white {
+	@include background-image(linear-gradient(to right, rgba(white, 1) , rgba(white, 0)));
+}
+
+hr.hr_gradiente_light_green {
+	@include background-image(linear-gradient(to right, rgba(#88ACA3, 1) , rgba(white, 0)));
+}
+
+hr.hr_gradiente_light_grey {
+	@include background-image(linear-gradient(to right, rgba(#999999, 1) , rgba(white, 0)));
+}
+
+a.link_mediaforce {
+	color: #BEEFF1 !important;
+}
+
+.no-margin-all {
+	margin: 0 !important;
+} 
+
+.no-margin-left {
+	margin-left: 0 !important;
+}
+
+.no-margin-right {
+	margin-right: 0 !important;
+}
+
+.no-margin-left-right {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.margin_10 {
+	margin: 10px !important;
+}
+
+.no-padding-all {
+	padding: 0 !important;
+}
+
+.no-padding-left {
+	padding-left: 0 !important;
+}
+
+.no-padding-right {
+	padding-right: 0 !important;
+}
+
+.no-padding-left-right {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.small-symbol {
+	font-weight: normal;
+	font-size: 80%;
+}
+
+.box_shadow {
+	box-shadow: -5px 5px 4px #45473D, -1px 0 #484A40, 0 1px #484A40, 1px 0 #484A40, 0 -1px #484A40;
+}
+
+.border_left_1 {
+	border-left: 1px solid #ABB1AB;
+}
+
+.border_right_1 {
+	border-right: 1px solid #D7D9D7;
+}
+
+.padding_dez {
+	padding: 10px !important;
+}
+
+.padding_top_dez {
+	padding-top: 10px !important;
+}
+
+.padding_quinze {
+	padding: 15px !important;
+}
+
+.padding_vinte {
+	padding: 20px !important;
+}
+
+.padding_trinta {
+	padding: 30px !important;
+}
+
+.texto_centralizado {
+	text-align: center;
+}
+
+.margem_bottom_10 {
+	margin-bottom: 10px !important;
+}
+
+.margem_top_10 {
+	margin-top: 10px !important;
+}
+
+.padding_dez_vinte {
+	padding: 10px 20px !important;
+}
+
+.margin_left_10 {
+	margin-left: 10px !important;
+}
+
+.padding_left_10 {
+	margin-left: 10px !important;
+}
+
+.padding_left_20 {
+	margin-left: 20px !important;
+}
+
+
+.ng-table-counts {
+	display: none;
+	margin: 0 !important;
 }
 
 
@@ -462,9 +678,199 @@ text-align: center !important;
 		button{
 			border-radius: 5px;
 			padding: 10px 30px;
-			background: #cfeade;
-			color: #7f8e87;
+			background: #30B4B6;
+			color: white;
+			transition: background 0.3s;
+
+			&:hover {
+				background: #75D9DB;
+			}
 		}
 
 	}
 }
+
+
+/********************* 13 - Janelas Modais   ************************/
+
+#indicadoresModal dl dd {
+	width: 350px;
+}
+
+#indicadoresModal .tabs-content .content {
+	margin-left: 350px !important;
+
+	padding: 10px 50px;
+}
+
+.fundo_titulo_modal {
+	background: url("/img/bola-futura-uniao.png");
+	background-size: 100%;
+	background-position: left bottom;
+	height: 52px;
+	margin-left: 5px;
+	background-repeat: no-repeat;
+
+	h2.titulo_modal {
+		font-size: 1.7em;
+		color: #969696;
+		font-weight: normal!important;
+		margin-left: 55px;
+		padding-bottom: 3px;
+	}
+}
+
+.reveal-modal {
+	background: rgba(255, 255, 255, 0.92);
+	p {
+		padding: 10px 30px 0 30px;
+	}
+}
+
+.reveal-modal.produtos-pagina {
+	p {
+		padding: 10px 31px;
+		color: #969696 !important;
+	}
+
+	.accordion {
+		margin-top: 20px;
+	}
+
+	dd.accordion-navigation {
+		padding: 0px 31px;
+		a {
+			padding: 10px 15px;
+			font-size: 1.8em;
+			background: #bfd5ca;
+			color: #485c52;
+			border: 1px solid #8fb5a2;
+			border-left: 6px solid #8fb5a2;
+			transition: all 0.4s;
+
+			&:hover {
+				border-left: 6px solid #ACC8BA;
+				background: #DBE8E1;
+				color: #60796C;
+			}
+
+		}
+
+		
+	}
+
+	dd.accordion-navigation.active {
+		a {
+
+			border-left: 6px solid #ACC8BA;
+			background: #DBE8E1;
+			color: #485c52;
+
+		}
+	}
+
+	.tabs-content {
+		margin: 0 !important;
+		padding: 0 !important;
+
+		p {
+			margin: 0;
+
+			margin-bottom: 0px !important;
+
+			padding: 15px 20px 20px 52px !important;
+
+  			@include background-image(linear-gradient(white, white, #FCFCFC, #ebebeb));
+
+		}
+	}
+
+
+	.accordion-navigation .content  {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+
+	.content dl.tabs_accordion a {
+		padding: 0 !important;
+		margin: 0 !important;
+		border: none !important;
+		background: none !important;
+		font-size: 1.2em;
+		padding: 10px 20px !important;
+
+		color: #ACBDB5;
+
+		transition: color 0.3s;
+
+		&:hover {
+			color: #60796C;
+		}
+
+	}
+
+	.tabs.tabs_accordion {
+		border-left: 6px solid #bfd6ca;
+		border-right: 1px solid #bfd6ca;
+		
+	}
+
+	.tabs dd.active {
+		
+		background: url(/img/esfera-futurauniao-3.png);
+		background-repeat: no-repeat;
+		background-position: left center; 
+		padding-left: 20px;
+		margin-left: 15px;
+
+		a {
+			color: #60796C;
+		}
+	}
+	.content dl.tabs_accordion {
+		background: #e1faed;
+		border-bottom: 1px solid #95B9A7;
+	}
+
+	.tabs-content * {
+		border: none ;
+
+	} 
+
+	.tabs-content .content.active{
+		border-left: 6px solid lightgray !important;
+		border-right: 1px solid lightgrey !important;
+		border-bottom: 1px solid lightgrey !important;
+	}
+}
+
+
+.reveal-modal.conteudo-lista-estilo {
+
+	.lista-conteudo {
+		padding: 10px 30px;
+	}
+
+	dl {
+		dd {
+
+			a{
+				margin: 2px;
+				padding: 0;
+				padding: 5px 25px;
+				border-radius: 5px;
+				font-size: 1.2em;
+				font-weight: normal;
+			}
+
+
+		}
+
+		dd.active {
+			a {
+				font-weight: bold;
+			}
+		}
+	}
+}
+

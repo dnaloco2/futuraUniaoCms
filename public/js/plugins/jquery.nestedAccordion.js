@@ -15,7 +15,7 @@
 
     var version = '1.4.7.4';
     var o = $.extend({}, $.fn.accordion.defaults, options);
-	  
+    
     return this.each(function() {
       var containerID = o.container ? '#' + this.id : '', objID = o.objID ? o.objID : o.obj + o.objClass,
         Obj = o.container ? containerID + ' ' + objID : '#' + this.id,

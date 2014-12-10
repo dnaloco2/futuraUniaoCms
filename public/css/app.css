@@ -24,298 +24,538 @@
 }
 
 /* line 28, ../scss/_myfonts.scss */
-.icon-content-copy:before {
-  content: "\e60b";
+.icon-facebook2:before {
+  content: "\e652";
 }
 
 /* line 31, ../scss/_myfonts.scss */
-.icon-uniE603:before {
-  content: "\e603";
+.icon-earth:before {
+  content: "\e644";
 }
 
 /* line 34, ../scss/_myfonts.scss */
-.icon-uniE604:before {
-  content: "\e604";
+.icon-globe:before {
+  content: "\e643";
 }
 
 /* line 37, ../scss/_myfonts.scss */
+.icon-twitter2:before {
+  content: "\e64e";
+}
+
+/* line 40, ../scss/_myfonts.scss */
+.icon-list:before {
+  content: "\e64d";
+}
+
+/* line 43, ../scss/_myfonts.scss */
+.icon-bubbles:before {
+  content: "\e64b";
+}
+
+/* line 46, ../scss/_myfonts.scss */
+.icon-bubbles2:before {
+  content: "\e64c";
+}
+
+/* line 49, ../scss/_myfonts.scss */
+.icon-quill:before {
+  content: "\e649";
+}
+
+/* line 52, ../scss/_myfonts.scss */
+.icon-globe2:before {
+  content: "\e641";
+}
+
+/* line 55, ../scss/_myfonts.scss */
+.icon-earth2:before {
+  content: "\e642";
+}
+
+/* line 58, ../scss/_myfonts.scss */
+.icon-address-book:before {
+  content: "\e63b";
+}
+
+/* line 61, ../scss/_myfonts.scss */
 .icon-pencil:before {
   content: "\e610";
 }
 
-/* line 40, ../scss/_myfonts.scss */
+/* line 64, ../scss/_myfonts.scss */
 .icon-pencil2:before {
   content: "\e611";
 }
 
-/* line 43, ../scss/_myfonts.scss */
-.icon-phone:before {
+/* line 67, ../scss/_myfonts.scss */
+.icon-phone22:before {
   content: "\e601";
 }
 
-/* line 46, ../scss/_myfonts.scss */
+/* line 70, ../scss/_myfonts.scss */
 .icon-mobile:before {
   content: "\e602";
 }
 
-/* line 49, ../scss/_myfonts.scss */
+/* line 73, ../scss/_myfonts.scss */
 .icon-drawer:before {
   content: "\e60c";
 }
 
-/* line 52, ../scss/_myfonts.scss */
+/* line 76, ../scss/_myfonts.scss */
 .icon-users:before {
   content: "\e606";
 }
 
-/* line 55, ../scss/_myfonts.scss */
+/* line 79, ../scss/_myfonts.scss */
 .icon-users2:before {
   content: "\e607";
 }
 
-/* line 58, ../scss/_myfonts.scss */
+/* line 82, ../scss/_myfonts.scss */
 .icon-lock:before {
   content: "\e608";
 }
 
-/* line 61, ../scss/_myfonts.scss */
+/* line 85, ../scss/_myfonts.scss */
 .icon-lock2:before {
   content: "\e609";
 }
 
-/* line 64, ../scss/_myfonts.scss */
+/* line 88, ../scss/_myfonts.scss */
 .icon-unlocked:before {
   content: "\e60a";
 }
 
-/* line 67, ../scss/_myfonts.scss */
+/* line 91, ../scss/_myfonts.scss */
 .icon-remove:before {
   content: "\e612";
 }
 
-/* line 70, ../scss/_myfonts.scss */
+/* line 94, ../scss/_myfonts.scss */
 .icon-tree:before {
   content: "\e60d";
 }
 
-/* line 73, ../scss/_myfonts.scss */
+/* line 97, ../scss/_myfonts.scss */
 .icon-link:before {
   content: "\e60e";
 }
 
-/* line 76, ../scss/_myfonts.scss */
+/* line 100, ../scss/_myfonts.scss */
 .icon-cancel-circle:before {
   content: "\e613";
 }
 
-/* line 79, ../scss/_myfonts.scss */
+/* line 103, ../scss/_myfonts.scss */
 .icon-close:before {
   content: "\e614";
 }
 
-/* line 82, ../scss/_myfonts.scss */
+/* line 106, ../scss/_myfonts.scss */
 .icon-enter:before {
   content: "\e615";
 }
 
-/* line 85, ../scss/_myfonts.scss */
+/* line 109, ../scss/_myfonts.scss */
 .icon-exit:before {
   content: "\e605";
 }
 
-/* line 88, ../scss/_myfonts.scss */
+/* line 112, ../scss/_myfonts.scss */
 .icon-googleplus:before {
   content: "\e616";
 }
 
-/* line 91, ../scss/_myfonts.scss */
+/* line 115, ../scss/_myfonts.scss */
 .icon-facebook:before {
   content: "\e617";
 }
 
-/* line 94, ../scss/_myfonts.scss */
+/* line 118, ../scss/_myfonts.scss */
 .icon-twitter:before {
   content: "\e618";
 }
 
-/* line 97, ../scss/_myfonts.scss */
+/* line 121, ../scss/_myfonts.scss */
 .icon-feed:before {
   content: "\e619";
 }
 
-/* line 100, ../scss/_myfonts.scss */
+/* line 124, ../scss/_myfonts.scss */
 .icon-vimeo2:before {
   content: "\e61a";
 }
 
-/* line 103, ../scss/_myfonts.scss */
+/* line 127, ../scss/_myfonts.scss */
 .icon-lanyrd:before {
   content: "\e61b";
 }
 
-/* line 106, ../scss/_myfonts.scss */
+/* line 130, ../scss/_myfonts.scss */
 .icon-github:before {
   content: "\e61c";
 }
 
-/* line 109, ../scss/_myfonts.scss */
+/* line 133, ../scss/_myfonts.scss */
 .icon-blogger:before {
   content: "\e61d";
 }
 
-/* line 112, ../scss/_myfonts.scss */
+/* line 136, ../scss/_myfonts.scss */
 .icon-tumblr:before {
   content: "\e61e";
 }
 
-/* line 115, ../scss/_myfonts.scss */
+/* line 139, ../scss/_myfonts.scss */
 .icon-linkedin:before {
   content: "\e61f";
 }
 
-/* line 118, ../scss/_myfonts.scss */
+/* line 142, ../scss/_myfonts.scss */
 .icon-file-xml:before {
   content: "\e60f";
 }
 
-/* line 121, ../scss/_myfonts.scss */
+/* line 145, ../scss/_myfonts.scss */
 .icon-close2:before {
   content: "\e620";
 }
 
-/* line 124, ../scss/_myfonts.scss */
+/* line 148, ../scss/_myfonts.scss */
 .icon-compose:before {
   content: "\e621";
 }
 
-/* line 127, ../scss/_myfonts.scss */
+/* line 151, ../scss/_myfonts.scss */
 .icon-trash:before {
   content: "\e622";
 }
 
-/* line 130, ../scss/_myfonts.scss */
-.icon-key:before {
-  content: "\e623";
-}
-
-/* line 133, ../scss/_myfonts.scss */
-.icon-search:before {
-  content: "\e600";
-}
-
-/* line 136, ../scss/_myfonts.scss */
-.icon-settings:before {
-  content: "\e624";
-}
-
-/* line 139, ../scss/_myfonts.scss */
-.icon-lock3:before {
-  content: "\e625";
-}
-
-/* line 142, ../scss/_myfonts.scss */
-.icon-pen:before {
-  content: "\e626";
-}
-
-/* line 145, ../scss/_myfonts.scss */
-.icon-news:before {
-  content: "\e627";
-}
-
-/* line 148, ../scss/_myfonts.scss */
-.icon-photo:before {
-  content: "\e628";
-}
-
-/* line 151, ../scss/_myfonts.scss */
-.icon-note:before {
-  content: "\e629";
-}
-
 /* line 154, ../scss/_myfonts.scss */
-.icon-params:before {
-  content: "\e62a";
+.icon-twitter4:before {
+  content: "\e650";
 }
 
 /* line 157, ../scss/_myfonts.scss */
-.icon-calendar:before {
-  content: "\e62b";
+.icon-uniE603:before {
+  content: "\e603";
 }
 
 /* line 160, ../scss/_myfonts.scss */
-.icon-wallet:before {
-  content: "\e62c";
+.icon-uniE604:before {
+  content: "\e604";
 }
 
 /* line 163, ../scss/_myfonts.scss */
-.icon-users3:before {
-  content: "\e62d";
-}
-
-/* line 166, ../scss/_myfonts.scss */
 .icon-user-add:before {
   content: "\e62e";
 }
 
-/* line 169, ../scss/_myfonts.scss */
+/* line 166, ../scss/_myfonts.scss */
 .icon-vcard:before {
   content: "\e62f";
 }
 
-/* line 172, ../scss/_myfonts.scss */
+/* line 169, ../scss/_myfonts.scss */
 .icon-chat:before {
   content: "\e630";
 }
 
-/* line 175, ../scss/_myfonts.scss */
+/* line 172, ../scss/_myfonts.scss */
 .icon-key2:before {
   content: "\e631";
 }
 
-/* line 178, ../scss/_myfonts.scss */
+/* line 175, ../scss/_myfonts.scss */
 .icon-creditcard:before {
   content: "\e632";
 }
 
-/* line 181, ../scss/_myfonts.scss */
+/* line 178, ../scss/_myfonts.scss */
 .icon-lock4:before {
   content: "\e633";
 }
 
-/* line 184, ../scss/_myfonts.scss */
+/* line 181, ../scss/_myfonts.scss */
 .icon-logout:before {
   content: "\e634";
 }
 
-/* line 187, ../scss/_myfonts.scss */
+/* line 184, ../scss/_myfonts.scss */
 .icon-login:before {
   content: "\e635";
 }
 
-/* line 190, ../scss/_myfonts.scss */
+/* line 187, ../scss/_myfonts.scss */
 .icon-cross:before {
   content: "\e636";
 }
 
-/* line 193, ../scss/_myfonts.scss */
+/* line 190, ../scss/_myfonts.scss */
 .icon-cross2:before {
   content: "\e637";
 }
 
-/* line 196, ../scss/_myfonts.scss */
+/* line 193, ../scss/_myfonts.scss */
 .icon-minus:before {
   content: "\e638";
 }
 
-/* line 199, ../scss/_myfonts.scss */
+/* line 196, ../scss/_myfonts.scss */
 .icon-cross3:before {
   content: "\e639";
 }
 
-/* line 202, ../scss/_myfonts.scss */
+/* line 199, ../scss/_myfonts.scss */
 .icon-docs:before {
   content: "\e63a";
+}
+
+/* line 202, ../scss/_myfonts.scss */
+.icon-twitter3:before {
+  content: "\e64f";
+}
+
+/* line 205, ../scss/_myfonts.scss */
+.icon-feather:before {
+  content: "\e64a";
+}
+
+/* line 208, ../scss/_myfonts.scss */
+.icon-users3:before {
+  content: "\e62d";
+}
+
+/* line 211, ../scss/_myfonts.scss */
+.icon-user-add:before {
+  content: "\e62e";
+}
+
+/* line 214, ../scss/_myfonts.scss */
+.icon-vcard:before {
+  content: "\e62f";
+}
+
+/* line 217, ../scss/_myfonts.scss */
+.icon-chat:before {
+  content: "\e630";
+}
+
+/* line 220, ../scss/_myfonts.scss */
+.icon-key2:before {
+  content: "\e631";
+}
+
+/* line 223, ../scss/_myfonts.scss */
+.icon-creditcard:before {
+  content: "\e632";
+}
+
+/* line 226, ../scss/_myfonts.scss */
+.icon-lock4:before {
+  content: "\e633";
+}
+
+/* line 229, ../scss/_myfonts.scss */
+.icon-logout:before {
+  content: "\e634";
+}
+
+/* line 232, ../scss/_myfonts.scss */
+.icon-login:before {
+  content: "\e635";
+}
+
+/* line 235, ../scss/_myfonts.scss */
+.icon-cross:before {
+  content: "\e636";
+}
+
+/* line 238, ../scss/_myfonts.scss */
+.icon-cross2:before {
+  content: "\e637";
+}
+
+/* line 241, ../scss/_myfonts.scss */
+.icon-minus:before {
+  content: "\e638";
+}
+
+/* line 244, ../scss/_myfonts.scss */
+.icon-cross3:before {
+  content: "\e639";
+}
+
+/* line 247, ../scss/_myfonts.scss */
+.icon-docs:before {
+  content: "\e63a";
+}
+
+/* line 250, ../scss/_myfonts.scss */
+.icon-clipboard:before {
+  content: "\e647";
+}
+
+/* line 253, ../scss/_myfonts.scss */
+.icon-social-twitter:before {
+  content: "\e651";
+}
+
+/* line 256, ../scss/_myfonts.scss */
+.icon-point-of-interest:before {
+  content: "\e645";
+}
+
+/* line 259, ../scss/_myfonts.scss */
+.icon-quick-contacts-dialer:before {
+  content: "\e63c";
+}
+
+/* line 262, ../scss/_myfonts.scss */
+.icon-content-copy:before {
+  content: "\e60b";
+}
+
+/* line 265, ../scss/_myfonts.scss */
+.icon-bubbles2:before {
+  content: "\e64c";
+}
+
+/* line 268, ../scss/_myfonts.scss */
+.icon-quill:before {
+  content: "\e649";
+}
+
+/* line 271, ../scss/_myfonts.scss */
+.icon-globe2:before {
+  content: "\e641";
+}
+
+/* line 274, ../scss/_myfonts.scss */
+.icon-earth2:before {
+  content: "\e642";
+}
+
+/* line 277, ../scss/_myfonts.scss */
+.icon-address-book:before {
+  content: "\e63b";
+}
+
+/* line 280, ../scss/_myfonts.scss */
+.icon-pencil:before {
+  content: "\e610";
+}
+
+/* line 283, ../scss/_myfonts.scss */
+.icon-pencil2:before {
+  content: "\e611";
+}
+
+/* line 286, ../scss/_myfonts.scss */
+.icon-phone22:before {
+  content: "\e601";
+}
+
+/* line 289, ../scss/_myfonts.scss */
+.icon-mobile:before {
+  content: "\e602";
+}
+
+/* line 292, ../scss/_myfonts.scss */
+.icon-drawer:before {
+  content: "\e60c";
+}
+
+/* line 295, ../scss/_myfonts.scss */
+.icon-users:before {
+  content: "\e606";
+}
+
+/* line 298, ../scss/_myfonts.scss */
+.icon-board:before {
+  content: "\e648";
+}
+
+/* line 301, ../scss/_myfonts.scss */
+.icon-planet:before {
+  content: "\e646";
+}
+
+/* line 304, ../scss/_myfonts.scss */
+.icon-phone:before {
+  content: "\e640";
+}
+
+/* line 307, ../scss/_myfonts.scss */
+.icon-phone2:before {
+  content: "\e63d";
+}
+
+/* line 310, ../scss/_myfonts.scss */
+.icon-addressbook:before {
+  content: "\e63e";
+}
+
+/* line 313, ../scss/_myfonts.scss */
+.icon-addressbook2:before {
+  content: "\e63f";
+}
+
+/* line 316, ../scss/_myfonts.scss */
+.icon-key:before {
+  content: "\e623";
+}
+
+/* line 319, ../scss/_myfonts.scss */
+.icon-search:before {
+  content: "\e600";
+}
+
+/* line 322, ../scss/_myfonts.scss */
+.icon-settings:before {
+  content: "\e624";
+}
+
+/* line 325, ../scss/_myfonts.scss */
+.icon-lock3:before {
+  content: "\e625";
+}
+
+/* line 328, ../scss/_myfonts.scss */
+.icon-pen:before {
+  content: "\e626";
+}
+
+/* line 331, ../scss/_myfonts.scss */
+.icon-news:before {
+  content: "\e627";
+}
+
+/* line 334, ../scss/_myfonts.scss */
+.icon-photo:before {
+  content: "\e628";
+}
+
+/* line 337, ../scss/_myfonts.scss */
+.icon-note:before {
+  content: "\e629";
+}
+
+/* line 340, ../scss/_myfonts.scss */
+.icon-params:before {
+  content: "\e62a";
+}
+
+/* line 343, ../scss/_myfonts.scss */
+.icon-calendar:before {
+  content: "\e62b";
+}
+
+/* line 346, ../scss/_myfonts.scss */
+.icon-wallet:before {
+  content: "\e62c";
 }
 
 /*CSS file for fontawesome - an iconfont we will be using. This CSS file imported contains the font-face declaration. More info: http://fortawesome.github.io/Font-Awesome/ */
@@ -23753,113 +23993,18 @@ INDICE
 }
 
 /********************* 3 - Estrutura ******************************/
-/* line 116, ../scss/app.scss */
-footer#rodape {
-  color: #C4C4C4;
-  background-color: #F1F1F1;
-  width: 100% !important;
-  border-top: 3px solid #C4C4C4;
-  margin-top: 20px;
-  padding-top: 15px;
-  /* vertical padding instead of vertical margin (ie8) */
-  /*  
-    Add styles for all links in the 'accordion':
-  .accordion a {...}
-  */
-}
-/* line 125, ../scss/app.scss */
-footer#rodape .logos_empresas img {
-  width: 80%;
-}
-/* line 129, ../scss/app.scss */
-footer#rodape .barra_copyright {
-  background: #323d38;
-  padding: 10px !important;
-}
-/* line 133, ../scss/app.scss */
-footer#rodape h3 {
-  font-size: 1.2em;
-  color: #C4C4C4;
-}
-/* line 137, ../scss/app.scss */
-footer#rodape a {
-  color: #C4C4C4;
-}
-/* line 141, ../scss/app.scss */
-footer#rodape .accordion_list {
-  margin: 0;
-}
-/* line 143, ../scss/app.scss */
-footer#rodape .accordion_list li {
-  list-style-type: none;
-}
-/* line 145, ../scss/app.scss */
-footer#rodape .accordion_list li.last-child {
-  margin-left: 19px;
-  list-style-type: disc;
-}
-/* line 148, ../scss/app.scss */
-footer#rodape .accordion_list .outer {
-  border: 1px solid #dadada;
-  border-width: 0 1px 1px;
-  background: #fff;
-}
-/* line 150, ../scss/app.scss */
-footer#rodape .accordion_list .inner {
-  margin-bottom: 0;
-  padding: .5em 20px 1em;
-  position: relative;
-  overflow: hidden;
-}
-/* line 152, ../scss/app.scss */
-footer#rodape .accordion_list .inner .inner {
-  padding-bottom: 0;
-}
-/* line 154, ../scss/app.scss */
-footer#rodape .accordion_list .h {
-  padding-top: .3em;
-}
-/* line 156, ../scss/app.scss */
-footer#rodape .accordion_list p {
-  margin: .5em 1px 1em;
-}
-/* line 163, ../scss/app.scss */
-footer#rodape a.trigger {
-  display: block;
-  padding-left: 20px;
-  background-image: url(/img/mais.png);
-  background-repeat: no-repeat;
-  background-position: 1px 50%;
-}
-/* line 165, ../scss/app.scss */
-footer#rodape a.trigger.open {
-  background-image: url(/img/menos.png);
-}
-/* line 167, ../scss/app.scss */
-footer#rodape .last-child a.trigger {
-  padding-left: 1px;
-  background-image: none;
-  font-weight: normal;
-}
-/* line 171, ../scss/app.scss */
-footer#rodape a.active {
-  font-weight: 700;
-  color: #f72;
-  text-decoration: none;
-}
-
-/* line 176, ../scss/app.scss */
+/* line 119, ../scss/app.scss */
 .admin-content {
   margin-left: 220px;
 }
 
-/* line 180, ../scss/app.scss */
+/* line 123, ../scss/app.scss */
 .content-admin {
   padding: 15px 30px;
   margin-left: 220px;
 }
 
-/* line 185, ../scss/app.scss */
+/* line 128, ../scss/app.scss */
 div.editable {
   border: solid 2px transparent;
   padding-left: 15px;
@@ -23867,17 +24012,17 @@ div.editable {
   border-color: #C4C4C4;
   min-height: 50px;
 }
-/* line 194, ../scss/app.scss */
+/* line 137, ../scss/app.scss */
 div.editable::hover {
   border-color: black;
 }
 
-/* line 200, ../scss/app.scss */
+/* line 143, ../scss/app.scss */
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
 
-/* line 204, ../scss/app.scss */
+/* line 147, ../scss/app.scss */
 #fotoCorretor {
   margin: auto;
   max-width: 200px;
@@ -23886,107 +24031,240 @@ div.editable::hover {
   box-shadow: -2px 2px 3px #43453A;
 }
 
-/* line 213, ../scss/app.scss */
+/* line 156, ../scss/app.scss */
 #tabela-corretores tbody {
   overflow-y: auto;
   overflow-x: scroll;
 }
 
-/* line 219, ../scss/app.scss */
+/* line 162, ../scss/app.scss */
 .linha_split_decor {
   clear: both;
   width: 100%;
   height: 3px;
 }
 
-/* line 226, ../scss/app.scss */
+/* line 169, ../scss/app.scss */
 #linha_header_top {
   background-color: #282165;
   top: 0;
 }
 
-/* line 231, ../scss/app.scss */
+/* line 174, ../scss/app.scss */
 #linha_header_bottom {
   background-color: #00A556;
   top: 45px;
 }
 
 /********************* 4 - Rodap├® *********************************/
-/* line 237, ../scss/app.scss */
-footer#rodape-principal {
-  background: #0A0079;
-  height: 200px;
+/* line 183, ../scss/app.scss */
+footer#rodape #sitemap li a.trigger {
+  padding-left: 25px !important;
+}
+
+/* line 187, ../scss/app.scss */
+footer#rodape #sitemap li ul {
+  padding-left: 15px !important;
+}
+
+/* line 191, ../scss/app.scss */
+.btn_social_footer {
+  padding: 15px;
+}
+/* line 195, ../scss/app.scss */
+.btn_social_footer a {
+  font-size: 2em !important;
+  color: #999999 !important;
+  transition: color 0.5s;
+}
+/* line 200, ../scss/app.scss */
+.btn_social_footer a:hover {
+  color: #5B5849 !important;
+}
+
+/* line 207, ../scss/app.scss */
+footer#rodape {
+  color: #999999;
+  background-color: #f1f1f1;
+  width: 100% !important;
+  border-top: 3px solid #999999;
+  margin-top: 20px;
+  padding-top: 15px;
+  /* vertical padding instead of vertical margin (ie8) */
+  /*  
+    Add styles for all links in the 'accordion':
+  .accordion a {...}
+  */
+}
+/* line 216, ../scss/app.scss */
+footer#rodape #sitemap, footer#rodape #sitemap * {
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* line 223, ../scss/app.scss */
+footer#rodape .logos_empresas img {
+  width: 100%;
+  background-position: center center;
+}
+/* line 229, ../scss/app.scss */
+footer#rodape .barra_copyright {
+  background: #999999;
+  color: white !important;
+  padding: 10px !important;
+}
+/* line 235, ../scss/app.scss */
+footer#rodape h3 {
+  font-size: 1.2em;
+  color: #999999;
+}
+/* line 239, ../scss/app.scss */
+footer#rodape a {
+  color: #999999;
+}
+/* line 243, ../scss/app.scss */
+footer#rodape .accordion_list {
+  margin: 0;
+}
+/* line 245, ../scss/app.scss */
+footer#rodape .accordion_list li {
+  list-style-type: none;
+}
+/* line 247, ../scss/app.scss */
+footer#rodape .accordion_list li.last-child {
+  margin-left: 19px;
+  list-style-type: disc;
+}
+/* line 250, ../scss/app.scss */
+footer#rodape .accordion_list .outer {
+  border: 1px solid #dadada;
+  border-width: 0 1px 1px;
+  background: #fff;
+}
+/* line 252, ../scss/app.scss */
+footer#rodape .accordion_list .inner {
+  margin-bottom: 0;
+  padding: .5em 20px 1em;
+  position: relative;
+  overflow: hidden;
+}
+/* line 254, ../scss/app.scss */
+footer#rodape .accordion_list .inner .inner {
+  padding-bottom: 0;
+}
+/* line 256, ../scss/app.scss */
+footer#rodape .accordion_list .h {
+  padding-top: .3em;
+}
+/* line 258, ../scss/app.scss */
+footer#rodape .accordion_list p {
+  margin: .5em 1px 1em;
+}
+/* line 265, ../scss/app.scss */
+footer#rodape a.trigger {
+  display: block;
+  padding-left: 20px;
+  background-image: url(/img/mais.jpg);
+  background-repeat: no-repeat;
+  background-position: 1px 50%;
+}
+/* line 267, ../scss/app.scss */
+footer#rodape a.trigger.open {
+  background-image: url(/img/menos.jpg);
+}
+/* line 269, ../scss/app.scss */
+footer#rodape .last-child a.trigger {
+  padding-left: 1px;
+  background-image: none;
+  font-weight: normal;
+}
+/* line 273, ../scss/app.scss */
+footer#rodape a.active {
+  font-weight: 700;
+  color: #f72;
+  text-decoration: none;
 }
 
 /********************* 5 - Estilo de T├¡tulos *********************/
-/* line 244, ../scss/app.scss */
+/* line 279, ../scss/app.scss */
 .half-left-title {
   color: #00A556;
 }
 
-/* line 248, ../scss/app.scss */
+/* line 283, ../scss/app.scss */
 .half-right-title {
   color: #282165;
 }
 
 /********************* 6 - Estilo de Texto ************************/
-/* line 254, ../scss/app.scss */
+/* line 289, ../scss/app.scss */
 .tipo-telefone {
   float: left;
   margin-left: 5px;
 }
 
 /********************* 7 - Bot├Áes *********************************/
-/* line 261, ../scss/app.scss */
+/* line 296, ../scss/app.scss */
 .default-btn-cms {
   -moz-border-radius: 5px / 5px;
   -webkit-border-radius: 5px 5px;
   border-radius: 5px / 5px;
   background-color: #282165 !important;
 }
-/* line 267, ../scss/app.scss */
+/* line 302, ../scss/app.scss */
 .default-btn-cms:hover {
   background-color: #3c3197 !important;
 }
 
-/* line 272, ../scss/app.scss */
+/* line 307, ../scss/app.scss */
 .btn-cms {
   margin-top: 2px;
 }
 
-/* line 276, ../scss/app.scss */
+/* line 311, ../scss/app.scss */
 .quit-btn-cms {
   -moz-border-radius: 5px / 5px;
   -webkit-border-radius: 5px 5px;
   border-radius: 5px / 5px;
   background-color: #970004 !important;
 }
-/* line 282, ../scss/app.scss */
+/* line 317, ../scss/app.scss */
 .quit-btn-cms:hover {
   background-color: #ca0005 !important;
 }
 
 /********************* 8 - Navega├º├úo ******************************/
-/* line 289, ../scss/app.scss */
+/* line 324, ../scss/app.scss */
 #navbar-menu-principal {
   border-top: 3px solid #282165;
   border-bottom: 3px solid #00A556;
   box-shadow: 0px 1px 5px #232323;
+  background: white;
+}
+/* line 330, ../scss/app.scss */
+#navbar-menu-principal a {
+  font-size: 0.9em;
+  transition: all 0.3s;
 }
 
-/* line 295, ../scss/app.scss */
+/* line 336, ../scss/app.scss */
 #admin-menu {
   width: 220px;
-  margin-top: 47px;
+  margin-top: 51px;
   background: #282165;
+  border-right: 3px solid #00A556;
   height: 100vh;
 }
-/* line 302, ../scss/app.scss */
+/* line 344, ../scss/app.scss */
+#admin-menu #menu_title {
+  background: #282165 !important;
+}
+/* line 349, ../scss/app.scss */
 #admin-menu ul {
   margin: 0;
   padding: 0;
 }
-/* line 306, ../scss/app.scss */
+/* line 353, ../scss/app.scss */
 #admin-menu ul li {
   background-color: #00A556;
   -moz-transition-property: all;
@@ -23998,11 +24276,11 @@ footer#rodape-principal {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 312, ../scss/app.scss */
+/* line 359, ../scss/app.scss */
 #admin-menu ul li:hover {
   background-color: #00ce6b;
 }
-/* line 316, ../scss/app.scss */
+/* line 363, ../scss/app.scss */
 #admin-menu ul li li {
   padding-left: 20%;
   -moz-transition-property: all;
@@ -24014,73 +24292,295 @@ footer#rodape-principal {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 322, ../scss/app.scss */
+/* line 369, ../scss/app.scss */
 #admin-menu ul li li:hover {
-  border-left: 5px solid #3f349f;
+  border-left: 5px solid #31287a;
 }
-/* line 329, ../scss/app.scss */
+/* line 376, ../scss/app.scss */
 #admin-menu h3 {
   font-size: 1.4em;
   color: white;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI4MjE2NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM3MmU4YiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #282165), color-stop(100%, #372e8b));
-  background-image: -moz-linear-gradient(#282165, #372e8b);
-  background-image: -webkit-linear-gradient(#282165, #372e8b);
-  background-image: linear-gradient(#282165, #372e8b);
+  background: #1A1540;
 }
-/* line 335, ../scss/app.scss */
+/* line 381, ../scss/app.scss */
+#admin-menu h3:hover {
+  background-color: #2a2266;
+}
+/* line 386, ../scss/app.scss */
 #admin-menu a {
   color: white;
 }
 
-/* line 343, ../scss/app.scss */
+/* line 394, ../scss/app.scss */
 .menu-accordion ul {
   list-style-type: none;
 }
-/* line 346, ../scss/app.scss */
+/* line 397, ../scss/app.scss */
 .menu-accordion ul h3 {
   cursor: pointer;
   margin: 0 !important;
   padding: 5px !important;
 }
-/* line 352, ../scss/app.scss */
+/* line 403, ../scss/app.scss */
 .menu-accordion ul ul {
   display: none;
 }
-/* line 355, ../scss/app.scss */
+/* line 406, ../scss/app.scss */
 .menu-accordion ul ul li a {
   display: block;
 }
-/* line 361, ../scss/app.scss */
+/* line 412, ../scss/app.scss */
 .menu-accordion ul li.active ul {
   display: block;
 }
 
-/* line 370, ../scss/app.scss */
+/* line 421, ../scss/app.scss */
 .menu-links li a {
   font-weight: bold !important;
 }
 
 /********************* 9 - Formul├írios ****************************/
 /********************* 10 - Extras/Miscel├óneas ********************/
-/* line 379, ../scss/app.scss */
-.texto_centralizado {
-  text-align: center !important;
+/* line 430, ../scss/app.scss */
+#logo_index_admin {
+  width: 84%;
 }
 
-/* line 383, ../scss/app.scss */
+/* line 434, ../scss/app.scss */
+#index_admin {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjQ1cHgiIGN5PSI0NXB4IiByPSIyMDAlIj48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VmZWZlZiIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-radial-gradient(45px 45px, #ffffff 60px, #efefef 200px);
+  background-image: -webkit-radial-gradient(45px 45px, #ffffff 60px, #efefef 200px);
+  background-image: radial-gradient(45px 45px, #ffffff 60px, #efefef 200px);
+  height: 100vh;
+}
+
+/* line 439, ../scss/app.scss */
 .light_right_border {
   border-right: 1px solid #D6D7D0 !important;
 }
 
+/* line 443, ../scss/app.scss */
+.height_vh {
+  height: 100vh !important;
+}
+
+/* line 447, ../scss/app.scss */
+.font_12 {
+  font-size: 12px !important;
+}
+
+/* line 452, ../scss/app.scss */
+.font_10 {
+  font-size: 10px !important;
+}
+
+/* line 457, ../scss/app.scss */
+.light_gray_f {
+  color: #B6B8AB;
+}
+
+/* line 461, ../scss/app.scss */
+.green_f {
+  color: #2F7938 !important;
+}
+
+/* line 465, ../scss/app.scss */
+hr.my_fancy_hr {
+  border: 0;
+  height: 2px;
+  padding: 0 !important;
+  margin: 0 !important;
+  padding: 0;
+}
+
+/* line 474, ../scss/app.scss */
+hr.hr_gradiente_dark_blue {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM4NTU1OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #385559), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -moz-linear-gradient(left, #385559, rgba(255, 255, 255, 0));
+  background-image: -webkit-linear-gradient(left, #385559, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to right, #385559, rgba(255, 255, 255, 0));
+}
+
+/* line 478, ../scss/app.scss */
+hr.hr_gradiente_white {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -moz-linear-gradient(left, #ffffff, rgba(255, 255, 255, 0));
+  background-image: -webkit-linear-gradient(left, #ffffff, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
+}
+
+/* line 482, ../scss/app.scss */
+hr.hr_gradiente_light_green {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg4YWNhMyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #88aca3), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -moz-linear-gradient(left, #88aca3, rgba(255, 255, 255, 0));
+  background-image: -webkit-linear-gradient(left, #88aca3, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to right, #88aca3, rgba(255, 255, 255, 0));
+}
+
+/* line 486, ../scss/app.scss */
+hr.hr_gradiente_light_grey {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk5OTk5OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #999999), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -moz-linear-gradient(left, #999999, rgba(255, 255, 255, 0));
+  background-image: -webkit-linear-gradient(left, #999999, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to right, #999999, rgba(255, 255, 255, 0));
+}
+
+/* line 490, ../scss/app.scss */
+a.link_mediaforce {
+  color: #BEEFF1 !important;
+}
+
+/* line 494, ../scss/app.scss */
+.no-margin-all {
+  margin: 0 !important;
+}
+
+/* line 498, ../scss/app.scss */
+.no-margin-left {
+  margin-left: 0 !important;
+}
+
+/* line 502, ../scss/app.scss */
+.no-margin-right {
+  margin-right: 0 !important;
+}
+
+/* line 506, ../scss/app.scss */
+.no-margin-left-right {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* line 511, ../scss/app.scss */
+.margin_10 {
+  margin: 10px !important;
+}
+
+/* line 515, ../scss/app.scss */
+.no-padding-all {
+  padding: 0 !important;
+}
+
+/* line 519, ../scss/app.scss */
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+/* line 523, ../scss/app.scss */
+.no-padding-right {
+  padding-right: 0 !important;
+}
+
+/* line 527, ../scss/app.scss */
+.no-padding-left-right {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* line 532, ../scss/app.scss */
+.small-symbol {
+  font-weight: normal;
+  font-size: 80%;
+}
+
+/* line 537, ../scss/app.scss */
+.box_shadow {
+  box-shadow: -5px 5px 4px #45473D, -1px 0 #484A40, 0 1px #484A40, 1px 0 #484A40, 0 -1px #484A40;
+}
+
+/* line 541, ../scss/app.scss */
+.border_left_1 {
+  border-left: 1px solid #ABB1AB;
+}
+
+/* line 545, ../scss/app.scss */
+.border_right_1 {
+  border-right: 1px solid #D7D9D7;
+}
+
+/* line 549, ../scss/app.scss */
+.padding_dez {
+  padding: 10px !important;
+}
+
+/* line 553, ../scss/app.scss */
+.padding_top_dez {
+  padding-top: 10px !important;
+}
+
+/* line 557, ../scss/app.scss */
+.padding_quinze {
+  padding: 15px !important;
+}
+
+/* line 561, ../scss/app.scss */
+.padding_vinte {
+  padding: 20px !important;
+}
+
+/* line 565, ../scss/app.scss */
+.padding_trinta {
+  padding: 30px !important;
+}
+
+/* line 569, ../scss/app.scss */
+.texto_centralizado {
+  text-align: center;
+}
+
+/* line 573, ../scss/app.scss */
+.margem_bottom_10 {
+  margin-bottom: 10px !important;
+}
+
+/* line 577, ../scss/app.scss */
+.margem_top_10 {
+  margin-top: 10px !important;
+}
+
+/* line 581, ../scss/app.scss */
+.padding_dez_vinte {
+  padding: 10px 20px !important;
+}
+
+/* line 585, ../scss/app.scss */
+.margin_left_10 {
+  margin-left: 10px !important;
+}
+
+/* line 589, ../scss/app.scss */
+.padding_left_10 {
+  margin-left: 10px !important;
+}
+
+/* line 593, ../scss/app.scss */
+.padding_left_20 {
+  margin-left: 20px !important;
+}
+
+/* line 598, ../scss/app.scss */
+.ng-table-counts {
+  display: none;
+  margin: 0 !important;
+}
+
 /********************* 11 - Media Queries  ************************/
 /********************* 12 - P├ígina Index   ************************/
-/* line 394, ../scss/app.scss */
+/* line 610, ../scss/app.scss */
 #home_index * {
   font-family: 'Muli', sans-serif !important;
 }
-/* line 398, ../scss/app.scss */
+/* line 614, ../scss/app.scss */
 #home_index #fundo_banner_home {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M1ZTZkNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y2ZmJmOSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -24091,11 +24591,11 @@ footer#rodape-principal {
   height: 100%;
   width: 100%;
 }
-/* line 405, ../scss/app.scss */
+/* line 621, ../scss/app.scss */
 #home_index #banner_futura_uniao {
   margin: auto;
 }
-/* line 409, ../scss/app.scss */
+/* line 625, ../scss/app.scss */
 #home_index #chamada_sulamerica {
   border-top: 2px solid #C4C6BB;
   border-bottom: 1px solid #C4C6BB;
@@ -24110,7 +24610,7 @@ footer#rodape-principal {
   display: block;
   overflow: auto;
 }
-/* line 418, ../scss/app.scss */
+/* line 634, ../scss/app.scss */
 #home_index #chamada_sulamerica #texto_sulamerica {
   line-height: 160%;
   margin-top: 20px !important;
@@ -24118,43 +24618,210 @@ footer#rodape-principal {
   color: #999999;
   padding-left: 15%;
 }
-/* line 426, ../scss/app.scss */
+/* line 642, ../scss/app.scss */
 #home_index #chamada_sulamerica #logo_sulamerica {
   width: 58%;
   padding: 10px;
 }
-/* line 434, ../scss/app.scss */
+/* line 650, ../scss/app.scss */
 #home_index #futurauniao_features h1 {
   font-size: 36px;
   color: #97a69f;
   margin-bottom: 30px;
   margin-top: 20px;
 }
-/* line 441, ../scss/app.scss */
+/* line 657, ../scss/app.scss */
 #home_index #futurauniao_features h2 {
   font-size: 26px;
   font-weight: normal !important;
   color: #999999;
 }
-/* line 447, ../scss/app.scss */
+/* line 663, ../scss/app.scss */
 #home_index #futurauniao_features img {
   width: 30%;
 }
-/* line 451, ../scss/app.scss */
+/* line 667, ../scss/app.scss */
 #home_index #futurauniao_features p {
   width: 60%;
   margin: auto;
   height: 130px;
   color: #828282;
 }
-/* line 458, ../scss/app.scss */
+/* line 674, ../scss/app.scss */
 #home_index #futurauniao_features .campo_img {
   height: 140px;
 }
-/* line 462, ../scss/app.scss */
+/* line 678, ../scss/app.scss */
 #home_index #futurauniao_features button {
   border-radius: 5px;
   padding: 10px 30px;
-  background: #cfeade;
-  color: #7f8e87;
+  background: #30B4B6;
+  color: white;
+  transition: background 0.3s;
+}
+/* line 685, ../scss/app.scss */
+#home_index #futurauniao_features button:hover {
+  background: #75D9DB;
+}
+
+/********************* 13 - Janelas Modais   ************************/
+/* line 696, ../scss/app.scss */
+#indicadoresModal dl dd {
+  width: 350px;
+}
+
+/* line 700, ../scss/app.scss */
+#indicadoresModal .tabs-content .content {
+  margin-left: 350px !important;
+  padding: 10px 50px;
+}
+
+/* line 706, ../scss/app.scss */
+.fundo_titulo_modal {
+  background: url("/img/bola-futura-uniao.png");
+  background-size: 100%;
+  background-position: left bottom;
+  height: 52px;
+  margin-left: 5px;
+  background-repeat: no-repeat;
+}
+/* line 714, ../scss/app.scss */
+.fundo_titulo_modal h2.titulo_modal {
+  font-size: 1.7em;
+  color: #969696;
+  font-weight: normal !important;
+  margin-left: 55px;
+  padding-bottom: 3px;
+}
+
+/* line 723, ../scss/app.scss */
+.reveal-modal, dialog {
+  background: rgba(255, 255, 255, 0.92);
+}
+/* line 725, ../scss/app.scss */
+.reveal-modal p, dialog p {
+  padding: 10px 30px 0 30px;
+}
+
+/* line 731, ../scss/app.scss */
+.reveal-modal.produtos-pagina p, dialog.produtos-pagina p {
+  padding: 10px 31px;
+  color: #969696 !important;
+}
+/* line 736, ../scss/app.scss */
+.reveal-modal.produtos-pagina .accordion, dialog.produtos-pagina .accordion {
+  margin-top: 20px;
+}
+/* line 740, ../scss/app.scss */
+.reveal-modal.produtos-pagina dd.accordion-navigation, dialog.produtos-pagina dd.accordion-navigation {
+  padding: 0px 31px;
+}
+/* line 742, ../scss/app.scss */
+.reveal-modal.produtos-pagina dd.accordion-navigation a, dialog.produtos-pagina dd.accordion-navigation a {
+  padding: 10px 15px;
+  font-size: 1.8em;
+  background: #bfd5ca;
+  color: #485c52;
+  border: 1px solid #8fb5a2;
+  border-left: 6px solid #8fb5a2;
+  transition: all 0.4s;
+}
+/* line 751, ../scss/app.scss */
+.reveal-modal.produtos-pagina dd.accordion-navigation a:hover, dialog.produtos-pagina dd.accordion-navigation a:hover {
+  border-left: 6px solid #ACC8BA;
+  background: #DBE8E1;
+  color: #60796C;
+}
+/* line 763, ../scss/app.scss */
+.reveal-modal.produtos-pagina dd.accordion-navigation.active a, dialog.produtos-pagina dd.accordion-navigation.active a {
+  border-left: 6px solid #ACC8BA;
+  background: #DBE8E1;
+  color: #485c52;
+}
+/* line 772, ../scss/app.scss */
+.reveal-modal.produtos-pagina .tabs-content, dialog.produtos-pagina .tabs-content {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* line 776, ../scss/app.scss */
+.reveal-modal.produtos-pagina .tabs-content p, dialog.produtos-pagina .tabs-content p {
+  margin: 0;
+  margin-bottom: 0px !important;
+  padding: 15px 20px 20px 52px !important;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMzMuMzMzMzMlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PHN0b3Agb2Zmc2V0PSI2Ni42NjY2NyUiIHN0b3AtY29sb3I9IiNmY2ZjZmMiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYmViZWIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(33.33333%, #ffffff), color-stop(66.66667%, #fcfcfc), color-stop(100%, #ebebeb));
+  background-image: -moz-linear-gradient(#ffffff, #ffffff, #fcfcfc, #ebebeb);
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff, #fcfcfc, #ebebeb);
+  background-image: linear-gradient(#ffffff, #ffffff, #fcfcfc, #ebebeb);
+}
+/* line 789, ../scss/app.scss */
+.reveal-modal.produtos-pagina .accordion-navigation .content, dialog.produtos-pagina .accordion-navigation .content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* line 794, ../scss/app.scss */
+.reveal-modal.produtos-pagina .content dl.tabs_accordion a, dialog.produtos-pagina .content dl.tabs_accordion a {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  background: none !important;
+  font-size: 1.2em;
+  padding: 10px 20px !important;
+  color: #ACBDB5;
+  transition: color 0.3s;
+}
+/* line 806, ../scss/app.scss */
+.reveal-modal.produtos-pagina .content dl.tabs_accordion a:hover, dialog.produtos-pagina .content dl.tabs_accordion a:hover {
+  color: #60796C;
+}
+/* line 812, ../scss/app.scss */
+.reveal-modal.produtos-pagina .tabs.tabs_accordion, dialog.produtos-pagina .tabs.tabs_accordion {
+  border-left: 6px solid #bfd6ca;
+  border-right: 1px solid #bfd6ca;
+}
+/* line 818, ../scss/app.scss */
+.reveal-modal.produtos-pagina .tabs dd.active, dialog.produtos-pagina .tabs dd.active {
+  background: url(/img/esfera-futurauniao-3.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px;
+  margin-left: 15px;
+}
+/* line 826, ../scss/app.scss */
+.reveal-modal.produtos-pagina .tabs dd.active a, dialog.produtos-pagina .tabs dd.active a {
+  color: #60796C;
+}
+/* line 830, ../scss/app.scss */
+.reveal-modal.produtos-pagina .content dl.tabs_accordion, dialog.produtos-pagina .content dl.tabs_accordion {
+  background: #e1faed;
+  border-bottom: 1px solid #95B9A7;
+}
+/* line 835, ../scss/app.scss */
+.reveal-modal.produtos-pagina .tabs-content *, dialog.produtos-pagina .tabs-content * {
+  border: none;
+}
+/* line 840, ../scss/app.scss */
+.reveal-modal.produtos-pagina .tabs-content .content.active, dialog.produtos-pagina .tabs-content .content.active {
+  border-left: 6px solid lightgray !important;
+  border-right: 1px solid lightgrey !important;
+  border-bottom: 1px solid lightgrey !important;
+}
+
+/* line 850, ../scss/app.scss */
+.reveal-modal.conteudo-lista-estilo .lista-conteudo, dialog.conteudo-lista-estilo .lista-conteudo {
+  padding: 10px 30px;
+}
+/* line 857, ../scss/app.scss */
+.reveal-modal.conteudo-lista-estilo dl dd a, dialog.conteudo-lista-estilo dl dd a {
+  margin: 2px;
+  padding: 0;
+  padding: 5px 25px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+/* line 870, ../scss/app.scss */
+.reveal-modal.conteudo-lista-estilo dl dd.active a, dialog.conteudo-lista-estilo dl dd.active a {
+  font-weight: bold;
 }
