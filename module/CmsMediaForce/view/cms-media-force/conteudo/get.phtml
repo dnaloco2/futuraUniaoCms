@@ -1,0 +1,14 @@
+<div class="row" id="conteudo_single">
+	<div class="large-12 columns">
+		<h2><?php echo $this->data['titulo']; ?> - ID: <?php echo $this->data['id']; ?></h2>
+		<hr class="my_fancy_hr hr_gradiente_light_grey">
+
+		<p><?php echo $this->data['conteudo']; ?></p>
+
+		<p>
+			<strong>Categoria:</strong> <?php echo $this->data['categoria']; ?> |
+			<strong>Criado Em:</strong> <?php echo $this->data['criado_em']->format('Y-m-d H:i:s'); ?> |
+			<strong>Criado Por:</strong> <?php echo $this->data['criado_por']; ?>
+		</p>
+	</div>
+</div>

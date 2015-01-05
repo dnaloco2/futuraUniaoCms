@@ -9,7 +9,6 @@ $cor_azul: #282165;
 $cor_verde: #00A556;
 $cor_branco_fosco: #E7E8E3;
 
-
 // Variaveis Foundation
 // foundation functions
 @import "foundation/functions";
@@ -33,15 +32,17 @@ $body-font-family: 'Arimo', sans-serif;
 // Top Bar
 $topbar-title-weight: bold;
 $color_top_01: white;
-$fcolor_top_01: #262C35;
+$fcolor_top_01: #3F4958;
+$bgcolor_hover: #C1C4B9;
 
 $topbar-bg-color: $color_top_01;
 $topbar-link-color: $fcolor_top_01;
 
-$topbar-dropdown-bg: $main-color;
-$topbar-dropdown-link-bg: $main-color;
-$topbar-dropdown-label-bg: $main-color;
-$topbar-link-bg-hover:  $secondary-color;
+$topbar-dropdown-link-color: $fcolor_top_01;
+$topbar-dropdown-bg: $color_top_01;
+$topbar-dropdown-link-bg: $color_top_01;
+$topbar-dropdown-label-bg: $color_top_01;
+$topbar-link-bg-hover:  $bgcolor_hover;
 
 //Compass/CSS3
 @import "compass/css3";
@@ -114,7 +115,11 @@ INDICE
 
 /********************* 3 - Estrutura ******************************/
 
-
+#conteudo_single {
+	background: #f1f1f1;
+	margin-top: 20px;
+	border-radius: 10px;
+}
 
 .admin-content {
 	margin-left: 220px;
@@ -327,6 +332,32 @@ footer#rodape {
 	box-shadow: 0px 1px 5px #232323;
 	background: white;
 
+	#logo_empresa {
+		left: -3px;
+		width: 220px;
+		height: 220px;
+		position: absolute;
+		background: url("/img/logo-futura-sombra.png");
+		background-size: 90% !important;
+		background-repeat: no-repeat !important;
+		top: -25px;
+		background-position: center;
+		z-index: 999999;
+	}
+
+	ul.left {
+		margin-left: 220px
+	}
+
+	ul.right {
+		ul {
+			box-shadow: -1px 1px 5px gray;
+			li {
+				border-bottom: 1px solid #C1C4B9;
+			}
+		}
+	}
+
 	a {
 		font-size: 0.9em;
 		transition: all 0.3s;
@@ -334,6 +365,8 @@ footer#rodape {
 }
 
 #admin-menu {
+	z-index: 9;
+	padding-top: 130px;
 	width: 220px;
 	margin-top: 51px;
 	background: $main-color;
@@ -425,6 +458,14 @@ footer#rodape {
 }
 
 /********************* 9 - Formulários ****************************/
+#formularioCadastro {
+ 	padding: 20px;
+
+ 	label {
+		color: gray;
+		font-weight: bold;
+	}
+}
 
 /********************* 10 - Extras/Miscelâneas ********************/
 #logo_index_admin {
@@ -554,6 +595,10 @@ a.link_mediaforce {
 	padding-top: 10px !important;
 }
 
+.padding_20_top {
+	padding-top: 20px !important;
+}
+
 .padding_quinze {
 	padding: 15px !important;
 }
@@ -582,6 +627,10 @@ a.link_mediaforce {
 	padding: 10px 20px !important;
 }
 
+.padding_40_left {
+	padding-left: 40px !important;
+}
+
 .margin_left_10 {
 	margin-left: 10px !important;
 }
@@ -600,6 +649,14 @@ a.link_mediaforce {
 	margin: 0 !important;
 }
 
+q {
+	quotes: "&#8220;" "&#8221;";
+}
+
+.input_search {
+  margin-top: 5px;
+  padding: 5px;
+}
 
 /********************* 11 - Media Queries  ************************/
 
@@ -624,8 +681,8 @@ a.link_mediaforce {
 
 	#chamada_sulamerica {
 		border-top: 2px solid #C4C6BB;
-  		border-bottom: 1px solid #C4C6BB;
-		min-height: 100px;
+  		border-bottom: 2px solid #C4C6BB;
+		min-height: 85px;
 		height: 100%;
 		@include background-image(linear-gradient(#FDFDFD, #F5F5F5));
 		display: block;
@@ -633,19 +690,28 @@ a.link_mediaforce {
 
 		#texto_sulamerica {
 			line-height: 160%;
-			margin-top: 20px !important;
-			font-size: 1.3em;
+			margin-top: 20px;
+			font-size: 16px;
 			color: #999999;
 			padding-left: 15%;
 		}
 
 		#logo_sulamerica {
-			width: 58%;
+
 			padding: 10px;
+			width: 45%;
+			margin-top: 5px;
 		}
 	}
 
 	#futurauniao_features {
+
+		//@include background-image(linear-gradient(#FDFDFD, #CFEADE));
+		height: 100%;
+
+		display: table;
+		padding-bottom: 20px;
+		margin-bottom: -20px;
 
 		h1 {
 			font-size: 36px;
@@ -667,7 +733,7 @@ a.link_mediaforce {
 		p {
 			width: 60%;
 			margin: auto;
-			height: 130px;
+			min-height: 100px;
 			color: #828282;
 		}
 
@@ -681,6 +747,10 @@ a.link_mediaforce {
 			background: #30B4B6;
 			color: white;
 			transition: background 0.3s;
+
+			a {
+				color: white;
+			}
 
 			&:hover {
 				background: #75D9DB;
@@ -697,10 +767,22 @@ a.link_mediaforce {
 	width: 350px;
 }
 
-#indicadoresModal .tabs-content .content {
-	margin-left: 350px !important;
+#indicadoresModal {
+	.tabs {
+		margin-top: 20px;
+		margin-left: 30px;
+	}
+	.tabs-content {
+		.content {
+			margin-left: 350px !important;
 
-	padding: 10px 50px;
+			padding: 20px 50px;
+
+			.conversor_moeda {
+				margin-left: 5%;
+			}
+		}
+	}
 }
 
 .fundo_titulo_modal {
@@ -720,10 +802,43 @@ a.link_mediaforce {
 	}
 }
 
+.fundo_titulo_modal_2 {
+	@extend .fundo_titulo_modal;
+	background: url("/img/bola-futura-uniao2.png");
+	height: 52px;
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-position: left bottom;
+}
+
 .reveal-modal {
 	background: rgba(255, 255, 255, 0.92);
+	p, blockquote {
+		padding: 10px 24px 0 30px;
+	}
+
 	p {
+		padding-left: 24px !important;
+	}
+	blockquote {
 		padding: 10px 30px 0 30px;
+		border: none;
+		font-size: 20px;
+		font-style: italic;
+		color: #8FB5A2;
+	}
+	
+	.subtitulo_empresa {
+		color: #9B9B9B;
+		font-size: 20px;
+		font-weight: bold;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+
+	.texto_empresa p {
+		font-size: 18px !important;
+		color: #9B9B9B;
 	}
 }
 
@@ -844,7 +959,6 @@ a.link_mediaforce {
 	}
 }
 
-
 .reveal-modal.conteudo-lista-estilo {
 
 	.lista-conteudo {
@@ -874,3 +988,56 @@ a.link_mediaforce {
 	}
 }
 
+#faqModal {
+	dd  {
+		padding: 0 35px ;
+
+		div {
+			* {
+				padding: 0 10px 5px  !important;
+				margin: 0 !important;
+				font-style: italic;
+			}
+		}
+	}
+}
+
+
+
+
+
+.fundo_titulo_modal_2 {
+ background: none;
+ position: relative;
+}
+
+.circle {
+ width: 40px;
+height: 40px;
+border-radius: 50%;
+background: #8FB5A2;
+border: 10px solid #BFD5CA;
+position: absolute;
+}
+.linha_vertical {
+ border-left: 4px solid #8FB5A2;
+height: 28px;
+top: 20px;
+left: 18px;
+position: absolute;
+}
+.linha_horizontal{
+width: 100%;
+position: absolute;
+height: 3px;
+background: -moz-linear-gradient(left,  rgba(143,181,162,1) 0%, rgba(41,137,216,0.04) 96%, rgba(41,137,216,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(143,181,162,1)), color-stop(96%,rgba(41,137,216,0.04)), color-stop(100%,rgba(41,137,216,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(143,181,162,1) 0%,rgba(41,137,216,0.04) 96%,rgba(41,137,216,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(143,181,162,1) 0%,rgba(41,137,216,0.04) 96%,rgba(41,137,216,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(143,181,162,1) 0%,rgba(41,137,216,0.04) 96%,rgba(41,137,216,0) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(143,181,162,1) 0%,rgba(41,137,216,0.04) 96%,rgba(41,137,216,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fb5a2', endColorstr='#002989d8',GradientType=1 ); /* IE6-9 */
+
+top: 46px;
+left: 18px;
+}

@@ -24,6 +24,7 @@ class LoadCategoria extends AbstractFixture implements OrderedFixtureInterface {
         $catBoth = array(
             'Circulares',
             'Notificações',
+            'Treinamento'
         );
 
 

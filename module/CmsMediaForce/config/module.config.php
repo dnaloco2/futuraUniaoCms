@@ -16,6 +16,20 @@ return array(
                     ),
                 ),
             ),
+            'conteudo' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route' => '/conteudo[/:categoria[/:id]]',
+                    'constraints' => array(
+                        'id' => '[0-9]+'
+                    ),
+                    'defaults' => array(
+                        '__NAMESPACE__' => __NAMESPACE__ . '\Controller',
+                        'controller' => 'Conteudo',
+                        'action' => 'get'
+                    )
+                )
+            ),
             'cms-activate' => array(
                 'type' => 'Segment',
                 'options' => array(
@@ -153,6 +167,7 @@ return array(
             __NAMESPACE__ . '\Controller\ArquivosTexto' => __NAMESPACE__ .  '\Controller\ArquivosTextoController',
             __NAMESPACE__ . '\Controller\Links' => __NAMESPACE__ .  '\Controller\LinksController',
             __NAMESPACE__ . '\Controller\Corretores' => __NAMESPACE__ .  '\Controller\CorretoresController',
+            __NAMESPACE__ . '\Controller\Conteudo' => __NAMESPACE__ .  '\Controller\ConteudoController',
         ),
     ),
 

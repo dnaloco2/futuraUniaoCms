@@ -69,7 +69,9 @@ if (strpos($route, 'conteudo') !== false) {
             <nav class="top-bar" data-topbar role="navigation">
               <!-- Title -->
               <ul class="title-area">
-                <li class="name"><h1><a href="/" target="_self"><img src="/img/titulo_menu.jpg" alt="Titulo Menu"></a></h1></li>
+                <li>
+                  <a href="/" target="_self"><div id="logo_empresa"></div></a>
+                </li>
 
                 <!-- Mobile Menu Toggle -->
                 <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -130,7 +132,6 @@ if (strpos($route, 'conteudo') !== false) {
                       <li><a href="#" data-reveal-id="modal-servicos-apoio-com">Apoio Comercial</a></li>
                       <li><a href="#" data-reveal-id="modal-servicos-apoio-jur">Apoio Jurídico</a></li>
                       <li><a href="#" data-reveal-id="modal-servicos-apoio-sin">Apoio Sinistros</a></li>
-                      <li><a href="#" data-reveal-id="modal-servicos-apoio-resseg">Apoio Resseguros</a></li>
                     </ul>
                   </li>
 
@@ -158,30 +159,16 @@ if (strpos($route, 'conteudo') !== false) {
 
                   <li class="has-dropdown"><a href="#">Para Corretores</a>
                     <ul class="dropdown">
-                      <li><a href="#" data-reveal-id="formulariosModal">Formulários</a></li>
-                      <li><a href="#" data-reveal-id="notificacoesModal">Notificações</a></li>
                       <li><a href="#" data-reveal-id="circularesModal">Circulares</a></li>
+                      <li><a href="#" data-reveal-id="treinamentosModal">Treinamento</a></li>
+                      <li><a href="#" data-reveal-id="cadastreseModal">Cadastre-se Conosco</a></li>
+                      <li><a href="#" data-reveal-id="sugestoesModal">Sugestões e Reclamações</a></li>
                     </ul>
                   </li>
-                  <li class="divider"></li>
-
-
-                  <li class="has-dropdown"><a>Ajuda</a>
-                    <ul class="dropdown">
-                      <li><a href="#" data-reveal-id="faqModal">FAQ</a></li>
-                      <li><a href="#" data-reveal-id="glossarioModal">Glossário</a></li>
-                      <li><a href="#" data-reveal-id="linksModal">Links Úteis</a></li>
-                      <li><a href="#" data-reveal-id="indicadoresModal">Ind. Econômicos</a></li>
-                      <li><a href="#" data-reveal-id="previsaoModal">Previsão do Tempo</a></li>
-                    </ul>
-                  </li>
-                  <li class="divider"></li>
-
+                  
                   <li class="has-dropdown"><a href="#">Atendimento</a>
                     <ul class="dropdown">
-                      <li><a href="#" data-reveal-id="formulariosModal">Fale Conosco</a></li>
-                      <li><a href="#">Chat On-Line</a></li>
-                      <li><a href="#" data-reveal-id="nossoCorretores">Telefones</a></li>
+                      <li><a href="#" data-reveal-id="nossoCorretores">Quem é Quem</a></li>
                     </ul>
                   </li>
                   
@@ -258,7 +245,7 @@ if (strpos($route, 'conteudo') !== false) {
 
         </div>
 
-        <?php if (!$isAdmin && !$isConteudo): ?>
+        <?php if (!$isAdmin): ?>
         <footer id="rodape" ng-class="{'admin-content': isAdmin}" class="ng-cloak">
           
 
@@ -363,7 +350,7 @@ if (strpos($route, 'conteudo') !== false) {
                 <li>
                   <a href="">Redes Sociais</a>
                   <ul>
-                    <li><a href="">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/futurauniao.consultoria?fref=ts" target="_blank">Facebook</a></li>
                     <li><a href="">Twitter</a></li>
                   </ul>
                 </li>
@@ -404,7 +391,7 @@ if (strpos($route, 'conteudo') !== false) {
                     </div>
 
                     <div class="small-6 columns btn_social_footer">
-                      <a href="" class="facebook_icon left"><span class="icon-facebook2"></span></a>
+                      <a href="https://www.facebook.com/futurauniao.consultoria?fref=ts" target="_blank" class="facebook_icon left"><span class="icon-facebook2"></span></a>
                     </div>
 
                 </div>
@@ -423,14 +410,14 @@ if (strpos($route, 'conteudo') !== false) {
 
             </div>
 
-            <div class="large-5 columns">
+            <div class="large-5 columns padding_40_left">
 
               <h3 class="titulo_footer">Contatos</h3>
               <hr class="my_fancy_hr hr_gradiente_light_grey" style="margin-bottom: 15px">
               <div class="font_rodape margem_top_10">
                 <p>
-                  <strong>Fones: </strong>(11) 3214-4608 / 3214-4580 <br>
-                  <strong>E-mail: </strong>atendimento@casesassessoria.com.br
+                  <strong>Fones: </strong>(11) 3661-4491 <br>
+                  <strong>E-mail: </strong>atendimento@futurauniao.com.br
                 </p>
               </div>
               
@@ -469,44 +456,117 @@ if (strpos($route, 'conteudo') !== false) {
           <div class="fundo_titulo_modal">
             <h2 class="titulo_modal">Quem Somos</h2>
           </div>
-          <p>Sobre a Futura União...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in debitis maiores ad, corrupti facere est doloribus inventore odit quasi, nihil atque beatae veniam velit sit ratione dignissimos! Aliquam quisquam deserunt voluptatibus eum, praesentium commodi debitis doloribus dolores vero esse voluptates molestias. Corporis adipisci voluptatum nam, suscipit ab molestiae aperiam harum, incidunt odio doloribus, aut? Non deleniti qui et aspernatur corrupti nesciunt, quisquam sunt, distinctio pariatur, at tempore quo. Illum culpa ut facilis eos impedit, quibusdam, enim officiis repellendus placeat reprehenderit ab. Veritatis, dolore, nihil. At aliquid, neque sequi iusto, eligendi quisquam maxime, provident rem facilis eos illo est repellat.</p>
+
+          <article>
+            <blockquote class="bq_empresa">" As coisas mudam, as pessoas não... "
+            </blockquote>
+            
+            <p class="subtitulo_empresa">Amigo corretor(a).
+</p>
+            
+            <div class="texto_empresa">
+              <p>Durante 18 anos, tive o privilégio de fazer parte da equipe de colaboradores da
+SulAmérica Seguros.</p>
+              <p>Neste período que é praticamente metade da minha vida, foi repleto de
+aprendizados e realizações e posso dizer que de certa forma, ajudei a
+assegurar o patrimônio e o bem estar de milhares de empresas e pessoas.</p>
+              <p>É com orgulho que vejo minha participação no desenvolvimento e crescimento
+desta empresa, que sempre me mostrou que trabalhando com seriedade,
+determinação e honestidade o sucesso é certo.</p>
+              <p>Outro grande aprendizado que tive, é que não podemos nunca parar de crescer
+e de aceitarmos desafios, e baseado neste ensinamento, que no ano de 2009
+nasceu a <strong>“Futura União – Assessoria e Consultoria Exclusiva da
+SulAmérica”</strong>, uma empresa voltada ao atendimento <strong>EXCLUSIVO</strong> à corretores
+de seguros com foco no varejo, aonde poderei utilizar todo o conhecimento que
+adquiri do mercado segurador e também poder auxiliar e facilitar a
+comercialização dos produtos da <strong>SULAMÉRICA</strong>.
+</p>
+              <p>Estamos sempre atentos as necessidades e oportunidades do mercado e
+também na constante busca de atender cada vez melhor e de forma completa
+nossos parceiros e clientes.</p>
+              <p>Aproveito a oportunidade para convidá-lo a visitar nossas instalações e
+firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
+
+            </div>
+          </article>
+
           <a class="close-reveal-modal">&#215;</a>
         </div>
 
         <!-- Janelas Modais de Serviços -->
-        <div id="modal-servicos-apoio-tecn" class="reveal-modal" data-reveal>
-          <div class="fundo_titulo_modal">
+        <div id="modal-servicos-apoio-tecn" class="reveal-modal paragrafo-modal" data-reveal>
+          <div class="fundo_titulo_modal_2">
+            <div class="circle">
+              
+            </div>
+            <div class="linha_vertical">
+              
+            </div>
+            <div class="linha_horizontal">
+              
+            </div>
             <h2 class="titulo_modal">Apoio Técnico</h2>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in debitis maiores ad, corrupti facere est doloribus inventore odit quasi, nihil atque beatae veniam velit sit ratione dignissimos! Aliquam quisquam deserunt voluptatibus eum, praesentium commodi debitis doloribus dolores vero esse voluptates molestias. Corporis adipisci voluptatum nam, suscipit ab molestiae aperiam harum, incidunt odio doloribus, aut? Non deleniti qui et aspernatur corrupti nesciunt, quisquam sunt, distinctio pariatur, at tempore quo. Illum culpa ut facilis eos impedit, quibusdam, enim officiis repellendus placeat reprehenderit ab. Veritatis, dolore, nihil. At aliquid, neque sequi iusto, eligendi quisquam maxime, provident rem facilis eos illo est repellat.</p>
+
+          <p>Para a realização de um atendimento rápido e eficaz, contamos com uma estrutura operacional diferenciada no mercado de seguros, com profissionais experientes e com conhecimentos sobre os mais variados produtos e serviços exclusivamente da SulAmérica, que nos permite ter mais agilidade nas respostas.</p>
           <a class="close-reveal-modal">&#215;</a>
         </div>
 
-        <div id="modal-servicos-apoio-com" class="reveal-modal" data-reveal>
-          <div class="fundo_titulo_modal">
-            <h2  class="titulo_modal">Apoio Comercial</h2>
+        <div id="modal-servicos-apoio-com" class="reveal-modal paragrafo-modal" data-reveal>
+          <div class="fundo_titulo_modal_2">
+            <div class="circle">
+              
+            </div>
+            <div class="linha_vertical">
+              
+            </div>
+            <div class="linha_horizontal">
+              
+            </div>
+            <h2 class="titulo_modal">Apoio Comercial</h2>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in debitis maiores ad, corrupti facere est doloribus inventore odit quasi, nihil atque beatae veniam velit sit ratione dignissimos! Aliquam quisquam deserunt voluptatibus eum, praesentium commodi debitis doloribus dolores vero esse voluptates molestias. Corporis adipisci voluptatum nam, suscipit ab molestiae aperiam harum, incidunt odio doloribus, aut? Non deleniti qui et aspernatur corrupti nesciunt, quisquam sunt, distinctio pariatur, at tempore quo. Illum culpa ut facilis eos impedit, quibusdam, enim officiis repellendus placeat reprehenderit ab. Veritatis, dolore, nihil. At aliquid, neque sequi iusto, eligendi quisquam maxime, provident rem facilis eos illo est repellat.</p>
+
+          <p>Nossa área comercial conta com profissionais com vasta experiência no mercado de seguros, prestando o apoio e suporte para que você Corretor de Seguros possa desenvolver um bom trabalho com a SulAmérica, alavancando suas vendas.</p>
           <a class="close-reveal-modal">&#215;</a>
         </div>
 
-        <div id="modal-servicos-apoio-jur" class="reveal-modal" data-reveal>
-          <div class="fundo_titulo_modal">
+        <div id="modal-servicos-apoio-jur" class="reveal-modal paragrafo-modal" data-reveal>
+          <div class="fundo_titulo_modal_2">
+            <div class="circle">
+              
+            </div>
+            <div class="linha_vertical">
+              
+            </div>
+            <div class="linha_horizontal">
+              
+            </div>
             <h2 class="titulo_modal">Apoio Jurídico</h2>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in debitis maiores ad, corrupti facere est doloribus inventore odit quasi, nihil atque beatae veniam velit sit ratione dignissimos! Aliquam quisquam deserunt voluptatibus eum, praesentium commodi debitis doloribus dolores vero esse voluptates molestias. Corporis adipisci voluptatum nam, suscipit ab molestiae aperiam harum, incidunt odio doloribus, aut? Non deleniti qui et aspernatur corrupti nesciunt, quisquam sunt, distinctio pariatur, at tempore quo. Illum culpa ut facilis eos impedit, quibusdam, enim officiis repellendus placeat reprehenderit ab. Veritatis, dolore, nihil. At aliquid, neque sequi iusto, eligendi quisquam maxime, provident rem facilis eos illo est repellat.</p>
+          <p>A Futura União, visando o atendimento diferenciado aos seus corretores, oferece apoio nas diversas áreas jurídicas, como: Seguros, Trabalhista, Contratos, Responsabilidade Civil, Consumidor, Imobiliário e afins.</p>
+          <p>Assim, no intuito de apoiá-los, informamos que consultas simples e esclarecimentos iniciais, serão realizados sem cobrança de valores. Caso haja necessidade da prestação de serviços jurídicos e/ou análise mais complexa, apresentaremos uma proposta com valores diferenciados para os corretores vinculados à Futura União.</p>
           <a class="close-reveal-modal">&#215;</a>
         </div>
 
-        <div id="modal-servicos-apoio-sin" class="reveal-modal" data-reveal>
-          <div class="fundo_titulo_modal">
+        <div id="modal-servicos-apoio-sin" class="reveal-modal paragrafo-modal" data-reveal>
+          <div class="fundo_titulo_modal_2">
+            <div class="circle">
+              
+            </div>
+            <div class="linha_vertical">
+              
+            </div>
+            <div class="linha_horizontal">
+              
+            </div>
             <h2 class="titulo_modal">Apoio Sinistros</h2>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in debitis maiores ad, corrupti facere est doloribus inventore odit quasi, nihil atque beatae veniam velit sit ratione dignissimos! Aliquam quisquam deserunt voluptatibus eum, praesentium commodi debitis doloribus dolores vero esse voluptates molestias. Corporis adipisci voluptatum nam, suscipit ab molestiae aperiam harum, incidunt odio doloribus, aut? Non deleniti qui et aspernatur corrupti nesciunt, quisquam sunt, distinctio pariatur, at tempore quo. Illum culpa ut facilis eos impedit, quibusdam, enim officiis repellendus placeat reprehenderit ab. Veritatis, dolore, nihil. At aliquid, neque sequi iusto, eligendi quisquam maxime, provident rem facilis eos illo est repellat.</p>
+
+          <p>Com nossos profissionais exclusivos da SulAmérica, conseguimos agilizar os procedimentos em caso de Sinistros com mais segurança e rapidez.</p>
           <a class="close-reveal-modal">&#215;</a>
         </div>
 
-        <div id="modal-servicos-apoio-resseg" class="reveal-modal" data-reveal>
+        <div id="modal-servicos-apoio-resseg" class="reveal-modal paragrafo-modal" data-reveal>
           <div class="fundo_titulo_modal">
             <h2 class="titulo_modal">Apoio Resseguros</h2>
           </div>
@@ -519,7 +579,16 @@ if (strpos($route, 'conteudo') !== false) {
         <!-- Janelas Modais de Produtos  -->
 
         <div id="modal-produtos-riscos-financeiros" class="reveal-modal produtos-pagina" data-reveal>
-          <div class="fundo_titulo_modal">
+          <div class="fundo_titulo_modal_2">
+            <div class="circle">
+              
+            </div>
+            <div class="linha_vertical">
+              
+            </div>
+            <div class="linha_horizontal">
+              
+            </div>
             <h2 class="titulo_modal">Riscos Financeiros</h2>
           </div>
 
@@ -585,9 +654,19 @@ if (strpos($route, 'conteudo') !== false) {
         </div> <!-- fim modal-produtos-riscos-financeiros  -->
 
         <div id="modal-produtos-riscos-patrimoniais-resp" class="reveal-modal produtos-pagina" data-reveal>
-          <div class="fundo_titulo_modal">
+          <div class="fundo_titulo_modal_2">
+            <div class="circle">
+              
+            </div>
+            <div class="linha_vertical">
+              
+            </div>
+            <div class="linha_horizontal">
+              
+            </div>
             <h2 class="titulo_modal">Riscos Patrimoniais & Responsabilidades</h2>
           </div>
+
           <div>
             <dl class="accordion" data-accordion="riscosPRGrupo">
               <dd class="accordion-navigation">
@@ -760,7 +839,16 @@ if (strpos($route, 'conteudo') !== false) {
         </div> <!-- fim modal-produtos-riscos-patrimoniais-resp  -->
 
         <div id="modal-produtos-riscos-diversos" class="reveal-modal produtos-pagina" data-reveal>
-          <div class="fundo_titulo_modal">
+          <div class="fundo_titulo_modal_2">
+            <div class="circle">
+              
+            </div>
+            <div class="linha_vertical">
+              
+            </div>
+            <div class="linha_horizontal">
+              
+            </div>
             <h2 class="titulo_modal">Riscos Diversos</h2>
           </div>
 
@@ -1123,8 +1211,17 @@ if (strpos($route, 'conteudo') !== false) {
         <div ng-controller="CircularesCtrl" id="circularesModal" class="reveal-modal conteudo-lista-estilo" data-reveal>
 
           <div class="row margem_bottom_10" >
-            <div class="fundo_titulo_modal">
-              <h2  class="titulo_modal">Circulares</h2>
+            <div class="fundo_titulo_modal_2">
+              <div class="circle">
+                
+              </div>
+              <div class="linha_vertical">
+                
+              </div>
+              <div class="linha_horizontal">
+                
+              </div>
+              <h2 class="titulo_modal">Circulares</h2>
             </div>
           </div>
 
@@ -1196,13 +1293,22 @@ if (strpos($route, 'conteudo') !== false) {
           </div>
 
           <a class="close-reveal-modal">&#215;</a>
-        </div> <!-- fim modal notificacoes -->
+        </div> <!-- fim modal circulares -->
 
         <div id="faqModal" ng-controller="FaqCtrl" class="reveal-modal conteudo-lista-estilo" data-reveal>
 
           <div class="row margem_bottom_10 padding_left_10" >
-            <div class="fundo_titulo_modal">
-              <h2  class="titulo_modal">FAQ - {{ currentPage }}</h2>
+            <div class="fundo_titulo_modal_2">
+              <div class="circle">
+                
+              </div>
+              <div class="linha_vertical">
+                
+              </div>
+              <div class="linha_horizontal">
+                
+              </div>
+              <h2 class="titulo_modal">FAQ - {{ currentPage }}</h2>
             </div>
           
           </div>
@@ -1214,7 +1320,7 @@ if (strpos($route, 'conteudo') !== false) {
             </div>
 
             <div class="large-9 small-12 columns">
-              <input ng-model="q" id="search" class="form-control expand" placeholder="Escreva a pergunta">
+              <input ng-model="q" id="search" class="form-control expand input_search" placeholder="Escreva a pergunta">
             </div>
 
           </div>
@@ -1242,8 +1348,17 @@ if (strpos($route, 'conteudo') !== false) {
         <div ng-controller="GlossarioCtrl" id="glossarioModal" class="reveal-modal conteudo-lista-estilo" data-reveal>
 
           <div class="row margem_bottom_10 padding_left_10" >
-            <div class="fundo_titulo_modal">
-              <h2  class="titulo_modal">Glossário</h2>
+            <div class="fundo_titulo_modal_2">
+              <div class="circle">
+                
+              </div>
+              <div class="linha_vertical">
+                
+              </div>
+              <div class="linha_horizontal">
+                
+              </div>
+              <h2 class="titulo_modal">Glossário</h2>
             </div>
           
           </div>
@@ -1255,7 +1370,7 @@ if (strpos($route, 'conteudo') !== false) {
             </div>
 
             <div class="large-9 small-12 columns">
-              <input ng-model="q" id="search" class="form-control expand" placeholder="Escreva o termo">
+              <input ng-model="q" id="search" class="form-control expand input_search" placeholder="Escreva o termo">
             </div>
 
           </div>
@@ -1282,7 +1397,18 @@ if (strpos($route, 'conteudo') !== false) {
 
           <div ng-controller="LinksCtrl" id="widget_links_uteis">
             <div>
-              <h2 class="titulo_modal">Links Uteis <span class="ng-cloak">{{tableParams.page()}}</span></h2>
+              <div class="fundo_titulo_modal_2">
+                <div class="circle">
+                  
+                </div>
+                <div class="linha_vertical">
+                  
+                </div>
+                <div class="linha_horizontal">
+                  
+                </div>
+                <h2 class="titulo_modal">Links Uteis <span class="ng-cloak">{{tableParams.page()}}</span></h2>
+              </div>
             </div>
 
             <div class="column-content widget-top widget-box padding_vinte">
@@ -1311,12 +1437,13 @@ if (strpos($route, 'conteudo') !== false) {
 
         <div id="indicadoresModal" class="reveal-modal" data-reveal>
 
-          <h3>Indicadores Econômicos e Ferramentas</h3>
+          <div class="fundo_titulo_modal">
+            <h2 class="titulo_modal">Indicadores Econômicos e Ferramentas</h2>
+          </div>
 
           <dl class="tabs vertical" data-tab>
             <dd class="active"><a href="#indicadoresInflacao">Indicadores de inflação</a></dd>
             <dd><a href="#indicadoresDiversos">Indicadores Diversos</a></dd>
-            <dd><a href="#dolarAtual">Dólar (Cotação Atual)</a></dd>
             <dd><a href="#dolarUltimos">Dólar (Fechamento dos últimos Dias)</a></dd>
             <dd><a href="#euroUltimos">Euro (Fechamento dos últimos Dias)</a></dd>
             <dd><a href="#conversorMoedas">Conversor de moedas)</a></dd>
@@ -1329,9 +1456,6 @@ if (strpos($route, 'conteudo') !== false) {
             <div class="content" id="indicadoresDiversos">
               <script type="text/javascript" src="http://www.debit.com.br/resumogratuito.php?info=diversos"></script>
             </div>
-            <div class="content" id="dolarAtual">
-              <a href="http://www.debit.com.br" target="_blank" alt="Correção monetária e cálculos trabalhistas"><img src="http://www.debit.com.br/indicadores.php" title="Correção monetária e cálculos trabalhistas"></a>
-            </div>
             <div class="content" id="dolarUltimos">
               <script type="text/javascript" src="http://www.debit.com.br/resumogratuito.php?info=dolar"></script>
             </div>
@@ -1339,8 +1463,8 @@ if (strpos($route, 'conteudo') !== false) {
               <script type="text/javascript" src="http://www.debit.com.br/resumogratuito.php?info=euro"></script>
             </div>
             <div class="content" id="conversorMoedas">
-              <div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana; float: left;"><iframe style="border:1px solid #C0C0C0; width:180px; height:300px;"  scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="http://pt.loobiz.com/BRL-vs-USD.htm"><a href="http://pt.loobiz.com/BRL-vs-USD.htm">BRL USD</a><div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana;"></iframe><br/><a href="http://pt.loobiz.com/moeda-conversor/">Conversor de Moedas</a><br/><a href="http://pt.loobiz.com/moeda-conversor/real+us-dolar">BRL / USD</a></div>
-              <div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana; float: left;"><iframe style="border:1px solid #C0C0C0; width:180px; height:300px;"  scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="http://pt.loobiz.com/BRL-vs-EUR.htm"><a href="http://pt.loobiz.com/BRL-vs-EUR.htm">BRL EUR</a><div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana;"></iframe><br/><a href="http://pt.loobiz.com/moeda-conversor/">Conversor de Moedas</a><br/><a href="http://pt.loobiz.com/moeda-conversor/real+euro">BRL / EUR</a></div>
+              <div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana; float: left;" class="conversor_moeda"><iframe style="border:1px solid #C0C0C0; width:180px; height:300px;"  scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="http://pt.loobiz.com/BRL-vs-USD.htm"><a href="http://pt.loobiz.com/BRL-vs-USD.htm">BRL USD</a><div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana;"></iframe><br/><a href="http://pt.loobiz.com/moeda-conversor/">Conversor de Moedas</a><br/><a href="http://pt.loobiz.com/moeda-conversor/real+us-dolar">BRL / USD</a></div>
+              <div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana; float: left;" class="conversor_moeda"><iframe style="border:1px solid #C0C0C0; width:180px; height:300px;"  scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="http://pt.loobiz.com/BRL-vs-EUR.htm"><a href="http://pt.loobiz.com/BRL-vs-EUR.htm">BRL EUR</a><div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana;"></iframe><br/><a href="http://pt.loobiz.com/moeda-conversor/">Conversor de Moedas</a><br/><a href="http://pt.loobiz.com/moeda-conversor/real+euro">BRL / EUR</a></div>
             </div>
           </div>         
 
@@ -1348,9 +1472,20 @@ if (strpos($route, 'conteudo') !== false) {
         </div> <!-- fim modal glossario -->
 
         <div ng id="nossoCorretores" class="reveal-modal" data-reveal ng-controller="CorretoresCtrl">
+          <div class="fundo_titulo_modal_2">
+            <div class="circle">
+              
+            </div>
+            <div class="linha_vertical">
+              
+            </div>
+            <div class="linha_horizontal">
+              
+            </div>
+            <h2 class="titulo_modal">Nossos Colaboradores <span class="ng-cloak">{{ currentPage }}</span></h2>
+          </div>
 
           <div class="row margem_bottom_10 padding_left_10" >
-            <h1 class="titulo-modal titulo-parte-home-light-green ">Nossos Colaboradores {{ currentPage }}</h1>
             <p class="light_gray_f subtitulo">Entre em contato com um de nossos colaboradores:</p>
           </div>
 
@@ -1467,51 +1602,450 @@ if (strpos($route, 'conteudo') !== false) {
           <a class="close-reveal-modal">&#215;</a>
         </div> <!-- fim modal formularios -->
 
-        <div id="previsaoModal" class="reveal-modal tiny" data-reveal>
-          <h3>Previsão do Tempo</h3>
+        <div id="servicosModal" class="reveal-modal" data-reveal>
 
-          <a href="http://www.accuweather.com/en/br/sao-paulo/45881/weather-forecast/45881" class="aw-widget-legal">
-<!--
-By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.
--->
-</a><div id="awcc1418136889580" class="aw-widget-current"  data-locationkey="" data-unit="c" data-language="en-us" data-useip="true" data-uid="awcc1418136889580"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
-          <a class="close-reveal-modal">&#215;</a>
-        </div> <!-- fim modal formularios -->
+          <div class="fundo_titulo_modal">
+            <h2 class="titulo_modal">Serviços</h2>
+          </div>
 
-        <div id="servicosModal" class="reveal-modal tiny" data-reveal>
-          <h3>Serviços</h3>
-
-          <a href="#" data-reveal-id="modal-servicos-apoio-tecn">Apoio Técnico</a>
-          <a href="#" data-reveal-id="modal-servicos-apoio-com">Apoio Comercial</a>
-          <a href="#" data-reveal-id="modal-servicos-apoio-jur">Apoio Jurídico</a>
-          <a href="#" data-reveal-id="modal-servicos-apoio-sin">Apoio Sinistros</a>
-          <a href="#" data-reveal-id="modal-servicos-apoio-resseg">Apoio Resseguros</a>
+          <ul class="inline-list padding_left_10 padding_20_top">
+            <li>
+              <a href="#" data-reveal-id="modal-servicos-apoio-tecn">Apoio Técnico</a>
+            </li>
+            <li>
+              <a href="#" data-reveal-id="modal-servicos-apoio-com">Apoio Comercial</a>
+            </li>
+            <li>
+              <a href="#" data-reveal-id="modal-servicos-apoio-jur">Apoio Jurídico</a>
+            </li>
+            <li>
+              <a href="#" data-reveal-id="modal-servicos-apoio-sin">Apoio Sinistros</a>
+            </li>
+          </ul>
 
           <a class="close-reveal-modal">&#215;</a>
         </div> <!-- fim modal serviços -->
 
-        <div id="produtosModal" class="reveal-modal tiny" data-reveal>
-          <h3>Produtos</h3>
+        <div id="produtosModal" class="reveal-modal" data-reveal>
 
-          <a href="#"  data-reveal-id="modal-produtos-riscos-financeiros">Riscos Financeiros</a>
-          <a href="#" data-reveal-id="modal-produtos-riscos-patrimoniais-resp">Riscos Patrimoniais & Responsabilidades</a>
-          <a href="#" data-reveal-id="modal-produtos-riscos-diversos">Riscos Diversos</a>
-          <a href="#" data-reveal-id="modal-produtos-transportes">Transportes</a>
+          <div class="fundo_titulo_modal">
+            <h2 class="titulo_modal">Produtos</h2>
+          </div>
+
+          <ul class="inline-list padding_left_10 padding_20_top">
+            <li>
+              <a href="#"  data-reveal-id="modal-produtos-riscos-financeiros">Riscos Financeiros</a>
+            </li>
+            <li>
+              <a href="#" data-reveal-id="modal-produtos-riscos-patrimoniais-resp">Riscos Patrimoniais & Responsabilidades</a>
+            </li>
+            <li>
+              <a href="#" data-reveal-id="modal-produtos-riscos-diversos">Riscos Diversos</a>
+            </li>
+            <li>
+              <a href="#" data-reveal-id="modal-produtos-transportes">Transportes</a>
+            </li>
+          </ul>
 
           <a class="close-reveal-modal">&#215;</a>
         </div> <!-- fim modal produtos -->
       
-        <div id="paraCorretoresModal" class="reveal-modal tiny" data-reveal>
-          <h3>Para Corretores</h3>
+        <div id="paraCorretoresModal" class="reveal-modal" data-reveal>
+
+          <div class="fundo_titulo_modal">
+            <h2 class="titulo_modal">Para Corretores</h2>
+          </div>
           
-          <a href="#" data-reveal-id="formulariosModal">Formulários</a>
-
-          <a href="#" data-reveal-id="notificacoesModal">Notificações</a>
-
-          <a href="#" data-reveal-id="circularesModal">Circulares</a>
+          <ul class="inline-list padding_left_10 padding_20_top">
+            <li>
+              <a href="#" data-reveal-id="formulariosModal">Formulários</a>
+            </li>
+            <li>
+              <a href="#" data-reveal-id="notificacoesModal">Notificações</a>
+            </li>
+            <li>
+              <a href="#" data-reveal-id="circularesModal">Circulares</a>
+            </li>
+          </ul>
 
           <a class="close-reveal-modal">&#215;</a>
         </div> <!-- fim modal produtos -->
+
+        <div ng-controller="FormContatoCtrl" id="formularioModal" class="reveal-modal" data-reveal>
+
+          <div class="fundo_titulo_modal">
+            <h2 class="titulo_modal">Fale Conosco</h2>
+          </div>
+
+          
+
+          <div class="row padding_left_10" >
+            <p class="light_gray_f subtitulo">Os campos com asterisco (*) são obrigatórios.</p>
+          </div>
+
+          <p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
+
+          <form ng-submit="submit(contactform)" name="contactform" method="post" class="form-horizontal" role="form">
+                <div class="row" ng-class="{ 'error': contactform.inputNome.$invalid && submitte*d }">
+                  <div class="small-12 columns">
+                      <div class="row">
+                        <div class="small-2 columns">
+                          <label for="inputNome" class="left">* Nome: </label>
+                        </div>
+                        <div class="small-10 columns">
+                            <input ng-model="formData.inputNome" type="text" class="form-control" id="inputNome" name="inputNome" placeholder="Seu nome" required>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="large-6 small-12 columns">
+                
+                      <div class="row">
+                        <div class="small-3 columns">
+                          <label for="inputCorretora" class="left">Corretora: </label>
+                        </div>
+                        <div class="small-9 columns">
+                            <input ng-model="formData.inputCorretora" type="text" class="form-control" id="inputCorretora" name="inputCorretora" placeholder="Sua corretora">
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="large-6 small-12 columns">
+
+                      <div class="row">
+                        <div class="small-3 columns">
+                          <label for="inputTelefone" class="left">Telefone: </label>
+                        </div>
+                        <div class="small-9 columns">
+                            <input ng-model="formData.inputTelefone" type="text" class="form-control" id="inputTelefone" name="inputTelefone" placeholder="Seu telefone">
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="large-6 columns" ng-class="{ 'error': contactform.inputEmail.$invalid && submitted }">
+
+                      <div class="row">
+                        <div class="small-3 columns">
+                          <label for="inputEmail" class="left">* Email: </label>
+                        </div>
+                        <div class="small-9 columns">
+                            <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
+                        </div>
+                      </div>
+                  </div>
+                  
+                  <div class="large-6 columns">
+          
+                      <div class="row">
+                        <div class="small-3 columns">
+                          <label for="inputRamoProd" class="left">Ramo/Produto: </label>
+                        </div>
+                        <div class="small-9 columns">
+                            <input ng-model="formData.inputRamoProd" type="text" class="form-control" id="inputRamoProd" name="inputRamoProd" placeholder="Seu produto/ramo">
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="row" ng-class="{ 'error': contactform.inputAssunto.$invalid && submitted }">
+                  <div class="small-12 columns">
+                      <div class="row">
+                        <div class="small-2 columns">
+                          <label for="inputAssunto" class="left">* Assunto:</label>
+                        </div>
+                        <div class="small-10 columns">
+                            <input ng-model="formData.inputAssunto" type="text" class="form-control" id="inputAssunto" name="inputAssunto" placeholder="Assunto da mensagem" required>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row" ng-class="{ 'error': contactform.inputMensagem.$invalid && submitted }">
+
+                      <div class="small-12 columns">
+                        <label for="inputMensagem" class="left">* Mensagem:</label>
+                      </div>
+                      <div class="small-12 columns">
+                          <textarea ng-model="formData.inputMensagem" class="form-control" rows="4" id="inputMensagem" name="inputMessage" placeholder="Sua mensagem..." required></textarea>
+                      </div>
+
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <button type="submit" class="button expand" ng-disabled="submitButtonDisabled">
+                            Enviar
+                        </button>
+                    </div>
+                </div>
+            </form>
+            
+
+          <a class="close-reveal-modal ">&#215;</a>
+        </div> <!-- fim modal formulario contato -->
+
+        <div id="treinamentosModal" class="reveal-modal" data-reveal>
+          <div class="fundo_titulo_modal_2">
+            <div class="circle">
+              
+            </div>
+            <div class="linha_vertical">
+              
+            </div>
+            <div class="linha_horizontal">
+              
+            </div>
+            <h2 class="titulo_modal">Treinamento</h2>
+          </div>
+
+         <p>Em Construção!</p>
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal treinamento -->
+
+        <div id="cadastreseModal" class="reveal-modal" data-reveal>
+          <div class="fundo_titulo_modal_2">
+            <div class="circle">
+              
+            </div>
+            <div class="linha_vertical">
+              
+            </div>
+            <div class="linha_horizontal">
+              
+            </div>
+            <h2 class="titulo_modal">Cadastre-se Conosco</h2>
+          </div>
+
+          <form id="formularioCadastro">
+
+            <div class="row">
+              <div class="large-12 columns">
+                <label for="inputNomeRazao">Nome / Razão Social
+                  <input type="text" id="inputNomeRazao" placeholder="Escreva o seu nome ou razão social" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-12 columns">
+                <label for="inputRespContato">Responsável / Contato
+                  <input type="text" id="inputRespContato" placeholder="Escreva o seu nome ou razão social" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-6 columns">
+                <label for="inputCpfCnpj">CPF / CNPJ
+                  <input type="text" id="inputCpfCnpj" placeholder="Escreva o seu cpf ou cnpj" />
+                </label>
+              </div>
+              <div class="large-6 columns">
+                <label for="inputInscSusep">N.° INSC. SUSEP
+                  <input type="text" id="inputCpfCnpj" placeholder="Escreva o seu número de inscrição no SUSEP" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-12 columns">
+                <label for="inputEndereco">Endereco
+                  <input type="text" id="inputEndereco" placeholder="Escreva o seu endereço" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-6 columns">
+                <label for="inputBairro">Bairro
+                  <input type="text" id="inputBairro" placeholder="Escreva o seu bairro" />
+                </label>
+              </div>
+              <div class="large-6 columns">
+                <label for="inputCidade">Cidade
+                  <input type="text" id="inputCidade" placeholder="Escreva a sua cidade" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-6 columns">
+                <label for="inputUf">Estado
+                  <select>
+                    <option value="">Selecione</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espirito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                  </select>
+                </label>
+              </div>
+              <div class="large-6 columns">
+                <label for="inputCep">CEP
+                  <input type="text" id="inputCep" placeholder="Escreva o seu CEP" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-6 columns">
+                <label for="inputTelefone">Telefone
+                  <input type="text" id="inputTelefone" placeholder="Escreva o seu telefone" />
+                </label>
+              </div>
+              <div class="large-6 columns">
+                <label for="inputCelular">Celular
+                  <input type="text" id="inputCelular" placeholder="Escreva o seu celular" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-6 columns">
+                <label for="inputFax">Fax
+                  <input type="text" id="inputFax" placeholder="Escreva o seu fax" />
+                </label>
+              </div>
+              <div class="large-6 columns">
+                <label for="inputEmail">E-mail
+                  <input type="text" id="inputEmail" placeholder="Escreva o seu email" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-12 columns">
+                <label for="textObservacoes">Observações
+                  <textarea id="textObservacoes" placeholder="Caso queira comentar algo, utilize este espaço"></textarea>
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-12 columns">
+                <input class="button expand" type="submit" value="Cadastrar-se">
+              </div>
+            </div>
+          </form>
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal treinamento -->
+
+        <div id="sugestoesModal" class="reveal-modal" data-reveal>
+          <div class="fundo_titulo_modal_2">
+            <div class="circle">
+              
+            </div>
+            <div class="linha_vertical">
+              
+            </div>
+            <div class="linha_horizontal">
+              
+            </div>
+            <h2 class="titulo_modal">Sugestões e Reclamações</h2>
+          </div>
+
+          <p>Visando a melhoria continua de nossos serviços e a consequente satisfação dos nossos Corretores de Seguros, solicitamos que deixe seu comentário, pois sua opinião é muito importante Futura União.</p>
+
+         <p>Em Construção!</p>
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal treinamento -->
+
+        <div id="missaoModal" class="reveal-modal" data-reveal>
+
+          <div class="fundo_titulo_modal">
+            <h2 class="titulo_modal">Missão</h2>
+          </div>
+
+         <p>Oferecer uma prestação de serviços de qualidade e diferenciada no
+segmento de Assessoria Exclusiva à corretores de seguros</p>
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal missao -->
+
+        <div id="valoresModal" class="reveal-modal" data-reveal>
+
+          <div class="fundo_titulo_modal">
+            <h2 class="titulo_modal">Valores</h2>
+          </div>
+
+         <p>Profissionais capacitados e especializados que possuem vasta
+experiência nas diversas áreas da Companhia; Valorização do trabalho de
+nossos colaboradores; Segurança nos negócios; Objetividade e transparência
+na relação com os corretores e seguradora.</p>
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal valores -->
+
+        <div id="empresaModal" class="reveal-modal" data-reveal>
+
+          <div class="fundo_titulo_modal">
+            <h2 class="titulo_modal">Sobre a Empresa</h2>
+          </div>
+
+          <article>
+            <blockquote class="bq_empresa">" As coisas mudam, as pessoas não... "
+            </blockquote>
+            
+            <p class="subtitulo_empresa">Amigo corretor(a).
+</p>
+            
+            <div class="texto_empresa">
+              <p>Durante 18 anos, tive o privilégio de fazer parte da equipe de colaboradores da
+SulAmérica Seguros.</p>
+              <p>Neste período que é praticamente metade da minha vida, foi repleto de
+aprendizados e realizações e posso dizer que de certa forma, ajudei a
+assegurar o patrimônio e o bem estar de milhares de empresas e pessoas.</p>
+              <p>É com orgulho que vejo minha participação no desenvolvimento e crescimento
+desta empresa, que sempre me mostrou que trabalhando com seriedade,
+determinação e honestidade o sucesso é certo.</p>
+              <p>Outro grande aprendizado que tive, é que não podemos nunca parar de crescer
+e de aceitarmos desafios, e baseado neste ensinamento, que no ano de 2009
+nasceu a <strong>“Futura União – Assessoria e Consultoria Exclusiva da
+SulAmérica”</strong>, uma empresa voltada ao atendimento <strong>EXCLUSIVO</strong> à corretores
+de seguros com foco no varejo, aonde poderei utilizar todo o conhecimento que
+adquiri do mercado segurador e também poder auxiliar e facilitar a
+comercialização dos produtos da <strong>SULAMÉRICA</strong>.
+</p>
+              <p>Estamos sempre atentos as necessidades e oportunidades do mercado e
+também na constante busca de atender cada vez melhor e de forma completa
+nossos parceiros e clientes.</p>
+              <p>Aproveito a oportunidade para convidá-lo a visitar nossas instalações e
+firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
+
+            </div>
+          </article>
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div> <!-- fim modal valores -->
 
         <!-- fim das janelas modais  -->
 
@@ -1590,6 +2124,9 @@ By accessing and/or using this code snippet, you agree to AccuWeather’s terms 
         });
 
       </script>
+
+      <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+':35729/livereload.js?snipver=2"></' + 'script>')</script>
 
     </body>
 </html>
