@@ -352,7 +352,7 @@ CmsApp.controller('CorretoresCtrl', ['$scope', 'Corretor', '$location', function
 
 }]);
 
-
+/*
 CmsApp.controller('ArquivosCtrl', ['$scope',  function ( $scope ) {
 	
 	$scope.checked_expirar = true;
@@ -415,11 +415,13 @@ CmsApp.controller('ArquivosCtrl', ['$scope',  function ( $scope ) {
 			$scope.post.arquivo.$setValidity('required', true);
 		}
 
-	});*/
+	});
 
 }]);
 
-CmsApp.controller('LinksCtrl', ['$scope', 'ngTableParams', 'Link', function($scope, ngTableParams, Link) {
+*/
+
+/*CmsApp.controller('LinksCtrl', ['$scope', 'ngTableParams', 'Link', function($scope, ngTableParams, Link) {
 	$scope.links = [];
 
 	var loadLinks = ( function() {
@@ -445,7 +447,7 @@ CmsApp.controller('LinksCtrl', ['$scope', 'ngTableParams', 'Link', function($sco
 		});
 		
 	})();
-}]);
+}]);*/
 
 CmsApp.controller('FaqCtrl', ['$scope', 'Faq', '$sce', function($scope, Faq, $sce) {
 	$scope.currentPage = 1;
@@ -496,7 +498,7 @@ CmsApp.controller('CorretoresCtrl', ['$scope', 'Corretor', function($scope, Corr
 	})();
 }]);
 
-CmsApp.controller('FormulariosCtrl', ['$scope', 'Formulario', function ($scope, Formulario) {
+/*CmsApp.controller('FormulariosCtrl', ['$scope', 'Formulario', function ($scope, Formulario) {
 	$scope.currentPage = 1;
   	$scope.pageSize = 10;
 	$scope.formularios = [];
@@ -516,9 +518,9 @@ CmsApp.controller('FormulariosCtrl', ['$scope', 'Formulario', function ($scope, 
 		});
 		
 	})();
-}]);	
+}]);*/	
 
-CmsApp.controller('NotificacoesCtrl', ['$scope', 'Notificacao', 'NotificacaoArquivo', function ($scope, Notificacao, NotificacaoArquivo) {
+/*CmsApp.controller('NotificacoesCtrl', ['$scope', 'Notificacao', 'NotificacaoArquivo', function ($scope, Notificacao, NotificacaoArquivo) {
 	$scope.currentPage = 1;
   	$scope.pageSize = 10;
 	$scope.notificacoes = [];
@@ -565,7 +567,7 @@ CmsApp.controller('NotificacoesCtrl', ['$scope', 'Notificacao', 'NotificacaoArqu
 		});
 
 	})();
-}]);
+}]);*/
 
 CmsApp.controller('CircularesCtrl', ['$scope', 'Circular', 'CircularArquivo', function ($scope, Circular, CircularArquivo) {
 	$scope.currentPage = 1;

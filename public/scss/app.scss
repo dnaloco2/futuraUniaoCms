@@ -181,6 +181,24 @@ div.editable {
 	top: 45px;
 }
 
+#modal-produtos {
+	.tabs.vertical {
+		dd {
+			width: 260px;
+			a {
+				padding: 5px 50px;
+
+			}
+
+		}
+	}
+	.tabs-content {
+		margin-left: 0px;
+		padding: 0 0px 0 50px;
+	}
+
+}
+
 /********************* 4 - Rodapé *********************************/
 
 $cor_fonte_footer: #999999;

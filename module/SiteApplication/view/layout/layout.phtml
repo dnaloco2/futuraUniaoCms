@@ -137,7 +137,7 @@ if (strpos($route, 'conteudo') !== false) {
 
                   <li class="divider"></li>
 
-                  <li><a href="#">Produtos</a>
+                  <li><a href="#" data-reveal-id="modal-produtos">Produtos</a>
                     <ul class="dropdown">
 
                       <li><a href="#"  data-reveal-id="modal-produtos-riscos-financeiros">Riscos Financeiros</a>
@@ -574,6 +574,54 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
           <a class="close-reveal-modal">&#215;</a>
         </div>
         <!-- fim Janelas Modais de Serviços -->
+
+        <div id="modal-produtos" class="reveal-modal" data-reveal>
+
+          <div class="fundo_titulo_modal_2">
+            <div class="circle">
+              
+            </div>
+            <div class="linha_vertical">
+              
+            </div>
+            <div class="linha_horizontal">
+              
+            </div>
+            <h2 class="titulo_modal">Produtos</h2>
+          </div>
+
+          <dl class="tabs vertical" data-tab>
+            <dd class="active"><a href="#prod-panel-auto" id="link-prod-panel-auto">AUTO</a></dd>
+            <dd><a href="#prod-panel-residencial" id="link-prod-panel-residencial">RESIDENCIAL</a></dd>
+            <dd><a href="#prod-panel-odonto" id="link-prod-panel-odonto">ODONTO</a></dd>
+            <dd><a href="#prod-panel-saude" id="link-prod-panel-saude">SAUDE</a></dd>
+            <dd><a href="#prod-panel-vida" id="link-prod-panel-vida">VIDA</a></dd>
+            <dd><a href="#prod-panel-riscos" id="link-prod-panel-riscos">RISCOS IND. & COM.</a></dd>
+          </dl>
+          <div class="tabs-content vertical">
+            <div class="content active" id="prod-panel-auto">
+              <p>O SulAmérica Auto é um seguro completo, feito sob medida para as suas necessidades, oferecendo soluções em caso de imprevistos, além de benefícios e serviços pensados para você cliente, facilitando o seu dia-a-dia.</p>
+            </div>
+            <div class="content" id="prod-panel-residencial">
+              <p>Com o SulAmérica Residencial, você protege seu patrimônio, conta com diversos serviços e coberturas que facilitam o seu dia-a-dia.</p>
+            </div>
+            <div class="content" id="prod-panel-odonto">
+              <p>Conte com o que há de melhor em saúde bucal. Confira as informações do seu seguro.</p>
+            </div>
+            <div class="content" id="prod-panel-saude">
+              <p>O SulAmérica Saúde apresenta uma rede referenciada com médicos, clinicas, laboratórios e hospitais de qualidade.</p>
+            </div>
+            <div class="content" id="prod-panel-vida">
+              <p>A SulAmérica desenvolve uma família de produtos de vida e acidentes pessoais, para garantir seu bem-estar e das pessoas que você tanto ama. De forma fácil e sem complicações, garanta a sua tranquilidade e toda a sua família e aproveite o que a vida tem de melhor - nós cuidamos de todo o resto para você.</p>
+            </div>
+            <div class="content" id="prod-panel-riscos">
+              <p>A SulAmérica avalia cada negócio visando atender as suas necessidades e das empresas, oferecendo diversas opções de coberturas que garantem o seu patrimônio de acordo com a necessidade do seu cliente.</p>
+            </div>
+          </div>
+
+
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
 
 
         <!-- Janelas Modais de Produtos  -->
@@ -1094,14 +1142,14 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
 
         </div> <!-- fim modal-produtos-transportes  -->
 
-        <div ng-controller="FormulariosCtrl" id="formulariosModal" class="reveal-modal conteudo-lista-estilo" data-reveal>
-
+        <!-- <div ng-controller="FormulariosCtrl" id="formulariosModal" class="reveal-modal conteudo-lista-estilo" data-reveal>
+        
           <div class="row margem_bottom_10" >
             <div class="fundo_titulo_modal">
               <h2 class="titulo_modal">Formulários</h2>
             </div>
           </div>
-
+        
           <div class="lista-conteudo">
             <div ng-show="loadingFormularios" class="carregando_informacao texto_centralizado">
               <img src="/img/carregando.gif" alt="">
@@ -1128,17 +1176,17 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
           </div>
               
           <a class="close-reveal-modal">&#215;</a>
-        </div> <!-- fim modal formularios -->
+        </div> fim modal formularios -->
 
-        <div ng-controller="NotificacoesCtrl" id="notificacoesModal" class="reveal-modal conteudo-lista-estilo" data-reveal>
-
+        <!-- <div ng-controller="NotificacoesCtrl" id="notificacoesModal" class="reveal-modal conteudo-lista-estilo" data-reveal>
+        
           <div class="row margem_bottom_10" >
             <div class="fundo_titulo_modal">
               <h2  class="titulo_modal">Notificações</h2>
             </div>
-
+        
           </div>
-
+        
           <div class="lista-conteudo">
             <dl class="tabs" data-tab>
               <dd class="active"><a href="#panel_paginas_notificacoes">Paginas</a></dd>
@@ -1204,9 +1252,9 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
               </div>
             </div>
           </div>
-
+        
           <a class="close-reveal-modal">&#215;</a>
-        </div> <!-- fim modal notificacoes -->
+        </div> fim modal notificacoes -->
 
         <div ng-controller="CircularesCtrl" id="circularesModal" class="reveal-modal conteudo-lista-estilo" data-reveal>
 
@@ -1393,8 +1441,8 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
           <a class="close-reveal-modal ">&#215;</a>
         </div> <!-- fim modal glossario -->
 
-        <div ng-controller="LinksCtrl" id="linksModal" class="reveal-modal tiny" data-reveal>
-
+        <!-- <div ng-controller="LinksCtrl" id="linksModal" class="reveal-modal tiny" data-reveal>
+        
           <div ng-controller="LinksCtrl" id="widget_links_uteis">
             <div>
               <div class="fundo_titulo_modal_2">
@@ -1410,37 +1458,37 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
                 <h2 class="titulo_modal">Links Uteis <span class="ng-cloak">{{tableParams.page()}}</span></h2>
               </div>
             </div>
-
+        
             <div class="column-content widget-top widget-box padding_vinte">
-
+        
               <div ng-show="loadingLinks" class="carregando_informacao texto_centralizado">
                 <img src="/img/carregando.gif" alt="">
               </div>
-
+        
               <table ng-table="tableParams" class="table_clean ng-cloak">
                       <thead>
-
+        
                       </thead>
                       <tbody>
                           <tr ng-repeat="link in $data">
                               <td data-title="'descricao'"><a class="links_uteis" href="{{link.href}}" target="_blank"><img src="http://g.etfv.co/{{link.href}}" alt="Google" width="16" height="16" />&nbsp;&nbsp;&nbsp;{{link.descricao}}</a></td>
                           </tr>
                       </tbody>
-
+        
                       
                 </table>
             </div>
           </div>
-
+        
           <a class="close-reveal-modal ">&#215;</a>
-        </div> <!-- fim modal glossario -->
+        </div> fim modal glossario -->
 
-        <div id="indicadoresModal" class="reveal-modal" data-reveal>
-
+        <!-- <div id="indicadoresModal" class="reveal-modal" data-reveal>
+        
           <div class="fundo_titulo_modal">
             <h2 class="titulo_modal">Indicadores Econômicos e Ferramentas</h2>
           </div>
-
+        
           <dl class="tabs vertical" data-tab>
             <dd class="active"><a href="#indicadoresInflacao">Indicadores de inflação</a></dd>
             <dd><a href="#indicadoresDiversos">Indicadores Diversos</a></dd>
@@ -1450,7 +1498,7 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
           </dl>
           <div class="tabs-content">
             <div class="content active" id="indicadoresInflacao">
-  
+          
               <script type="text/javascript" src="http://www.debit.com.br/resumogratuito.php?info=inflacao"></script>
             </div>
             <div class="content" id="indicadoresDiversos">
@@ -1467,9 +1515,9 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
               <div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana; float: left;" class="conversor_moeda"><iframe style="border:1px solid #C0C0C0; width:180px; height:300px;"  scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="http://pt.loobiz.com/BRL-vs-EUR.htm"><a href="http://pt.loobiz.com/BRL-vs-EUR.htm">BRL EUR</a><div style="text-align: center; width:180px; font-size: 10px; font-family: Verdana;"></iframe><br/><a href="http://pt.loobiz.com/moeda-conversor/">Conversor de Moedas</a><br/><a href="http://pt.loobiz.com/moeda-conversor/real+euro">BRL / EUR</a></div>
             </div>
           </div>         
-
+        
           <a class="close-reveal-modal ">&#215;</a>
-        </div> <!-- fim modal glossario -->
+        </div> fim modal glossario -->
 
         <div ng id="nossoCorretores" class="reveal-modal" data-reveal ng-controller="CorretoresCtrl">
           <div class="fundo_titulo_modal_2">
@@ -1569,38 +1617,38 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
           <a class="close-reveal-modal">&#215;</a>
         </div> <!-- fim modal nossoCorretores -->
 
-        <div ng-controller="FormulariosCtrl" id="formulariosModal" class="reveal-modal" data-reveal>
+<!--         <div ng-controller="FormulariosCtrl" id="formulariosModal" class="reveal-modal" data-reveal>
 
-          <div class="row margem_bottom_10 padding_left_10" >
-            <h1 class="titulo-modal titulo-parte-home-light-green ">Formulários</h1>
-            <hr class="my_fancy_hr hr_gradiente_light_grey">
-          </div>
+  <div class="row margem_bottom_10 padding_left_10" >
+    <h1 class="titulo-modal titulo-parte-home-light-green ">Formulários</h1>
+    <hr class="my_fancy_hr hr_gradiente_light_grey">
+  </div>
 
-          <div ng-show="loadingFormularios" class="carregando_informacao texto_centralizado">
-            <img src="/img/carregando.gif" alt="">
-          </div>
-          <div ng-hide="loadingFormularios">
-            <strong>
-              <ng-pluralize count="formularios.length"
-                                 when="{'0': 'Sem Formulários Cadastrados!',
-                                 'one': '1 Formulário:',
-                                   'other': '{} Formulários:'}">
-              </ng-pluralize>
-            </strong>
-          </div>
+  <div ng-show="loadingFormularios" class="carregando_informacao texto_centralizado">
+    <img src="/img/carregando.gif" alt="">
+  </div>
+  <div ng-hide="loadingFormularios">
+    <strong>
+      <ng-pluralize count="formularios.length"
+                         when="{'0': 'Sem Formulários Cadastrados!',
+                         'one': '1 Formulário:',
+                           'other': '{} Formulários:'}">
+      </ng-pluralize>
+    </strong>
+  </div>
 
-          <ul class="ng-cloak">
-            
-            <li dir-paginate="formulario in formularios | filter:q | itemsPerPage: pageSize: 'forms'" current-page="currentPage" pagination-id="forms">
-              {{ formulario.titulo }} | <a href="/{{ formulario.endereco }}" target="_self" download>download</a>
-            </li>
+  <ul class="ng-cloak">
+    
+    <li dir-paginate="formulario in formularios | filter:q | itemsPerPage: pageSize: 'forms'" current-page="currentPage" pagination-id="forms">
+      {{ formulario.titulo }} | <a href="/{{ formulario.endereco }}" target="_self" download>download</a>
+    </li>
 
-          </ul>
+  </ul>
 
-          <dir-pagination-controls pagination-id="forms" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/templates/dirPagination.tpl.html" class="ng-cloak"></dir-pagination-controls>
-              
-          <a class="close-reveal-modal">&#215;</a>
-        </div> <!-- fim modal formularios -->
+  <dir-pagination-controls pagination-id="forms" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/templates/dirPagination.tpl.html" class="ng-cloak"></dir-pagination-controls>
+      
+  <a class="close-reveal-modal">&#215;</a>
+</div> fim modal formularios -->
 
         <div id="servicosModal" class="reveal-modal" data-reveal>
 
