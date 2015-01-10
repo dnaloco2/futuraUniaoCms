@@ -22,8 +22,7 @@ class ArquivoTexto  extends Form
         $nome->setLabel("Título: ")
                 ->setAttribute('placeholder','Entre com o título do arquivo')
                 ->setAttribute('class', 'form-input')
-                ->setAttribute('data-ng-model', 'arquivo.descricao')
-                ->setRequired(true);
+                ->setAttribute('data-ng-model', 'arquivo.descricao');
 
         $this->add($nome);
 

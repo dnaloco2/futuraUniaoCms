@@ -11,6 +11,7 @@ return array(
             __NAMESPACE__ . '\Controller\LinksRest' => __NAMESPACE__ .  '\Controller\LinksRestController',
             __NAMESPACE__ . '\Controller\ArquivosRest' => __NAMESPACE__ .  '\Controller\ArquivosRestController',
             __NAMESPACE__ . '\Controller\FormContato' => __NAMESPACE__ .  '\Controller\FormContatoController',
+            __NAMESPACE__ . '\Controller\CadastroCorretores' => __NAMESPACE__ .  '\Controller\CadastroCorretoresRestController',
         )
     ),
     'router' => array(
@@ -49,6 +50,20 @@ return array(
                     'defaults' => array(
                         '__NAMESPACE__' => __NAMESPACE__ . '\Controller',
                         'controller' => 'CorretoresRest'
+                    )
+                )
+            ),
+
+            'cadastro-corretores-rest' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route' => '/api/cadastrocorretor[/:id]',
+                    'constraints' => array(
+                        'id' => '[0-9]+'
+                    ),
+                    'defaults' => array(
+                        '__NAMESPACE__' => __NAMESPACE__ . '\Controller',
+                        'controller' => 'CadastroCorretores'
                     )
                 )
             ),

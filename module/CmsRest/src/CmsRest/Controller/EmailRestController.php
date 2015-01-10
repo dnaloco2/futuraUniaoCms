@@ -36,6 +36,7 @@ class EmailRestController extends AbstractRestfulController {
         $em = $this->getServiceLocator()->get("Doctrine\ORM\EntityManager");
         $repo = $em->getRepository("CmsMediaForce\Entity\Corretor");
         $corretor = null;
+
         if (isset($data['id']) && !is_null($data['id']) && !empty($data['id'])) {
             $corretor = $repo->find(intval($data['id']));
         }

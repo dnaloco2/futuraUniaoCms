@@ -128,28 +128,28 @@ if (strpos($route, 'conteudo') !== false) {
 
                   <li class="has-dropdown"><a href="#">Serviços</a>
                     <ul class="dropdown">
-                      <li><a href="#" data-reveal-id="modal-servicos-apoio-tecn">Apoio Técnico</a></li>
-                      <li><a href="#" data-reveal-id="modal-servicos-apoio-com">Apoio Comercial</a></li>
-                      <li><a href="#" data-reveal-id="modal-servicos-apoio-jur">Apoio Jurídico</a></li>
-                      <li><a href="#" data-reveal-id="modal-servicos-apoio-sin">Apoio Sinistros</a></li>
+                      <li><a href="/#" data-reveal-id="modal-servicos-apoio-tecn">Apoio Técnico</a></li>
+                      <li><a href="/#" data-reveal-id="modal-servicos-apoio-com">Apoio Comercial</a></li>
+                      <li><a href="/#" data-reveal-id="modal-servicos-apoio-jur">Apoio Jurídico</a></li>
+                      <li><a href="/#" data-reveal-id="modal-servicos-apoio-sin">Apoio Sinistros</a></li>
                     </ul>
                   </li>
 
                   <li class="divider"></li>
 
-                  <li><a href="#" data-reveal-id="modal-produtos">Produtos</a>
+                  <li><a href="/#" data-reveal-id="modal-produtos">Produtos</a>
                     <ul class="dropdown">
 
-                      <li><a href="#"  data-reveal-id="modal-produtos-riscos-financeiros">Riscos Financeiros</a>
+                      <li><a href="/#"  data-reveal-id="modal-produtos-riscos-financeiros">Riscos Financeiros</a>
                       </li>
 
-                      <li><a href="#" data-reveal-id="modal-produtos-riscos-patrimoniais-resp">Riscos Patrimoniais & Responsabilidades</a>
+                      <li><a href="/#" data-reveal-id="modal-produtos-riscos-patrimoniais-resp">Riscos Patrimoniais & Responsabilidades</a>
                       </li>
                       
-                      <li><a href="#" data-reveal-id="modal-produtos-riscos-diversos">Riscos Diversos</a>
+                      <li><a href="/#" data-reveal-id="modal-produtos-riscos-diversos">Riscos Diversos</a>
                       </li>
 
-                      <li><a href="#" data-reveal-id="modal-produtos-transportes">Transportes</a>
+                      <li><a href="/#" data-reveal-id="modal-produtos-transportes">Transportes</a>
                       </li>
 
                     </ul>
@@ -159,10 +159,10 @@ if (strpos($route, 'conteudo') !== false) {
 
                   <li class="has-dropdown"><a href="#">Para Corretores</a>
                     <ul class="dropdown">
-                      <li><a href="#" data-reveal-id="circularesModal">Circulares</a></li>
-                      <li><a href="#" data-reveal-id="treinamentosModal">Treinamento</a></li>
-                      <li><a href="#" data-reveal-id="cadastreseModal">Cadastre-se Conosco</a></li>
-                      <li><a href="#" data-reveal-id="sugestoesModal">Sugestões e Reclamações</a></li>
+                      <li><a href="/#" data-reveal-id="circularesModal">Circulares</a></li>
+                      <li><a href="/#" data-reveal-id="treinamentosModal">Treinamento</a></li>
+                      <li><a href="/#" data-reveal-id="cadastreseModal">Cadastre-se Conosco</a></li>
+                      <li><a href="/s#" data-reveal-id="sugestoesModal">Sugestões e Reclamações</a></li>
                     </ul>
                   </li>
                   
@@ -199,7 +199,7 @@ if (strpos($route, 'conteudo') !== false) {
               <li ng-class="{'active': isContent}">
                 <h3>&nbsp;&nbsp;<span class="icon-drawer"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conteudo</h3>
                 <ul>
-                  <li><a href="/admin/content/posts" target="_self"><span class="icon-compose"></span>&nbsp;&nbsp;&nbsp;&nbsp;Posts</a></li>
+                  <li><a href="/admin/content/posts" target="_self"><span class="icon-compose"></span>&nbsp;&nbsp;&nbsp;&nbsp;Páginas</a></li>
                   <li><a href="/admin/content/arquivostexto" target="_self"><span class="icon-note"></span>&nbsp;&nbsp;&nbsp;&nbsp;Arquivo</a></li>
                   <li><a href="/admin/content/links" target="_self"><span class="icon-link"></span>&nbsp;&nbsp;&nbsp;&nbsp;Links</a></li>
                   <li><a href="/admin/content/corretores" target="_self"><span class="icon-vcard"></span>&nbsp;&nbsp;&nbsp;&nbsp;Corretor</a></li>
@@ -590,35 +590,49 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
             <h2 class="titulo_modal">Produtos</h2>
           </div>
 
-          <dl class="tabs vertical" data-tab>
-            <dd class="active"><a href="#prod-panel-auto" id="link-prod-panel-auto">AUTO</a></dd>
-            <dd><a href="#prod-panel-residencial" id="link-prod-panel-residencial">RESIDENCIAL</a></dd>
-            <dd><a href="#prod-panel-odonto" id="link-prod-panel-odonto">ODONTO</a></dd>
-            <dd><a href="#prod-panel-saude" id="link-prod-panel-saude">SAUDE</a></dd>
-            <dd><a href="#prod-panel-vida" id="link-prod-panel-vida">VIDA</a></dd>
-            <dd><a href="#prod-panel-riscos" id="link-prod-panel-riscos">RISCOS IND. & COM.</a></dd>
-          </dl>
-          <div class="tabs-content vertical">
-            <div class="content active" id="prod-panel-auto">
-              <p>O SulAmérica Auto é um seguro completo, feito sob medida para as suas necessidades, oferecendo soluções em caso de imprevistos, além de benefícios e serviços pensados para você cliente, facilitando o seu dia-a-dia.</p>
+          <div id="paginas_de_produtos">
+            <dl class="tabs" data-tab>
+              <dd class="active" id="dd-prod-panel-auto"><a class="link-pagina-produtos" href="#prod-panel-auto" id="link-prod-panel-auto"></a></dd>
+              <dd id="dd-prod-panel-residencial"><a class="link-pagina-produtos" href="#prod-panel-residencial" id="link-prod-panel-residencial"></a></dd>
+              <dd id="dd-prod-panel-odonto"><a class="link-pagina-produtos" href="#prod-panel-odonto" id="link-prod-panel-odonto"></a></dd>
+              <dd id="dd-prod-panel-saude"><a class="link-pagina-produtos" href="#prod-panel-saude" id="link-prod-panel-saude"></a></dd>
+              <dd id="dd-prod-panel-vida"><a class="link-pagina-produtos" href="#prod-panel-vida" id="link-prod-panel-vida"></a></dd>
+              <dd id="dd-prod-panel-riscos"><a class="link-pagina-produtos" href="#prod-panel-riscos" id="link-prod-panel-riscos"></a></dd>
+            </dl>
+            <div class="tabs-content vertical extend">
+              <div class="content active" id="prod-panel-auto">
+                <div class="img_panel_produto" id="img_panel_auto"></div>
+                <h2 class="">Auto</h2>
+                <p>O SulAmérica Auto é um seguro completo, feito sob medida para as suas necessidades, oferecendo soluções em caso de imprevistos, além de benefícios e serviços pensados para você cliente, facilitando o seu dia-a-dia.</p>
+              </div>
+              <div class="content" id="prod-panel-residencial">
+                <div class="img_panel_produto" id="img_panel_residencial"></div>
+                <h2 class="">Residencial</h2>
+                <p>Com o SulAmérica Residencial, você protege seu patrimônio, conta com diversos serviços e coberturas que facilitam o seu dia-a-dia.</p>
+              </div>
+              <div class="content" id="prod-panel-odonto">
+                <div class="img_panel_produto" id="img_panel_odonto"></div>
+                <h2 class="">Odonto</h2>
+                <p>Conte com o que há de melhor em saúde bucal. Confira as informações do seu seguro.</p>
+              </div>
+              <div class="content" id="prod-panel-saude">
+                <div class="img_panel_produto" id="img_panel_saude"></div>
+                <h2 class="">Saude</h2>
+                <p>O SulAmérica Saúde apresenta uma rede referenciada com médicos, clinicas, laboratórios e hospitais de qualidade.</p>
+              </div>
+              <div class="content" id="prod-panel-vida">
+                <div class="img_panel_produto" id="img_panel_vida"></div>
+                <h2 class="">Vida</h2>
+                <p>A SulAmérica desenvolve uma família de produtos de vida e acidentes pessoais, para garantir seu bem-estar e das pessoas que você tanto ama. De forma fácil e sem complicações, garanta a sua tranquilidade e toda a sua família e aproveite o que a vida tem de melhor - nós cuidamos de todo o resto para você.</p>
+              </div>
+              <div class="content" id="prod-panel-riscos">
+                <div class="img_panel_produto" id="img_panel_riscos"></div>
+                <h2 class="">Riscos Ind. e Com.</h2>
+                <p>A SulAmérica avalia cada negócio visando atender as suas necessidades e das empresas, oferecendo diversas opções de coberturas que garantem o seu patrimônio de acordo com a necessidade do seu cliente.</p>
+              </div>
             </div>
-            <div class="content" id="prod-panel-residencial">
-              <p>Com o SulAmérica Residencial, você protege seu patrimônio, conta com diversos serviços e coberturas que facilitam o seu dia-a-dia.</p>
-            </div>
-            <div class="content" id="prod-panel-odonto">
-              <p>Conte com o que há de melhor em saúde bucal. Confira as informações do seu seguro.</p>
-            </div>
-            <div class="content" id="prod-panel-saude">
-              <p>O SulAmérica Saúde apresenta uma rede referenciada com médicos, clinicas, laboratórios e hospitais de qualidade.</p>
-            </div>
-            <div class="content" id="prod-panel-vida">
-              <p>A SulAmérica desenvolve uma família de produtos de vida e acidentes pessoais, para garantir seu bem-estar e das pessoas que você tanto ama. De forma fácil e sem complicações, garanta a sua tranquilidade e toda a sua família e aproveite o que a vida tem de melhor - nós cuidamos de todo o resto para você.</p>
-            </div>
-            <div class="content" id="prod-panel-riscos">
-              <p>A SulAmérica avalia cada negócio visando atender as suas necessidades e das empresas, oferecendo diversas opções de coberturas que garantem o seu patrimônio de acordo com a necessidade do seu cliente.</p>
-            </div>
-          </div>
 
+          </div>
 
           <a class="close-reveal-modal">&#215;</a>
         </div>
@@ -1854,7 +1868,7 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
           <a class="close-reveal-modal">&#215;</a>
         </div> <!-- fim modal treinamento -->
 
-        <div id="cadastreseModal" class="reveal-modal" data-reveal>
+        <div id="cadastreseModal" ng-controller="CadastroFormCtrl" class="reveal-modal" data-reveal>
           <div class="fundo_titulo_modal_2">
             <div class="circle">
               
@@ -1866,14 +1880,15 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
               
             </div>
             <h2 class="titulo_modal">Cadastre-se Conosco</h2>
+
           </div>
 
-          <form id="formularioCadastro">
+          <form>
 
             <div class="row">
               <div class="large-12 columns">
                 <label for="inputNomeRazao">Nome / Razão Social
-                  <input type="text" id="inputNomeRazao" placeholder="Escreva o seu nome ou razão social" />
+                  <input ng-model="formCadastro.inputNomeRazao" type="text" id="inputNomeRazao" placeholder="Escreva o seu nome ou razão social" />
                 </label>
               </div>
             </div>
@@ -1881,7 +1896,7 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
             <div class="row">
               <div class="large-12 columns">
                 <label for="inputRespContato">Responsável / Contato
-                  <input type="text" id="inputRespContato" placeholder="Escreva o seu nome ou razão social" />
+                  <input ng-model="formCadastro.inputRespContato" type="text" id="inputRespContato" placeholder="Escreva o seu nome ou razão social" />
                 </label>
               </div>
             </div>
@@ -1889,12 +1904,12 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
             <div class="row">
               <div class="large-6 columns">
                 <label for="inputCpfCnpj">CPF / CNPJ
-                  <input type="text" id="inputCpfCnpj" placeholder="Escreva o seu cpf ou cnpj" />
+                  <input ng-model="formCadastro.inputCpfCnpj" type="text" id="inputCpfCnpj" placeholder="Escreva o seu cpf ou cnpj" />
                 </label>
               </div>
               <div class="large-6 columns">
                 <label for="inputInscSusep">N.° INSC. SUSEP
-                  <input type="text" id="inputCpfCnpj" placeholder="Escreva o seu número de inscrição no SUSEP" />
+                  <input ng-model="formCadastro.inputInscSusep" type="text" id="inputCpfCnpj" placeholder="Escreva o seu número de inscrição no SUSEP" />
                 </label>
               </div>
             </div>
@@ -1902,7 +1917,7 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
             <div class="row">
               <div class="large-12 columns">
                 <label for="inputEndereco">Endereco
-                  <input type="text" id="inputEndereco" placeholder="Escreva o seu endereço" />
+                  <input ng-model="formCadastro.inputEndereco" type="text" id="inputEndereco" placeholder="Escreva o seu endereço" />
                 </label>
               </div>
             </div>
@@ -1910,12 +1925,12 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
             <div class="row">
               <div class="large-6 columns">
                 <label for="inputBairro">Bairro
-                  <input type="text" id="inputBairro" placeholder="Escreva o seu bairro" />
+                  <input ng-model="formCadastro.inputBairro" type="text" id="inputBairro" placeholder="Escreva o seu bairro" />
                 </label>
               </div>
               <div class="large-6 columns">
                 <label for="inputCidade">Cidade
-                  <input type="text" id="inputCidade" placeholder="Escreva a sua cidade" />
+                  <input ng-model="formCadastro.inputCidade" type="text" id="inputCidade" placeholder="Escreva a sua cidade" />
                 </label>
               </div>
             </div>
@@ -1923,7 +1938,7 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
             <div class="row">
               <div class="large-6 columns">
                 <label for="inputUf">Estado
-                  <select>
+                  <select ng-model="formCadastro.inputUf">
                     <option value="">Selecione</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
@@ -1957,7 +1972,7 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
               </div>
               <div class="large-6 columns">
                 <label for="inputCep">CEP
-                  <input type="text" id="inputCep" placeholder="Escreva o seu CEP" />
+                  <input ng-model="formCadastro.inputCep" type="text" id="inputCep" placeholder="Escreva o seu CEP" />
                 </label>
               </div>
             </div>
@@ -1965,12 +1980,12 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
             <div class="row">
               <div class="large-6 columns">
                 <label for="inputTelefone">Telefone
-                  <input type="text" id="inputTelefone" placeholder="Escreva o seu telefone" />
+                  <input ng-model="formCadastro.inputTelefone" type="text" id="inputTelefone" placeholder="Escreva o seu telefone" />
                 </label>
               </div>
               <div class="large-6 columns">
                 <label for="inputCelular">Celular
-                  <input type="text" id="inputCelular" placeholder="Escreva o seu celular" />
+                  <input ng-model="formCadastro.inputCelular" type="text" id="inputCelular" placeholder="Escreva o seu celular" />
                 </label>
               </div>
             </div>
@@ -1978,12 +1993,12 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
             <div class="row">
               <div class="large-6 columns">
                 <label for="inputFax">Fax
-                  <input type="text" id="inputFax" placeholder="Escreva o seu fax" />
+                  <input ng-model="formCadastro.inputFax" type="text" id="inputFax" placeholder="Escreva o seu fax" />
                 </label>
               </div>
               <div class="large-6 columns">
                 <label for="inputEmail">E-mail
-                  <input type="text" id="inputEmail" placeholder="Escreva o seu email" />
+                  <input ng-model="formCadastro.inputEmail" type="text" id="inputEmail" placeholder="Escreva o seu email" />
                 </label>
               </div>
             </div>
@@ -1991,14 +2006,15 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
             <div class="row">
               <div class="large-12 columns">
                 <label for="textObservacoes">Observações
-                  <textarea id="textObservacoes" placeholder="Caso queira comentar algo, utilize este espaço"></textarea>
+                  <textarea ng-model="formCadastro.textObservacoes" id="textObservacoes" placeholder="Caso queira comentar algo, utilize este espaço"></textarea>
                 </label>
               </div>
             </div>
 
             <div class="row">
               <div class="large-12 columns">
-                <input class="button expand" type="submit" value="Cadastrar-se">
+
+                <button class="button expand" ng-click="submit()">Cadastrar-se</button>
               </div>
             </div>
           </form>
@@ -2149,6 +2165,42 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
         $.fn.accordion.defaults.container = false; 
 
         $(document).ready(function () {
+
+          $( ".link-pagina-produtos" ).hover( 
+            function () {
+
+            },
+            function () {
+
+            }
+          );
+
+/*          $( ".link-pagina-produtos" ).click(function() {
+            if ($('#dd-prod-panel-auto').hasClass('active')){
+              $('.tabs-content').css( "background", "url('/img/fundo_auto.png')" );
+            }
+
+            if ($('#dd-prod-panel-residencial').hasClass('active')){
+              $('.tabs-content').css( "background", "url('/img/fundo_residencial.png')" );
+            };
+
+            if ($('#dd-prod-panel-odonto').hasClass('active')){
+              $('.tabs-content').css( "background", "url('/img/fundo_odonto.png')" );
+            };
+
+            if ($('#dd-prod-panel-saude').hasClass('active')){
+              $('.tabs-content').css( "background", "url('/img/fundo_saude.png')" );
+            };
+
+            if ($('#dd-prod-panel-vida').hasClass('active')){
+              $('.tabs-content').css( "background", "url('/img/fundo_vida.png')" );
+            };
+
+            if ($('#dd-prod-panel-riscos').hasClass('active')){
+              $('.tabs-content').css( "background", "url('/img/fundo_riscos.png')" );
+            };
+          });*/
+
           
           $(document).foundation();
 
@@ -2172,9 +2224,6 @@ firmarmos a nossa <strong>FUTURA UNIÃO</strong>.</p>
         });
 
       </script>
-
-      <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
-':35729/livereload.js?snipver=2"></' + 'script>')</script>
 
     </body>
 </html>

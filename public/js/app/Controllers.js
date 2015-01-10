@@ -463,10 +463,11 @@ CmsApp.controller('FaqCtrl', ['$scope', 'Faq', '$sce', function($scope, Faq, $sc
 		$scope.loadingFaqs = true;
 		var faqs = Faq.query( function () {
 			
+			if (faqs.data !== undefined) {
+				var data = $.map(faqs.data, function(el) { return el; });
 
-			var data = $.map(faqs.data, function(el) { return el; });
-
-			$scope.faqs = data;
+				$scope.faqs = data;
+			}
 
 			$scope.loadingFaqs = false;
 
@@ -487,9 +488,11 @@ CmsApp.controller('CorretoresCtrl', ['$scope', 'Corretor', function($scope, Corr
 
 		var corretores = Corretor.query( function () {
 		
-			var data = $.map(corretores.data, function(el) { return el; });
+			if (corretores.data !== undefined) {
+				var data = $.map(corretores.data, function(el) { return el; });
 
-			$scope.corretores = data;
+				$scope.corretores = data;
+			}
 
 			$scope.loadingCorretores = false;
 
@@ -580,9 +583,11 @@ CmsApp.controller('CircularesCtrl', ['$scope', 'Circular', 'CircularArquivo', fu
 		
 		var circulares = Circular.query( function () {
 			
-			var data = $.map(circulares.data, function(el) { return el; });
+			if (circulares.data !== undefined) {
+				var data = $.map(circulares.data, function(el) { return el; });
 
-			$scope.circulares = data;
+				$scope.circulares = data;
+			}
 
 			$scope.loadingCirculares = false;
 
@@ -599,10 +604,11 @@ CmsApp.controller('CircularesCtrl', ['$scope', 'Circular', 'CircularArquivo', fu
 
 		var circularesArquivos = CircularArquivo.query( function () {
 			
+			if (circularesArquivos.data !== undefined) {
+				var data = $.map(circularesArquivos.data, function(el) { return el; });
 
-			var data = $.map(circularesArquivos.data, function(el) { return el; });
-
-			$scope.circularesArquivos = data;
+				$scope.circularesArquivos = data;
+			}
 
 			$scope.loadingCircularesArquivos = false;
 
@@ -628,9 +634,11 @@ CmsApp.controller('GlossarioCtrl', ['$scope', 'Glossario', '$sce', function($sco
 		
 		var glossario = Glossario.query( function () {
 
-			var data = $.map(glossario.data, function(el) { return el; });
+			if (glossario.data !== undefined) {
+				var data = $.map(glossario.data, function(el) { return el; });
 
-			$scope.glossario = data;
+				$scope.glossario = data;
+			}
 
 			$scope.loadinGlossario = false;
 
@@ -638,6 +646,58 @@ CmsApp.controller('GlossarioCtrl', ['$scope', 'Glossario', '$sce', function($sco
 		
 	})();
 }]);
+
+CmsApp.controller('CadastroFormCtrl', ['$scope', '$http', function ($scope, $http) {
+	$scope.formCadastro = {};
+
+	$scope.queMerda = function () {
+		console.log('que merda');
+	}
+
+	//$scope.result = 'hidden'
+    //$scope.resultMessage;
+    //$scope.formData; //formData is an object holding the name, email, subject, and message
+    //$scope.submitButtonDisabled = false;
+   // $scope.submitted = false; //used so that form errors are shown only after the form has been submitted
+
+    $scope.submit = function() {
+        //$scope.submitted = true;
+        //$scope.submitButtonDisabled = true;
+        if (true) {
+
+            $http({
+                method  : 'POST',
+                url     : '/api/cadastrocorretor',
+                data    : $.param($scope.formCadastro),  //param method from jQuery
+                headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  //set the headers so angular passing info as form data (not request payload)
+            }).success(function(data){
+            	console.log(data);
+
+                /*if (data.success) { //success comes from the return json object
+
+                    //$scope.submitButtonDisabled = true;
+                    //$scope.resultMessage = data.message;
+                    //$scope.result='bg-success';
+                } else {
+
+                    //$scope.submitButtonDisabled = false;
+                    //$scope.resultMessage = data.message;
+                    //$scope.result='bg-danger';
+                }*/
+            }).error(function(data) {
+            	console.log('ERROR', data);
+            });
+
+            // $scope.submitButtonDisabled = false;
+            // $scope.resultMessage = 'Failed <img src="http://www.chaosm.net/blog/wp-includes/images/smilies/icon_sad.gif" alt=":(" class="wp-smiley">  Please fill out all the fields.';
+            // $scope.result='bg-danger';
+        }
+    };
+
+    $scope.formCadastro.enviarCadastro = function () {
+    	console.log('Enviando Formulario Cad...');
+    }
+}])
 
 CmsApp.controller('FormContatoCtrl', ['$scope', '$http', function($scope, $http) {
 	$scope.result = 'hidden'
@@ -678,3 +738,4 @@ CmsApp.controller('FormContatoCtrl', ['$scope', '$http', function($scope, $http)
         }
     }
 }]);
+

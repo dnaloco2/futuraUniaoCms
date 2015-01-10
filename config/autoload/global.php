@@ -14,15 +14,14 @@
 return array(
     'mail' => array(
         'name' => 'localhost',
-        'host' => 'smtp.gmail.com',
+        'host' => 'smtp.mail.yahoo.com',
         'port' => 587,
         'connection_class' => 'login',
         'connection_config' => array(
-            'username' => 'dnaloco@gmail.com',
-            'password' => 'artdna7',
+            'username' => 'arthur_scosta@yahoo.com.br',
+            'password' => 'Artdna#3',
             'ssl' => 'tls',
-            'from'=> 'dnaloco@gmail.com'
-
+            'from'=> 'arthur_scosta@yahoo.com.br'
         )
     )
 );
